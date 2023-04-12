@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Mips_Pipeline.srcs/sources_1/new/IMEM.v" \
+"../../../../Mips_Pipeline.srcs/sources_1/new/REG.v" \
+"../../../../Mips_Pipeline.srcs/sources_1/new/control.v" \
+"../../../../Mips_Pipeline.srcs/sources_1/new/reg_EXE_MEM.v" \
+"../../../../Mips_Pipeline.srcs/sources_1/new/reg_ID_EXE.v" \
+"../../../../Mips_Pipeline.srcs/sources_1/new/reg_IF_ID.v" \
+"../../../../Mips_Pipeline.srcs/sources_1/new/reg_MEM_WB.v" \
+"../../../../Mips_Pipeline.srcs/sources_1/new/system.v" \
+"../../../../Mips_Pipeline.srcs/sim_1/new/add_instruction_tb0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

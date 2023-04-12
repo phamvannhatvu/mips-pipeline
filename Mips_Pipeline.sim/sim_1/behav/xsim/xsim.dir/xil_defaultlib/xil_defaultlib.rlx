@@ -1,0 +1,14 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sim_1/new/add_instruction_tb0.v,1680793096,verilog,,,,add_instruction_tb0,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/IMEM.v,1680796710,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/REG.v,,IMEM,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/REG.v,1680796632,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/control.v,,REG,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/control.v,1680779851,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/reg_EXE_MEM.v,,control,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/reg_EXE_MEM.v,1680780243,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/reg_ID_EXE.v,,reg_EXE_MEM,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/reg_ID_EXE.v,1680780158,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/reg_IF_ID.v,,reg_ID_EXE,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/reg_IF_ID.v,1680780010,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/reg_MEM_WB.v,,reg_IF_ID,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/reg_MEM_WB.v,1680780284,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/system.v,,reg_MEM_WB,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sources_1/new/system.v,1680797064,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Mips_Pipeline.srcs/sim_1/new/add_instruction_tb0.v,,system,,,,,,,,
