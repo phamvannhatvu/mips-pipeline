@@ -1,46 +1,50 @@
 module reg_EXE_MEM (
-	input 			reg_EXE_MEM_branch_control_in,
-	input 			reg_EXE_MEM_mem_read_control_in,
-	input 			reg_EXE_MEM_mem_write_control_in,
-	input 			reg_EXE_MEM_reg_write_control_in,
-	input 			reg_EXE_MEM_mem_to_reg_control_in,
-	input	[4:0]	reg_EXE_MEM_write_register_in,
-	input	[31:0]	reg_EXE_MEM_alu_result_in,
-	input	[7:0]	reg_EXE_MEM_alu_status,
-	input	[7:0]	reg_EXE_MEM_branch_address_in,
-	input 	[31:0]	reg_EXE_MEM_rt_value_in,
-	input			reg_EXE_MEM_clk,
-	input			reg_EXE_MEM_reset,
+	input 	[1:0]	wb_control_in,
+	input	[2:0]	mem_control_in,
+
+	input	[4:0]	write_register_in,
+	input	[31:0]	alu_result_in,
+	input	[7:0]	alu_status,
+	input	[7:0]	branch_address_in,
+	input 	[31:0]	rt_value_in,
+	input			clk,
+	input			reset,
 	
-	output reg			reg_EXE_MEM_reg_write_control_out,
-	output reg			reg_EXE_MEM_mem_to_reg_control_out,
-	output reg	        reg_EXE_MEM_pc_source,
-	output reg	[7:0]	reg_EXE_MEM_branch_address_out,
-	output reg	[31:0]	reg_EXE_MEM_write_data,
-	output reg	[7:0] 	reg_EXE_MEM_write_address,
-	output reg	[4:0]	reg_EXE_MEM_write_register_out,
-	output reg	[31:0]	reg_EXE_MEM_alu_result_out
+	output reg	        branch_control_out,
+	output reg 			mem_read_control_out,
+	output reg 			mem_write_control_out,
+	output reg	[1:0]	wb_control_out,
+	output reg  		alu_zero,
+
+	output reg	[7:0]	branch_address_out,
+	output reg	[31:0]	write_data,
+	output reg	[4:0]	write_register_out,
+	output reg	[31:0]	alu_result_out
 );
 
-	always @(posedge reg_EXE_MEM_clk or posedge reg_EXE_MEM_reset) begin
-		if (reg_EXE_MEM_reset) begin
-			reg_EXE_MEM_reg_write_control_out 	<= 0;
-			reg_EXE_MEM_mem_to_reg_control_out	<= 0;
-			reg_EXE_MEM_pc_source				<= 0;
-			reg_EXE_MEM_branch_address_out 		<= 0;
-			reg_EXE_MEM_write_data				<= 0;
-			reg_EXE_MEM_write_address			<= 0;
-			reg_EXE_MEM_write_register_out		<= 0;
-			reg_EXE_MEM_alu_result_out			<= 0;
+	always @(posedge clk or posedge reset) begin
+		if (reset) begin
+			branch_control_out		<= 0;
+			mem_read_control_out 	<= 0;
+			mem_write_control_out 	<= 0;
+			wb_control_out			<= 0;
+			alu_zero				<= 0;
+			
+			branch_address_out 		<= 0;
+			write_data				<= 0;
+			write_register_out		<= 0;
+			alu_result_out			<= 0;
 		end else begin
-			reg_EXE_MEM_reg_write_control_out 	<= reg_EXE_MEM_reg_write_control_in;
-			reg_EXE_MEM_mem_to_reg_control_out	<= reg_EXE_MEM_mem_to_reg_control_in;
-			reg_EXE_MEM_pc_source				<= reg_EXE_MEM_branch_control_in & reg_EXE_MEM_alu_status[7];
-			reg_EXE_MEM_branch_address_out 		<= reg_EXE_MEM_branch_address_in;
-			reg_EXE_MEM_write_data				<= reg_EXE_MEM_rt_value_in;
-			reg_EXE_MEM_write_address			<= reg_EXE_MEM_alu_result_in[7:0];
-			reg_EXE_MEM_write_register_out		<= reg_EXE_MEM_write_register_in;
-			reg_EXE_MEM_alu_result_out			<= reg_EXE_MEM_alu_result_in;
+			branch_control_out		<= mem_control_in[2];
+			mem_read_control_out 	<= mem_control_in[1];
+			mem_write_control_out 	<= mem_control_in[0];
+			wb_control_out			<= wb_control_in;
+			alu_zero 				<= alu_status[7];
+			
+			branch_address_out 		<= branch_address_in;
+			write_data				<= rt_value_in;
+			write_register_out		<= write_register_in;
+			alu_result_out			<= alu_result_in;
 		end
 	end
 endmodule
