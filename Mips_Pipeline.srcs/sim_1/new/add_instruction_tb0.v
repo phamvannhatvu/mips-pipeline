@@ -6,13 +6,17 @@ reg clk, reset;
 reg [7:0] pc;
 wire [26:0] out;
 
-system uut(.SYS_clk(clk), .SYS_pc_val(pc), .SYS_leds(out));
+system uut(.SYS_clk(clk), .SYS_pc_val(pc), .SYS_reset(reset), .SYS_leds(out));
 
 initial begin
     reset = 1;
+    pc = 0;
+    #5  clk = 0;
+    #5  clk = 1;
+    #5  clk = 0;
+    #5  clk = 1;
     #5  clk = 0;
         reset = 0;
-        pc = 0;
     #5  clk = 1;
     #5  clk = 0;
     #5  clk = 1;
@@ -21,6 +25,10 @@ initial begin
     #5  clk = 0;
     #5  clk = 1;
     #5  clk = 0;
+    #5  clk = 1;
+    #5  clk = 0;
+    #5  clk = 1;
+    #5  clk = 0;    
     #5  clk = 1;
     #5  clk = 0;
     #5  clk = 1;

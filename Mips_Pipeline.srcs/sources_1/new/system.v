@@ -29,14 +29,82 @@ module system(
 	output	[26:0]	SYS_leds
 );
 
+	//Wire declarations
 	wire           	clk = SYS_clk;// & ~exception_handler.exception_output; 
-
+	
 	//IF_stage
 	wire 	[31:0]  instruction;
 	wire	[7:0]	next_pc_calulated;
 	wire    [7:0]	next_pc;
 	wire	[7:0]	if_pc;
 	
+	//ID_stage
+	wire [4:0] 	id_rs;
+	wire [4:0] 	id_rd;
+	wire [4:0] 	id_rt;
+	wire [5:0]	id_opcode;
+	wire [4:0]	id_shamt;
+	wire [5:0]	id_funct;
+	wire [7:0]	id_pc;
+	wire [15:0]	id_immediate;
+	wire [26:0] id_jump_address;
+
+	wire [10:0] id_control;
+	wire [31:0] id_extended_immediate;
+	wire [31:0] id_value_rs;
+	wire [31:0] id_value_rt;
+
+	//EXE_stage
+	wire 		exe_alu_src;
+	wire [1:0]	exe_alu_op;
+	wire 		exe_reg_dst;
+	
+	wire [2:0]	exe_mem_control;
+	wire [1:0]	exe_wb_control;
+
+	wire [7:0]	exe_pc;
+	wire [31:0]	exe_immediate;
+	wire [31:0]	exe_value_rs;
+	wire [31:0]	exe_value_rt;
+	wire [4:0]	exe_rt;
+	wire [4:0]  exe_rd;
+
+	wire [4:0] 	exe_write_register;
+	wire [31:0]	exe_alu_result;
+	wire [7:0] 	exe_alu_status;
+	wire [7:0] 	exe_branch_address;
+
+	//MEM_stage
+	wire [1:0] 	mem_wb_control;
+	wire 		mem_branch_control;
+	wire		mem_alu_zero;
+	wire 		mem_mem_read;
+	wire 		mem_mem_write;
+
+	wire [31:0] mem_alu_result;
+	wire [4:0]	mem_write_register;
+	wire [7:0] 	mem_branch_address;
+	wire [31:0] mem_write_data;
+	wire [31:0] mem_data_read;
+
+	//WB_stage
+	wire 	    wb_reg_write;
+	wire		wb_mem2reg;
+	wire [31:0]	wb_data_write;
+	wire [31:0] wb_alu_result;
+	wire [31:0] wb_data_from_dmem;
+	wire [4:0]	wb_write_register;
+
+	wire [31:0] wb_data_read;
+
+	//PC_update
+	wire 		branch_pc_sel;
+	wire		jump_pc_sel;
+	wire [7:0]	branch_mux_out;
+	wire [7:0]	jump_pc_address;
+
+	//Modules
+	//IF_stage
 	mux8bit pc_sel(
 		//input
 		.in0(next_pc_calulated),
@@ -51,6 +119,7 @@ module system(
 		//input
 		.pc_in(next_pc),
 		.clk(clk),
+		.reset(SYS_reset),
 
 		//output
 		.instruction_out(instruction),
@@ -77,21 +146,6 @@ module system(
 	);
 
 	//ID_stage
-	wire [4:0] 	id_rs;
-	wire [4:0] 	id_rd;
-	wire [4:0] 	id_rt;
-	wire [5:0]	id_opcode;
-	wire [4:0]	id_shamt;
-	wire [5:0]	id_funct;
-	wire [7:0]	id_pc;
-	wire [15:0]	id_immediate;
-	wire [26:0] id_jump_address;
-
-	wire [10:0] id_control;
-	wire [31:0] id_extended_immediate;
-	wire [31:0] id_value_rs;
-	wire [31:0] id_value_rt;
-
 	ID_stage ID_stage(
 		//input
 		.clk(clk),
@@ -144,25 +198,6 @@ module system(
 	);
 
 	//EXE_stage
-	wire 		exe_alu_src;
-	wire [1:0]	exe_alu_op;
-	wire 		exe_reg_dst;
-	
-	wire [2:0]	exe_mem_control;
-	wire [1:0]	exe_wb_control;
-
-	wire [7:0]	exe_pc;
-	wire [31:0]	exe_immediate;
-	wire [31:0]	exe_value_rs;
-	wire [31:0]	exe_value_rt;
-	wire [4:0]	exe_rt;
-	wire [4:0]  exe_rd;
-
-	wire [4:0] 	exe_write_register;
-	wire [31:0]	exe_alu_result;
-	wire [7:0] 	exe_alu_status;
-	wire [7:0] 	exe_branch_address;
-
 	EXE_stage EXE_stage(
 		//input
 		.immediate(exe_immediate),
@@ -209,17 +244,6 @@ module system(
 	);
 
 	//MEM_stage
-	wire [1:0] 	mem_wb_control;
-	wire 		mem_branch_control;
-	wire		mem_alu_zero;
-	wire 		mem_mem_read;
-	wire 		mem_mem_write;
-
-	wire [31:0] mem_alu_result;
-	wire [4:0]	mem_write_register;
-	wire [7:0] 	mem_branch_address;
-	wire [31:0] mem_write_data;
-	wire [31:0] mem_data_read;
 	MEM_stage MEM_stage(
 		//input
 		.branch_control(mem_branch_control),
@@ -255,15 +279,6 @@ module system(
 	);
 
 	//WB_stage
-	wire 	    wb_reg_write;
-	wire		wb_mem2reg;
-	wire [31:0]	wb_data_write;
-	wire [31:0] wb_alu_result;
-	wire [31:0] wb_data_from_dmem;
-	wire [4:0]	wb_write_register;
-
-	wire [31:0] wb_data_read;
-
 	WB_stage WB_stage(
 		//input
 		.data_from_dmem(wb_data_from_dmem),
@@ -275,11 +290,6 @@ module system(
 	);
 
 	//PC update
-	wire 		branch_pc_sel;
-	wire		jump_pc_sel;
-	wire [7:0]	branch_mux_out;
-	wire [7:0]	jump_pc_address;
-
 	mux8bit branch_pc_mux(
 		//input
 		.in0(if_pc + 4),
@@ -309,4 +319,6 @@ module system(
 		//output
 		.out(next_pc_calulated)
 	);
+
+	assign SYS_leds = exe_alu_result;
 endmodule

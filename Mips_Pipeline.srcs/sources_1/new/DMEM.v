@@ -35,21 +35,19 @@ module DMEM(
 	reg [7:0] memory [0:1023];
 
 	//read without clock
-	always @(posedge clk or posedge reset) begin
-		if (reset) begin
-			data_out <= 0;
-		end else begin
-			if (mem_write) begin
-				memory[address] 	<= data_in[31:24];
-				memory[address + 1] <= data_in[23:16];
-				memory[address + 2] <= data_in[15:8];
-				memory[address + 3] <= data_in[7:0];
-			end
-		end
-	end
+	always @(posedge clk) begin
+        if (mem_write && reset == 0) begin
+            memory[address] 	<= data_in[31:24];
+            memory[address + 1] <= data_in[23:16];
+            memory[address + 2] <= data_in[15:8];
+            memory[address + 3] <= data_in[7:0];
+        end
+    end
 
 	always @(*) begin
-		if (mem_read && reset != 0) begin
+	    if (reset) begin
+	       data_out = 0;
+	    end else if (mem_read) begin
 			data_out[31:24] = memory[address];
 			data_out[23:16] = memory[address + 1];
 			data_out[15:8] = memory[address + 2];

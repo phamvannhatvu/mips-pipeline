@@ -14,6 +14,10 @@ module ID_stage (
     output [31:0] value_rt,
     output [31:0] extended_immediate
 );
+    wire nop;   //determine nop instruction
+
+    assign nop = (address_rs == 0 && address_rt == 0 && immediate == 0);
+
     REG regFile(
         //input
         .address_rs(address_rs),
@@ -41,7 +45,9 @@ module ID_stage (
     control control(
         //input
         .opcode(opcode),
-
+        .reset(reset),
+        .nop(nop),
+        
         //output
         .control_signal(control_signal)
     );
