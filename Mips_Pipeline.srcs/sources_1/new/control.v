@@ -3,10 +3,17 @@ module control(
 	input 			nop,
 	input			reset,
 
-	output	[10:0] 	control_signal
+	output reg	[10:0] 	control_signal
 );
 
 	//for add instruction only
-	assign control_signal = ((reset || nop) ? 0 : 11'b0000xx01011);
-
+	always @(*) begin
+	   if (reset || nop) begin
+	       control_signal = 0;
+	   end else if (opcode == 6'b100011) begin
+	       control_signal = 11'b0010xx10001;
+	   end else begin
+           control_signal = 11'b0000xx01011;
+	   end
+	end
 endmodule

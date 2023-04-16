@@ -30,10 +30,15 @@ module DMEM(
 
 	output reg [31:0] 	data_out
 );
-
 	//same as IMEM: 2^8 words
 	reg [7:0] memory [0:1023];
-
+    
+    initial begin
+        memory[16] = 8'h6a;
+        memory[17] = 8'h44;
+        memory[18] = 8'h21;
+        memory[19] = 8'hb0;
+    end
 	//read without clock
 	always @(posedge clk) begin
         if (mem_write && reset == 0) begin

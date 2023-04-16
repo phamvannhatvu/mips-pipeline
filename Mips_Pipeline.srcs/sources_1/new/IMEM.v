@@ -11,20 +11,6 @@ module IMEM(
 	   memory[2] = 8'h50;
 	   memory[3] = 8'h20;
 	   
-//	   // 3 stalls
-//	   memory[4] = 8'h0; 
-//       memory[5] = 8'h0;
-//       memory[6] = 8'h0;
-//       memory[7] = 8'h0;	   
-//       memory[8] = 8'h0; 
-//       memory[9] = 8'h0;
-//       memory[10] = 8'h0;
-//       memory[11] = 8'h0;	   
-//       memory[12] = 8'h0; 
-//       memory[13] = 8'h0;
-//       memory[14] = 8'h0;
-//       memory[15] = 8'h0;
-	   
 	   memory[4] = 8'h01; //add t8 t5 t7
 	   memory[5] = 8'hAF;
 	   memory[6] = 8'hC0;
@@ -44,6 +30,44 @@ module IMEM(
 	   memory[17] = 8'h6A;
 	   memory[18] = 8'h60;
 	   memory[19] = 8'h20;
+	   
+	   // 3 stalls
+       memory[20] = 8'h0; 
+       memory[21] = 8'h0;
+       memory[22] = 8'h0;
+       memory[23] = 8'h0;       
+       memory[24] = 8'h0; 
+       memory[25] = 8'h0;
+       memory[26] = 8'h0;
+       memory[27] = 8'h0;       
+       memory[28] = 8'h0; 
+       memory[29] = 8'h0;
+       memory[30] = 8'h0;
+       memory[31] = 8'h0;
+
+       memory[32] = 8'h8D; //lw s7 4(t4)
+       memory[33] = 8'h97;
+       memory[34] = 8'h00;
+       memory[35] = 8'h04;
+
+	   // 3 stalls
+       memory[36] = 8'h0; 
+       memory[37] = 8'h0;
+       memory[38] = 8'h0;
+       memory[39] = 8'h0;       
+       memory[40] = 8'h0; 
+       memory[41] = 8'h0;
+       memory[42] = 8'h0;
+       memory[43] = 8'h0;       
+       memory[44] = 8'h0; 
+       memory[45] = 8'h0;
+       memory[46] = 8'h0;
+       memory[47] = 8'h0;
+
+	   memory[48] = 8'h02; //add t8 s7 t4
+       memory[49] = 8'hEC;
+       memory[50] = 8'hC0;
+       memory[51] = 8'h20;
 	end
 	
 	always @(pc or reset) begin
