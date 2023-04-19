@@ -6,17 +6,17 @@ module reg_ID_EXE(
 	input 	[4:0]	    rt_in,
 	input 	[4:0]	    rd_in,
 
-	input 	[10:0]		control_in,
+	input 	[14:0]		control_in,
 	
 	input 			    clk,
 	input 			    reset,
 	
 	output 	reg		    reg_dst_control_out,
-	output 	reg [1:0]	alu_op_control_out,
+	output 	reg [2:0]	alu_op_control_out,
 	output 	reg		    alu_src_control_out,
 
-	output 	reg	[2:0]   mem_control_out,
-	output 	reg	[1:0]   wb_control_out,
+	output 	reg	[4:0]   mem_control_out,
+	output 	reg	[2:0]   wb_control_out,
 
 	output 	reg [31:0]	rs_value_out,
 	output 	reg [31:0]	rt_value_out,
@@ -42,12 +42,12 @@ module reg_ID_EXE(
 			rt_out					<= 0;
 			rd_out					<= 0;
 		end else begin
-			reg_dst_control_out		<= control_in[3];
-			alu_op_control_out		<= control_in[6:5];
-			alu_src_control_out		<= control_in[4];
+			reg_dst_control_out		<= control_in[4];
+			alu_op_control_out		<= control_in[8:6];
+			alu_src_control_out		<= control_in[5];
 
- 			mem_control_out			<= control_in[9:7];
-			wb_control_out			<= control_in[1:0];
+ 			mem_control_out			<= control_in[13:9];
+			wb_control_out			<= control_in[2:0];
 
 			rs_value_out			<= rs_value_in;
 			rt_value_out			<= rt_value_in;

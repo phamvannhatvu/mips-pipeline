@@ -3,7 +3,7 @@ module EXE_stage (
     input [7:0]     pc,
     input [31:0]    rs_value,
     input           alu_src,
-    input [1:0]     alu_op,
+    input [2:0]     alu_op,
     input           reg_dst,
     input [31:0]    rt_value,
     input [4:0]     rt,
@@ -23,17 +23,18 @@ module EXE_stage (
         .out(shifted_immediate)
     );
     
+    wire [7:0] next_pc = pc + 4;
     adder32bit adder32bit(
         //input
         .in0(shifted_immediate),
-        .in1(pc),
+        .in1({24'h000000, next_pc}),
         
         //output
         .sum(branch_address)
     );
 
     wire [31:0] second_operand;
-    mux32bit operand_mux(
+    mux_2_to_1 #(32) operand_mux (
         //input
         .in0(rt_value),
         .in1(immediate),
@@ -43,7 +44,7 @@ module EXE_stage (
         .out(second_operand)
     );
 
-    mux5bit write_reg_mux(
+    mux_2_to_1 #(5) write_reg_mux(
         //input
         .in0(rt),
         .in1(rd),
@@ -53,7 +54,7 @@ module EXE_stage (
         .out(write_register)
     );
 
-    wire [3:0] alu_control_out;
+    wire [4:0] alu_control_out;
     alu_control alu_control(
         //input
         .funct(immediate[5:0]),
@@ -66,9 +67,11 @@ module EXE_stage (
     ALU ALU(
         //input
         .alu_control(alu_control_out),
-        .alu_operand_1(rs_value),
-        .alu_operand_2(second_operand),
+        .alu_operand_0(rs_value),
+        .alu_operand_1(second_operand),
+        .shamt(immediate[10:6]),
 
+        //output
         .alu_result(alu_result),
         .alu_status(alu_status)
     );

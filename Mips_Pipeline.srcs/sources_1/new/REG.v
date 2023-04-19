@@ -16,14 +16,17 @@ module REG (
 	   reg_file[8] = 4; //t0
 	   reg_file[9] = 5; //t1
 	   reg_file[11] = 3; //t3
-       reg_file[13] = 6; //t5
+	   reg_file[10] = 4; //t2
+       reg_file[13] = 24; //t5
        reg_file[15] = 9; //t7
-       reg_file[18] = 4; //s2
-       reg_file[16] = -2; //s0
-       reg_file[21] = 0; //s5
-       reg_file[17] = -1; //s1
+       reg_file[18] = 5; //s2
+       reg_file[19] = 4; //s3
+       reg_file[16] = 2; //s0
+       reg_file[21] = 2; //s5
+       reg_file[17] = 9; //s1
        reg_file[22] = 3; //s6
        reg_file[0] = 0; //zero
+       reg_file[25] = 12; //t9
 	end
 	
 	always @(posedge clk or posedge reset or negedge clk) begin

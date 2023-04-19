@@ -49,18 +49,18 @@ module system(
 	wire [15:0]	id_immediate;
 	wire [26:0] id_jump_address;
 
-	wire [10:0] id_control;
+	wire [14:0] id_control;
 	wire [31:0] id_extended_immediate;
 	wire [31:0] id_value_rs;
 	wire [31:0] id_value_rt;
 
 	//EXE_stage
 	wire 		exe_alu_src;
-	wire [1:0]	exe_alu_op;
+	wire [2:0]	exe_alu_op;
 	wire 		exe_reg_dst;
 	
-	wire [2:0]	exe_mem_control;
-	wire [1:0]	exe_wb_control;
+	wire [4:0]	exe_mem_control;
+	wire [2:0]	exe_wb_control;
 
 	wire [7:0]	exe_pc;
 	wire [31:0]	exe_immediate;
@@ -75,8 +75,10 @@ module system(
 	wire [7:0] 	exe_branch_address;
 
 	//MEM_stage
-	wire [1:0] 	mem_wb_control;
+	wire [2:0] 	mem_wb_control;
 	wire 		mem_branch_control;
+	wire 		mem_read_lo_control;
+	wire 		mem_read_hi_control;
 	wire		mem_alu_zero;
 	wire 		mem_mem_read;
 	wire 		mem_mem_write;
@@ -89,7 +91,7 @@ module system(
 
 	//WB_stage
 	wire 	    wb_reg_write;
-	wire		wb_mem2reg;
+	wire [1:0]	wb_mem2reg;
 	wire [31:0]	wb_data_write;
 	wire [31:0] wb_alu_result;
 	wire [31:0] wb_data_from_dmem;
@@ -105,7 +107,7 @@ module system(
 
 	//Modules
 	//IF_stage
-	mux8bit pc_sel(
+	mux_2_to_1 #(8) pc_sel(
 		//input
 		.in0(next_pc_calulated),
 		.in1(SYS_pc_val),
@@ -290,7 +292,7 @@ module system(
 	);
 
 	//PC update
-	mux8bit branch_pc_mux(
+	mux_2_to_1 #(8) branch_pc_mux(
 		//input
 		.in0(if_pc + 4),
 		.in1(mem_branch_address),
@@ -300,17 +302,18 @@ module system(
 		.out(branch_mux_out)
 	);
 
-	assign jump_pc_sel = id_control[10];
-
+	assign jump_pc_sel = id_control[14];
+	wire [7:0] shifted_jump_immediate;
 	shift_left_two jump_shifter(
 		//input
 		.in(id_jump_address),
 
 		//ouput
-		.out(jump_pc_address)
+		.out(shifted_jump_immediate)
 	);
+	assign jump_pc_address = id_pc + 4 + shifted_jump_immediate;
 
-	mux8bit jump_pc_mux(
+	mux_2_to_1 #(8) jump_pc_mux(
 		//input
 		.in0(branch_mux_out),
 		.in1(jump_pc_address),

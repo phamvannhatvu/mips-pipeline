@@ -1,6 +1,6 @@
 module reg_EXE_MEM (
-	input 	[1:0]	wb_control_in,
-	input	[2:0]	mem_control_in,
+	input 	[2:0]	wb_control_in,
+	input	[4:0]	mem_control_in,
 
 	input	[4:0]	write_register_in,
 	input	[31:0]	alu_result_in,
@@ -13,7 +13,7 @@ module reg_EXE_MEM (
 	output reg	        branch_control_out,
 	output reg 			mem_read_control_out,
 	output reg 			mem_write_control_out,
-	output reg	[1:0]	wb_control_out,
+	output reg	[2:0]	wb_control_out,
 	output reg  		alu_zero,
 
 	output reg	[7:0]	branch_address_out,

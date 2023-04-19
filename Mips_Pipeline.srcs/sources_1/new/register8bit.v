@@ -4,7 +4,7 @@ module register8bit (
 
     output reg [7:0] data_out
 );
-    always @(posedge clk) begin
+    always @(negedge clk) begin
         data_out <= data_in;
     end
 endmodule

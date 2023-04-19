@@ -12,9 +12,8 @@ verilog xil_defaultlib  \
 "../../../../Mips_Pipeline.srcs/sources_1/new/adder32bit.v" \
 "../../../../Mips_Pipeline.srcs/sources_1/new/alu_control.v" \
 "../../../../Mips_Pipeline.srcs/sources_1/new/control.v" \
-"../../../../Mips_Pipeline.srcs/sources_1/new/mux32bit.v" \
-"../../../../Mips_Pipeline.srcs/sources_1/new/mux5bit.v" \
-"../../../../Mips_Pipeline.srcs/sources_1/new/mux8bit.v" \
+"../../../../Mips_Pipeline.srcs/sources_1/new/mux_2_to_1.v" \
+"../../../../Mips_Pipeline.srcs/sources_1/new/mux_4_to_1.v" \
 "../../../../Mips_Pipeline.srcs/sources_1/new/reg_EXE_MEM.v" \
 "../../../../Mips_Pipeline.srcs/sources_1/new/reg_ID_EXE.v" \
 "../../../../Mips_Pipeline.srcs/sources_1/new/reg_IF_ID.v" \

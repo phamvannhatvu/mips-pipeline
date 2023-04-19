@@ -9,7 +9,7 @@ module ID_stage (
     input [4:0]  address_write,
     input [15:0] immediate,
 
-    output [10:0] control_signal,
+    output [15:0] control_signal,
     output [31:0] value_rs,
     output [31:0] value_rt,
     output [31:0] extended_immediate
