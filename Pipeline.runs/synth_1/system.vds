@@ -1,0 +1,788 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Apr 19 15:12:21 2023
+# Process ID: 20760
+# Current directory: C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1
+# Command line: vivado.exe -log system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system.tcl
+# Log file: C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1/system.vds
+# Journal file: C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source system.tcl -notrace
+Command: synth_design -top system -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18216 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 338.285 ; gain = 100.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1' (1#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IF_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IMEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IMEM' (2#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'register8bit' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/register8bit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'register8bit' (3#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/register8bit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_stage' (4#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IF_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_IF_ID' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_IF_ID' (5#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:1]
+WARNING: [Synth 8-689] width (27) of port connection 'jump_address' does not match port width (26) of module 'reg_IF_ID' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:113]
+INFO: [Synth 8-6157] synthesizing module 'ID_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'REG' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
+WARNING: [Synth 8-5788] Register reg_file_reg in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'reg_file_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "reg_file_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'REG' (6#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extender' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extender' (7#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'control' (8#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/control.v:1]
+WARNING: [Synth 8-689] width (16) of port connection 'control_signal' does not match port width (15) of module 'control' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'ID_stage' (9#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:1]
+WARNING: [Synth 8-689] width (11) of port connection 'control_signal' does not match port width (16) of module 'ID_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:131]
+INFO: [Synth 8-6157] synthesizing module 'reg_ID_EXE' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_ID_EXE' (10#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:1]
+WARNING: [Synth 8-689] width (11) of port connection 'control_in' does not match port width (15) of module 'reg_ID_EXE' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:141]
+WARNING: [Synth 8-689] width (2) of port connection 'alu_op_control_out' does not match port width (3) of module 'reg_ID_EXE' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:146]
+WARNING: [Synth 8-689] width (3) of port connection 'mem_control_out' does not match port width (5) of module 'reg_ID_EXE' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:148]
+WARNING: [Synth 8-689] width (2) of port connection 'wb_control_out' does not match port width (3) of module 'reg_ID_EXE' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:149]
+INFO: [Synth 8-6157] synthesizing module 'EXE_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized0' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized0' (10#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized1' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+	Parameter N bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized1' (10#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu_control' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu_control' (11#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (12#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EXE_stage' (13#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:1]
+WARNING: [Synth 8-689] width (2) of port connection 'alu_op' does not match port width (3) of module 'EXE_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:164]
+INFO: [Synth 8-6157] synthesizing module 'reg_EXE_MEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_EXE_MEM' (14#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:1]
+WARNING: [Synth 8-689] width (2) of port connection 'wb_control_in' does not match port width (3) of module 'reg_EXE_MEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:177]
+WARNING: [Synth 8-689] width (3) of port connection 'mem_control_in' does not match port width (5) of module 'reg_EXE_MEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:178]
+WARNING: [Synth 8-689] width (2) of port connection 'wb_control_out' does not match port width (3) of module 'reg_EXE_MEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:190]
+INFO: [Synth 8-6157] synthesizing module 'MEM_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
+WARNING: [Synth 8-5788] Register memory_reg in module DMEM is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'memory_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: Invalid write data for RAM. 
+	2: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	3: Unable to determine number of words or word size in RAM. 
+	4: No valid read/write found for RAM. 
+RAM "memory_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'DMEM' (15#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_stage' (16#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_MEM_WB' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_MEM_WB' (17#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:1]
+WARNING: [Synth 8-689] width (2) of port connection 'wb_control_in' does not match port width (3) of module 'reg_MEM_WB' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:214]
+WARNING: [Synth 8-689] width (1) of port connection 'mem2reg_control_out' does not match port width (2) of module 'reg_MEM_WB' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:222]
+INFO: [Synth 8-6157] synthesizing module 'WB_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/WB_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4_to_1' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_4_to_1.v:1]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_4_to_1' (18#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_4_to_1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'WB_stage' (19#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/WB_stage.v:1]
+WARNING: [Synth 8-689] width (1) of port connection 'mem2reg' does not match port width (2) of module 'WB_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:232]
+WARNING: [Synth 8-689] width (32) of port connection 'in0' does not match port width (8) of module 'mux_2_to_1' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:239]
+INFO: [Synth 8-6157] synthesizing module 'shift_left_two' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/shift_left_two.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shift_left_two' (20#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/shift_left_two.v:1]
+WARNING: [Synth 8-689] width (27) of port connection 'in' does not match port width (32) of module 'shift_left_two' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:249]
+WARNING: [Synth 8-689] width (8) of port connection 'out' does not match port width (32) of module 'shift_left_two' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:251]
+INFO: [Synth 8-6155] done synthesizing module 'system' (21#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:2]
+WARNING: [Synth 8-3331] design reg_EXE_MEM has unconnected port mem_control_in[4]
+WARNING: [Synth 8-3331] design reg_EXE_MEM has unconnected port mem_control_in[3]
+WARNING: [Synth 8-3331] design reg_EXE_MEM has unconnected port alu_status[6]
+WARNING: [Synth 8-3331] design reg_EXE_MEM has unconnected port alu_status[5]
+WARNING: [Synth 8-3331] design reg_EXE_MEM has unconnected port alu_status[4]
+WARNING: [Synth 8-3331] design reg_EXE_MEM has unconnected port alu_status[3]
+WARNING: [Synth 8-3331] design reg_EXE_MEM has unconnected port alu_status[2]
+WARNING: [Synth 8-3331] design reg_EXE_MEM has unconnected port alu_status[1]
+WARNING: [Synth 8-3331] design reg_EXE_MEM has unconnected port alu_status[0]
+WARNING: [Synth 8-3331] design reg_ID_EXE has unconnected port control_in[14]
+WARNING: [Synth 8-3331] design reg_ID_EXE has unconnected port control_in[3]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_load
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[2]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[1]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 733.137 ; gain = 495.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 733.137 ; gain = 495.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 733.137 ; gain = 495.250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "memory" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "memory" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "memory" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "memory" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element instruction_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:78]
+INFO: [Synth 8-5587] ROM size for "control_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "exception_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mfhi_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mflo_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "alu_result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "high_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "low_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:56]
+INFO: [Synth 8-5545] ROM "alu_result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "high_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "low_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "reg_write_control_out" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:40]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:13 ; elapsed = 00:03:19 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |DMEM__GB0     |           1|     42072|
+|2     |DMEM__GB1     |           1|     10019|
+|3     |DMEM__GB2     |           1|     10813|
+|4     |DMEM__GB3     |           1|     24917|
+|5     |DMEM__GB4     |           1|     15632|
+|6     |DMEM__GB5     |           1|     10795|
+|7     |DMEM__GB6     |           1|     33490|
+|8     |DMEM__GB7     |           1|     45376|
+|9     |DMEM__GB8     |           1|     31674|
+|10    |DMEM__GB9     |           1|     20992|
+|11    |system__GC0   |           1|     17556|
++------+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 2     
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 41    
+	               26 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1032  
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 9     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input   8192 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 13    
+	   4 Input     32 Bit        Muxes := 2     
+	   8 Input     32 Bit        Muxes := 2     
+	   8 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   6 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2041  
+	   5 Input      8 Bit        Muxes := 312   
+	   4 Input      8 Bit        Muxes := 828   
+	  53 Input      8 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	  19 Input      5 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 312   
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 60    
+	   2 Input      1 Bit        Muxes := 1059  
+	   5 Input      1 Bit        Muxes := 769   
+	   4 Input      1 Bit        Muxes := 256   
+	  16 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module system 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+Module DMEM 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1024  
++---Muxes : 
+	   2 Input   8192 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2038  
+	   5 Input      8 Bit        Muxes := 312   
+	   4 Input      8 Bit        Muxes := 828   
+	   5 Input      3 Bit        Muxes := 312   
+	   4 Input      2 Bit        Muxes := 60    
+	   2 Input      1 Bit        Muxes := 1018  
+	   5 Input      1 Bit        Muxes := 768   
+	   4 Input      1 Bit        Muxes := 256   
+Module mux_2_to_1__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module IMEM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	                8 Bit    Registers := 4     
++---Muxes : 
+	  53 Input      8 Bit        Muxes := 4     
+Module register8bit 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module reg_IF_ID 
+Detailed RTL Component Info : 
++---Registers : 
+	               26 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+Module REG 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 34    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module sign_extender 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   6 Input      9 Bit        Muxes := 1     
+Module reg_ID_EXE 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module mux_2_to_1__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module mux_2_to_1__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module alu_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	  19 Input      5 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 3     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 2     
+	   3 Input     33 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 11    
+	   4 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+Module EXE_stage 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
+Module reg_EXE_MEM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+Module reg_MEM_WB 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module mux_4_to_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module mux_2_to_1__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module mux_2_to_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design system has unconnected port SYS_load
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[2]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[1]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[0]
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "alu_result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "high_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "low_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP high_register_out0, operation Mode is: A*B.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: Generating DSP high_register_out0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: Generating DSP high_register_out0, operation Mode is: A*B.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: Generating DSP high_register_out0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+INFO: [Synth 8-4471] merging register 'reg_ID_EXE/alu_src_control_out_reg' into 'reg_ID_EXE/reg_dst_control_out_reg' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:29]
+WARNING: [Synth 8-6014] Unused sequential element reg_IF_ID/shamt_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:24]
+WARNING: [Synth 8-6014] Unused sequential element reg_IF_ID/funct_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:25]
+WARNING: [Synth 8-6014] Unused sequential element reg_ID_EXE/alu_src_control_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:29]
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[14]' (FDC) to 'reg_IF_ID/rd_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[15]' (FDC) to 'reg_IF_ID/rd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[13]' (FDC) to 'reg_IF_ID/rd_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[12]' (FDC) to 'reg_IF_ID/rd_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[11]' (FDC) to 'reg_IF_ID/rd_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reg_EXE_MEM/wb_control_out_reg[2]' (FDC) to 'reg_ID_EXE/wb_control_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/wb_control_out_reg[1]' (FDC) to 'reg_ID_EXE/reg_dst_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/wb_control_out_reg[2]' (FDC) to 'reg_ID_EXE/reg_dst_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_MEM_WB/mem2reg_control_out_reg[1]' (FDC) to 'reg_ID_EXE/reg_dst_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/mem_control_out_reg[4]' (FDC) to 'reg_ID_EXE/reg_dst_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/mem_control_out_reg[3]' (FDC) to 'reg_ID_EXE/reg_dst_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/rd_out_reg[3]' (FDC) to 'reg_ID_EXE/immediate_out_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/rd_out_reg[4]' (FDC) to 'reg_ID_EXE/immediate_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/rd_out_reg[2]' (FDC) to 'reg_ID_EXE/immediate_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/rd_out_reg[1]' (FDC) to 'reg_ID_EXE/immediate_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/rd_out_reg[0]' (FDC) to 'reg_ID_EXE/immediate_out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/wb_control_out_reg[0]' (FDC) to 'reg_ID_EXE/reg_dst_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_EXE_MEM/wb_control_out_reg[1]' (FDC) to 'reg_EXE_MEM/wb_control_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_MEM_WB/mem2reg_control_out_reg[0]' (FDC) to 'reg_MEM_WB/reg_write_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/mem_control_out_reg[0]' (FDC) to 'reg_ID_EXE/reg_dst_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/mem_control_out_reg[1]' (FDC) to 'reg_ID_EXE/reg_dst_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/mem_control_out_reg[2]' (FDC) to 'reg_ID_EXE/reg_dst_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[24]' (FDC) to 'reg_IF_ID/rs_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[25]' (FDC) to 'reg_IF_ID/rs_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[23]' (FDC) to 'reg_IF_ID/rs_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[22]' (FDC) to 'reg_IF_ID/rs_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[21]' (FDC) to 'reg_IF_ID/rs_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[10]' (FDC) to 'reg_IF_ID/immediate_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[9]' (FDC) to 'reg_IF_ID/immediate_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[8]' (FDC) to 'reg_IF_ID/immediate_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[7]' (FDC) to 'reg_IF_ID/immediate_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[6]' (FDC) to 'reg_IF_ID/immediate_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[5]' (FDC) to 'reg_IF_ID/immediate_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[19]' (FDC) to 'reg_IF_ID/rt_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[20]' (FDC) to 'reg_IF_ID/rt_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[18]' (FDC) to 'reg_IF_ID/rt_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[17]' (FDC) to 'reg_IF_ID/rt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[16]' (FDC) to 'reg_IF_ID/rt_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_EXE_MEM/mem_write_control_out_reg' (FDC) to 'reg_EXE_MEM/branch_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_EXE_MEM/mem_read_control_out_reg' (FDC) to 'reg_EXE_MEM/branch_control_out_reg'
+INFO: [Synth 8-3886] merging instance 'reg_EXE_MEM/branch_control_out_reg' (FDC) to 'reg_EXE_MEM/wb_control_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[29]' (FDC) to 'reg_ID_EXE/immediate_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[31]' (FDC) to 'reg_ID_EXE/immediate_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[27]' (FDC) to 'reg_ID_EXE/immediate_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[28]' (FDC) to 'reg_ID_EXE/immediate_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[30]' (FDC) to 'reg_ID_EXE/immediate_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[15]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[16]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[17]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[18]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[19]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[20]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[21]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[22]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[23]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[24]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[25]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_ID_EXE/reg_dst_control_out_reg )
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[31][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[30][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[30][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[29][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[29][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[28][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[28][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[27][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[27][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[26][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[26][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[25][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[25][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[24][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[24][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[23][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[23][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[22][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[22][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[21][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[21][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[20][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[20][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[19][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[19][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[18][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[18][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[17][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[17][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[16][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[16][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[15][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[15][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[14][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[14][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[13][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[13][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[12][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[12][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[11][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[11][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[10][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[10][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[9][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[9][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[8][30]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][30] )
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[7][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[6][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[6][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[5][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[5][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[4][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[4][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[3][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[3][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[2][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[2][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[1][30]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[1][30]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[0][30]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][30] )
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[31][31]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[30][31]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[30][31]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[29][31]'
+INFO: [Synth 8-3886] merging instance 'ID_stage/regFile/reg_file_reg[29][31]' (FDE_1) to 'ID_stage/regFile/reg_file_reg[28][31]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[8][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_stage/regFile/reg_file_reg[0][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\reg_EXE_MEM/write_data_reg[26] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:49 ; elapsed = 00:05:20 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |DMEM__GB0     |           1|     34210|
+|2     |DMEM__GB1     |           1|      8960|
+|3     |DMEM__GB2     |           1|     10137|
+|4     |DMEM__GB3     |           1|     20798|
+|5     |DMEM__GB4     |           1|     21247|
+|6     |DMEM__GB5     |           1|     10273|
+|7     |DMEM__GB6     |           1|     13675|
+|8     |DMEM__GB7     |           1|      7561|
+|9     |DMEM__GB8     |           1|     11479|
+|10    |DMEM__GB9     |           1|      2741|
+|11    |system__GC0   |           1|       586|
++------+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:50 ; elapsed = 00:05:21 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |system__GC0   |           1|       528|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3332] Sequential element (ID_stage/regFile/reg_file_reg[7][4]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (ID_stage/regFile/reg_file_reg[2][0]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (ID_stage/regFile/reg_file_reg[1][1]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (ID_stage/regFile/reg_file_reg[3][2]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (ID_stage/regFile/reg_file_reg[1][3]) is unused and will be removed from module system.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:50 ; elapsed = 00:05:21 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:50 ; elapsed = 00:05:22 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:50 ; elapsed = 00:05:22 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:50 ; elapsed = 00:05:22 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:50 ; elapsed = 00:05:22 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:50 ; elapsed = 00:05:22 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:50 ; elapsed = 00:05:22 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     2|
+|3     |LUT1   |     1|
+|4     |LUT2   |     5|
+|5     |LUT3   |     4|
+|6     |LUT4   |     5|
+|7     |LUT5   |    18|
+|8     |LUT6   |    37|
+|9     |FDCE   |    86|
+|10    |FDRE   |     6|
+|11    |IBUF   |     8|
+|12    |OBUF   |    27|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------+-------------+------+
+|      |Instance     |Module       |Cells |
++------+-------------+-------------+------+
+|1     |top          |             |   200|
+|2     |  EXE_stage  |EXE_stage    |     2|
+|3     |    ALU      |ALU          |     2|
+|4     |  ID_stage   |ID_stage     |    11|
+|5     |    regFile  |REG          |    11|
+|6     |  IF_stage   |IF_stage     |    76|
+|7     |    imem     |IMEM         |    32|
+|8     |    pc_reg   |register8bit |    44|
+|9     |  reg_ID_EXE |reg_ID_EXE   |    23|
+|10    |  reg_IF_ID  |reg_IF_ID    |    52|
++------+-------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:50 ; elapsed = 00:05:22 . Memory (MB): peak = 974.398 ; gain = 736.512
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:50 ; elapsed = 00:05:23 . Memory (MB): peak = 974.398 ; gain = 736.512
+Synthesis Optimization Complete : Time (s): cpu = 00:04:50 ; elapsed = 00:05:23 . Memory (MB): peak = 974.398 ; gain = 736.512
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+280 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:54 ; elapsed = 00:05:29 . Memory (MB): peak = 974.398 ; gain = 749.797
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1/system.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_utilization_synth.rpt -pb system_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 974.398 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 19 15:17:53 2023...
