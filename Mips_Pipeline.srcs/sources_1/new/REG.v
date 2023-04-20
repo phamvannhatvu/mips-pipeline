@@ -13,20 +13,32 @@ module REG (
 	reg 	[31:0]	reg_file [0:31];
 	
 	initial begin
-	   reg_file[8] = 4; //t0
-	   reg_file[9] = 5; //t1
-	   reg_file[11] = 3; //t3
-	   reg_file[10] = 4; //t2
-       reg_file[13] = 24; //t5
-       reg_file[15] = 9; //t7
-       reg_file[18] = 5; //s2
-       reg_file[19] = 4; //s3
-       reg_file[16] = 2; //s0
-       reg_file[21] = 2; //s5
-       reg_file[17] = 9; //s1
-       reg_file[22] = 3; //s6
-       reg_file[0] = 0; //zero
-       reg_file[25] = 12; //t9
+	   //zero
+	   reg_file[0] = 0;
+	   
+	   //t0-t7
+	   reg_file[8] = 10;
+       reg_file[9] = 11;
+       reg_file[10] = 12;
+       reg_file[11] = 13;
+       reg_file[12] = 14;
+       reg_file[13] = 15;
+	   reg_file[14] = 16;
+       reg_file[15] = 17;
+       
+       //s0-s7
+ 	   reg_file[16] = 20;
+       reg_file[17] = 21;
+       reg_file[18] = 22;
+       reg_file[19] = 23;
+       reg_file[20] = 24;
+       reg_file[21] = 25;
+       reg_file[22] = 26;
+       reg_file[23] = 27;
+       
+       //t8-t9 
+       reg_file[24] = 58;
+       reg_file[25] = 59; 
 	end
 	
 	always @(posedge clk or posedge reset or negedge clk) begin

@@ -45,57 +45,52 @@ module system(
 	wire [5:0]	id_opcode;
 	wire [4:0]	id_shamt;
 	wire [5:0]	id_funct;
-	wire [7:0]	id_pc;
 	wire [15:0]	id_immediate;
 	wire [26:0] id_jump_address;
+	wire [7:0]	id_pc;
 
-	wire [14:0] id_control;
+	wire [13:0] id_control;
 	wire [31:0] id_extended_immediate;
 	wire [31:0] id_value_rs;
 	wire [31:0] id_value_rt;
+	wire [4:0] 	id_write_register;
 
 	//EXE_stage
-	wire 		exe_alu_src;
-	wire [2:0]	exe_alu_op;
-	wire 		exe_reg_dst;
-	
-	wire [4:0]	exe_mem_control;
-	wire [2:0]	exe_wb_control;
-
-	wire [7:0]	exe_pc;
 	wire [31:0]	exe_immediate;
 	wire [31:0]	exe_value_rs;
 	wire [31:0]	exe_value_rt;
-	wire [4:0]	exe_rt;
-	wire [4:0]  exe_rd;
+
+	wire 		exe_alu_src;
+	wire [2:0]	exe_alu_op;
+	wire 		exe_excep_control_in;
+	wire [3:0]	exe_mem_control;
+	wire [1:0]	exe_wb_control_in;
+	
 
 	wire [4:0] 	exe_write_register;
 	wire [31:0]	exe_alu_result;
 	wire [7:0] 	exe_alu_status;
-	wire [7:0] 	exe_branch_address;
+	wire		exe_excep_control_out;
 
 	//MEM_stage
-	wire [2:0] 	mem_wb_control;
-	wire 		mem_branch_control;
-	wire 		mem_read_lo_control;
-	wire 		mem_read_hi_control;
-	wire		mem_alu_zero;
-	wire 		mem_mem_read;
-	wire 		mem_mem_write;
+	wire [1:0] 	mem_wb_control;
+	wire [1:0]	mem_mem_read;
+	wire [1:0]	mem_mem_write;
+	wire 		mem_excep_control;
 
 	wire [31:0] mem_alu_result;
 	wire [4:0]	mem_write_register;
-	wire [7:0] 	mem_branch_address;
 	wire [31:0] mem_write_data;
 	wire [31:0] mem_data_read;
 
 	//WB_stage
 	wire 	    wb_reg_write;
-	wire [1:0]	wb_mem2reg;
+	wire 		wb_mem2reg;
 	wire [31:0]	wb_data_write;
 	wire [31:0] wb_alu_result;
 	wire [31:0] wb_data_from_dmem;
 	wire [4:0]	wb_write_register;
+	wire		wb_excep_control;
 
 	wire [31:0] wb_data_read;
 
@@ -155,28 +150,28 @@ module system(
 
 		.data_write(wb_data_write),
 		.reg_write(wb_reg_write),
-		.address_write(wb_write_register),
+		.address_write_in(wb_write_register),
 		
+		.opcode(id_opcode),
 		.address_rs(id_rs),
 		.address_rt(id_rt),
-		.opcode(id_opcode),
 		.immediate(id_immediate),
+		.pc_in(id_pc),
 
 		//output
 		.extended_immediate(id_extended_immediate),
 		.value_rs(id_value_rs),
 		.value_rt(id_value_rt),
-		.control_signal(id_control)
+		.control_signal(id_control),
+		.address_write_out(id_write_register)
 	);
 
 	reg_ID_EXE reg_ID_EXE(
 		//input
 		.rs_value_in(id_value_rs),
 		.rt_value_in(id_value_rt),
-		.pc_in(id_pc),
 		.immediate_in(id_extended_immediate),
-		.rt_in(id_rt),
-		.rd_in(id_rd),
+		.write_register_in(id_write_register),
 
 		.control_in(id_control),
 		
@@ -186,37 +181,29 @@ module system(
 		//output
 		.alu_src_control_out(exe_alu_src),
 		.alu_op_control_out(exe_alu_op),
-		.reg_dst_control_out(exe_reg_dst),
-
 		.mem_control_out(exe_mem_control),
 		.wb_control_out(exe_wb_control),
-
+		.excep_control_out(exe_excep_control_in),
 		.rs_value_out(exe_value_rs),
 		.rt_value_out(exe_value_rt),
 		.immediate_out(exe_immediate),
-		.pc_out(exe_pc),
-		.rt_out(exe_rt),
-		.rd_out(exe_rd)
+		.write_register_out(exe_write_register)
 	);
 
 	//EXE_stage
 	EXE_stage EXE_stage(
 		//input
 		.immediate(exe_immediate),
-		.pc(exe_pc),
 		.rs_value(exe_value_rs),
+		.rt_value(exe_value_rt),
 		.alu_src(exe_alu_src),
 		.alu_op(exe_alu_op),
-		.reg_dst(exe_reg_dst),
-		.rt_value(exe_value_rt),
-		.rt(exe_rt),
-		.rd(exe_rd),
+		.excep_control_in(exe_excep_control_in),
 
 		//output
-		.branch_address(exe_branch_address),
 		.alu_result(exe_alu_result),
 		.alu_status(exe_alu_status),
-		.write_register(exe_write_register)
+		.excep_control_out(exe_excep_control_out)
 	);
 
 	reg_EXE_MEM reg_EXE_MEM(
@@ -226,30 +213,25 @@ module system(
 
 		.write_register_in(exe_write_register),
 		.alu_result_in(exe_alu_result),
-		.alu_status(exe_alu_status),
-		.branch_address_in(exe_branch_address),
 		.rt_value_in(exe_value_rt),
+		.excep_control_in(exe_excep_control_out),
 		.clk(clk),
 		.reset(SYS_reset),
 
 		//output
-		.branch_control_out(mem_branch_control),
 		.mem_read_control_out(mem_mem_read),
 		.mem_write_control_out(mem_mem_write),
 		.wb_control_out(mem_wb_control),
-		.alu_zero(mem_alu_zero),
 
-		.branch_address_out(mem_branch_address),
 		.write_data(mem_write_data),
 		.write_register_out(mem_write_register),
-		.alu_result_out(mem_alu_result)
+		.alu_result_out(mem_alu_result),
+		.excep_control_out(mem_excep_control)
 	);
 
 	//MEM_stage
 	MEM_stage MEM_stage(
 		//input
-		.branch_control(mem_branch_control),
-		.alu_zero(mem_alu_zero),
 		.mem_read(mem_mem_read),
 		.mem_write(mem_mem_write),
 		.mem_address(mem_alu_result),
@@ -259,8 +241,7 @@ module system(
 		.reset(SYS_reset),
 
 		//output
-		.data_read_out(mem_data_read),
-		.branch_pc_sel(branch_pc_sel)
+		.data_read_out(mem_data_read)
 	);
 
 	reg_MEM_WB reg_MEM_WB(
@@ -269,6 +250,8 @@ module system(
 		.data_from_dmem_in(mem_data_read),
 		.alu_result_in(mem_alu_result),
 		.write_register_in(mem_write_register),
+		.excep_control_in(mem_excep_control),
+
 		.clk(clk),
 		.reset(SYS_reset),
 
@@ -277,7 +260,8 @@ module system(
 		.mem2reg_control_out(wb_mem2reg),
 		.data_from_dmem_out(wb_data_from_dmem),
 		.alu_result_out(wb_alu_result),
-		.write_register_out(wb_write_register)
+		.write_register_out(wb_write_register),
+		.excep_control_out(wb_excep_control)
 	);
 
 	//WB_stage

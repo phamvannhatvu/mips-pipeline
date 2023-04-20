@@ -1,21 +1,15 @@
 module MEM_stage (
-    input           branch_control,
-    input           alu_zero,
-    input           mem_read,
-    input           mem_write,
+    input       [1:0]   mem_read,
+    input       [1:0]   mem_write,
+    input       [31:0]  mem_address,
+    input       [31:0]  write_data,
+    input               clk,
+    input               reset,
 
-    input [31:0]    mem_address,
-    input [31:0]    write_data,
-
-    input           clk,
-    input           reset,
-
-    output [31:0]   data_read_out,
-    output          branch_pc_sel
+    output      [31:0]  data_read_out
 );
     
-    DMEM data_mem(
-        //input
+    DMEM data_mem (
         .address(mem_address),
         .data_in(write_data),
         .mem_write(mem_write),
@@ -23,10 +17,7 @@ module MEM_stage (
         .clk(clk),
         .reset(reset),
 
-        //output
         .data_out(data_read_out)
     );
-
-    assign branch_pc_sel = branch_control & alu_zero;
 
 endmodule
