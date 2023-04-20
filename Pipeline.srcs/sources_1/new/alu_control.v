@@ -4,15 +4,38 @@ module alu_control (
 
     output  reg [4:0]   control_out,
     output  reg         exception_out,
-    output  reg         mfhi_enable,
-    output  reg         mflo_enable
+    output  reg         hilo_write_control,
+    output  reg [1:0]   hilo_read_control
 );
 
     always @(*) begin
         control_out = 5'b0;
         exception_out = 1'b0;
-        mfhi_enable = 1'b0;
-        mflo_enable = 1'b0;
+
+        // case (alu_op)
+        //     3'b000: begin               // NOP
+        //         control_out             = 5'b00000;
+        //     end
+        //     3'b001: begin               // SHIFT
+        //         case (funct)
+        //             6'b000000: begin    // SLL
+        //                 control_out     = 5'b00001;
+        //             end
+        //             6'b000010: begin    // SRL
+        //                 control_out     = 5'b01001;
+        //             end
+        //             6'b000011: begin    // SRA
+        //                 control_out     = 5'b11001;
+        //             end
+        //             default: begin      // No instruction
+        //                 exception_out   = 1'b1;
+        //             end
+        //         endcase
+        //     end
+        //     3'b010: begin   // MUL DIV
+        //     end
+        //     default: 
+        // endcase
 
         if (alu_op == 3'b111) begin
             // R-TYPE

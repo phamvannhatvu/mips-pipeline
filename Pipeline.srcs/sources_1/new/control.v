@@ -3,9 +3,9 @@ module control (
 	input				nop,
 	input				reset,
 
-	output	reg	[14:0]	control_signal
+	output	reg	[13:0]	control_signal
 );
-
+	// TOi ve vua khoc vua sua
 	always @(*) begin
 		if (reset || nop) begin
 			control_signal = 11'b0;

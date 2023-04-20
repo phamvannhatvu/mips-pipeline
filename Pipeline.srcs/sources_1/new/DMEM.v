@@ -1,13 +1,15 @@
 module DMEM (
 	input		[31:0]	address,
 	input		[31:0]	data_in,
-	input				mem_write,
-	input				mem_read,
+	input		[1:0]	mem_write,
+	input		[1:0]	mem_read,
 	input				clk,
 	input				reset,
 
 	output	reg [31:0]	data_out
 );
+
+	// Load byte, load haft, load word and store cham ba cham
 
 	// Same as IMEM: 2^8 words
 	reg [7:0] memory [0:1023];

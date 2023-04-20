@@ -7,8 +7,7 @@ module ALU (
 	output	reg	[31:0]	alu_result,
 	output	reg	[7:0]	alu_status,
 	output	reg	[31:0]	high_register_out,
-	output	reg	[31:0]	low_register_out,
-	output	reg			reg_write_control_out
+	output	reg	[31:0]	low_register_out
 );
 
 	reg         carry_in;

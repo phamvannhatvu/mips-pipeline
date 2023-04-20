@@ -1,22 +1,24 @@
 module ID_stage (
     input               clk,
     input               reset,
+    input       [5:0]   opcode,
     input       [4:0]   address_rs,
     input       [4:0]   address_rt,
-    input       [5:0]   opcode,
+    input       [15:0]  immediate,
+
     input       [31:0]  data_write,
     input               reg_write,
     input       [4:0]   address_write,
-    input       [15:0]  immediate,
 
-    output      [15:0]  control_signal,
+    output      [13:0]  control_signal,
     output      [31:0]  value_rs,
     output      [31:0]  value_rt,
     output      [31:0]  extended_immediate
 );
+    // Them mux regDes, brach haha, so sanh bang
 
     wire nop;   // Determine nop instruction
-    assign nop = (address_rs == 0 && address_rt == 0 && immediate == 0);
+    assign nop = ({opcode, address_rs, address_rt, immediate} == 32'b0);
 
     REG regFile (
         .address_rs(address_rs),
@@ -39,8 +41,8 @@ module ID_stage (
 
     control control (
         .opcode(opcode),
-        .reset(reset),
         .nop(nop),
+        .reset(reset),
         
         .control_signal(control_signal)
     );
