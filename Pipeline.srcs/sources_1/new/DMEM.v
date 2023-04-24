@@ -12,13 +12,17 @@ module DMEM (
 	// Load byte, load haft, load word and store cham ba cham
 
 	// Same as IMEM: 2^8 words
-	reg [7:0] memory [0:1023];
+	reg [7:0]	memory [0:1023];
     
     initial begin
-        memory[16] = 8'h6a;
-        memory[17] = 8'h44;
-        memory[18] = 8'h21;
-        memory[19] = 8'hb0;
+        memory[0] = 8'hca;
+        memory[1] = 8'hca;
+        memory[2] = 8'hca;
+        memory[3] = 8'hca;
+        memory[4] = 8'hca;
+        memory[5] = 8'hca;
+        memory[6] = 8'hca;
+        memory[7] = 8'hca;
     end
     
 	// Write with clock

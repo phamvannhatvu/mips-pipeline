@@ -27,6 +27,7 @@ module reg_EXE_MEM (
 			write_data				<= 0;
 			write_register_out		<= 0;
 			alu_result_out			<= 0;
+			excep_control_out		<= 0;
 		end else begin
 			mem_read_control_out	<= mem_control_in[3:2];
 			mem_write_control_out	<= mem_control_in[1:0];
@@ -34,6 +35,7 @@ module reg_EXE_MEM (
 			write_data				<= rt_value_in;
 			write_register_out		<= write_register_in;
 			alu_result_out			<= alu_result_in;
+			excep_control_out		<= excep_control_in;
 		end
 	end
 	

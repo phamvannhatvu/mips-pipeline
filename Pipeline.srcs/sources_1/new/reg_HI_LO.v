@@ -1,12 +1,12 @@
 module reg_HI_LO (
-    input       [31:0]  high_register_in;
-    input       [31:0]  low_register_in;
-    input               write_control;
-    input       [1:0]   read_control;
-    input               clk;
-    input               reset;
+    input       [31:0]  high_register_in,
+    input       [31:0]  low_register_in,
+    input               write_control,
+    input       [1:0]   read_control,
+    input               clk,
+    input               reset,
 
-    output      [31:0]  data_out;
+    output  reg [31:0]  data_out
 );
 
     reg [31:0]  reg_hilo [0:1];

@@ -10,14 +10,15 @@ module IF_stage (
     IMEM imem (
         .reset(reset),
         .clk(clk),
-        .pc(pc_out),
+        .pc(pc_in),
         
         .instruction_out(instruction_out)
     );
-
-    register8bit pc_reg(
+    
+    pc_register #(8) pc_reg (
         .data_in(pc_in),
         .clk(clk),
+        .reset(reset),
 
         .data_out(pc_out)
     );

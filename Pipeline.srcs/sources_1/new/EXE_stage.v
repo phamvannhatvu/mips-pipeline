@@ -4,20 +4,13 @@ module EXE_stage (
     input       [31:0]  rt_value,
     input               alu_src,
     input       [2:0]   alu_op,
-    input       [4:0]   write_register_in,
     input   			excep_control_in,
 
     output      [7:0]   alu_status,
     output      [31:0]  alu_result,
-    output      [4:0]   write_register_out,
     output  reg			excep_control_out
 );
-    // Xoa may cai gaga di, chuyen qua ID
     // Exception chuan bi no cai bum
-
-    // wire [31:0] shifted_immediate = immediate << 2;
-    // wire [7:0]  next_pc = pc + 4;
-    // assign branch_address = shifted_immediate + next_pc;
 
     wire [31:0] second_operand;
     mux_2_to_1 #(32) operand_mux (
@@ -27,15 +20,6 @@ module EXE_stage (
 
         .out(second_operand)
     );
-
-    // Vua sua vua chuyen qua ID
-    // mux_2_to_1 #(5) write_reg_mux (
-    //     .in0(rt),
-    //     .in1(rd),
-    //     .sel(reg_dst),
-        
-    //     .out(write_register)
-    // );
 
     wire [4:0]  alu_control_out;
     wire        exception_out;
