@@ -4,6 +4,7 @@ module EXE_stage (
     input       [31:0]  rt_value,
     input               alu_src,
     input       [2:0]   alu_op,
+    input       [3:0]   mem_control,
     input   			excep_control_in,
     input               clk,
     input               reset,
@@ -72,6 +73,14 @@ module EXE_stage (
         .sel(hilo_read_enable),
 
         .out(alu_result)
+    );
+
+    align_check align_check (
+        .mem_control_in(mem_control),
+        .alu_op_in(alu_op),
+        .alu_result_in(alu_result_out),
+
+        .align_exception_out(alu_status[3])
     );
 
     assign reg_write_out = ~ hilo_write_control;

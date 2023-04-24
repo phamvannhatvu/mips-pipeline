@@ -152,6 +152,7 @@ module system (
 		.rt_value(exe_value_rt),
 		.alu_src(exe_alu_src),
 		.alu_op(exe_alu_op),
+		.mem_control(exe_mem_control),
 		.excep_control_in(exe_excep_control_in),
 		.clk(clk),
 		.reset(SYS_reset),

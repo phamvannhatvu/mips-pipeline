@@ -26,7 +26,7 @@ module REG (
 	   reg_file[15] = 17;	// t7
 
 	   reg_file[16] = 50;	// s0
-	   reg_file[17] = 50;	// s1
+	   reg_file[17] = 55;	// s1
 	end
 	
 	always @(posedge clk or negedge clk or posedge reset) begin

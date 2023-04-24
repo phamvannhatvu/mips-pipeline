@@ -29,7 +29,7 @@ module reg_EXE_MEM (
 			alu_result_out			<= 0;
 			excep_control_out		<= 0;
 		end else begin
-			if (reg_write_control_in == 1'b1) begin
+			if (reg_write_control_in == 1'b0) begin
 				wb_control_out[1]	<= wb_control_in[1];
 				wb_control_out[0]	<= 0;
 			end else begin
