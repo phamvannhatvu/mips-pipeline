@@ -48,7 +48,7 @@ module ALU (
 			3'b010: begin
 				if (alu_control[4:3] == 2'b00) begin
 					{high_register_out, low_register_out} = alu_operand_0_r * alu_operand_1_r;
-				end else if (alu_control[4:3] == 2'b01) begin
+				end else if (alu_control[4:3] == 2'b11) begin
 					if (alu_operand_1 == 32'b0) begin
 						alu_status[2] = 1'b1;
 					end else begin

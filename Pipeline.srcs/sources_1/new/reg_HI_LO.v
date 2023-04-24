@@ -13,19 +13,20 @@ module reg_HI_LO (
 
     always @(posedge clk or negedge clk or posedge reset) begin
         if (reset) begin
-            data_out <= 0;
+            data_out        <= 0;
         end else if (clk) begin
-            if (write_control) begin
+            if (write_control == 1'b1) begin
                 reg_hilo[0] <= low_register_in;
                 reg_hilo[1] <= high_register_in;
+                data_out    <= 32'b0;
             end
         end else begin
-            if (read_control[0]) begin
-                data_out <= reg_hilo[0];
-            end else if (read_control[1]) begin
-                data_out <= reg_hilo[1];
+            if (read_control[0] == 1'b1) begin
+                data_out    <= reg_hilo[0];
+            end else if (read_control[1] == 1'b1) begin
+                data_out    <= reg_hilo[1];
             end else begin
-                data_out <= 32'b0;
+                data_out    <= 32'b0;
             end
         end
     end

@@ -144,6 +144,7 @@ module system (
 	wire [31:0]	exe_alu_result;
 	wire [7:0] 	exe_alu_status;
 	wire		exe_excep_control_out;
+	wire		exe_reg_write_control;
 
 	EXE_stage EXE_stage (
 		.immediate(exe_immediate),
@@ -152,10 +153,13 @@ module system (
 		.alu_src(exe_alu_src),
 		.alu_op(exe_alu_op),
 		.excep_control_in(exe_excep_control_in),
+		.clk(clk),
+		.reset(SYS_reset),
 
 		.alu_result(exe_alu_result),
 		.alu_status(exe_alu_status),
-		.excep_control_out(exe_excep_control_out)
+		.excep_control_out(exe_excep_control_out),
+		.reg_write_out(exe_reg_write_control)
 	);
 
 	// reg_EXE_MEM
@@ -174,6 +178,7 @@ module system (
 		.alu_result_in(exe_alu_result),
 		.rt_value_in(exe_value_rt),
 		.excep_control_in(exe_excep_control_out),
+		.reg_write_control_in(exe_reg_write_control),
 		.clk(clk),
 		.reset(SYS_reset),
 
@@ -260,28 +265,6 @@ module system (
 
 		.out(pc_next)
 	);
-
-	// wire		pc_branch_sel = id_control[12];
-	// wire [7:0]	pc_branch_mux_out;
-	// mux_2_to_1 #(8) branch_pc_mux (
-	// 	.in0(if_pc),
-	// 	.in1(id_branch_address),
-	// 	.sel(pc_branch_sel),
-
-	// 	.out(pc_branch_mux_out)
-	// );
-
-	// wire		pc_jump_sel = id_control[13];
-	// wire [7:0]	pc_jump_address;
-	// wire [7:0]	shifted_jump_immediate = id_jump_address << 2;
-	// assign pc_jump_address = id_pc + shifted_jump_immediate;
-	// mux_2_to_1 #(8) jump_pc_mux (
-	// 	.in0(pc_branch_mux_out),
-	// 	.in1(pc_jump_address),
-	// 	.sel(pc_jump_sel),
-
-	// 	.out(pc_calulated)
-	// );
 
 	assign SYS_leds = exe_alu_result;
 

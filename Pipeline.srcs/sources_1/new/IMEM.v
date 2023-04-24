@@ -69,6 +69,50 @@ module IMEM (
 	// 	memory[14] = 8'h50;
 	// 	memory[15] = 8'h25;
 	// end
+
+	// initial begin
+	// 	memory[0] = 8'h01;	// mult t1 t2
+	// 	memory[1] = 8'h2a;
+	// 	memory[2] = 8'h00;
+	// 	memory[3] = 8'h18;
+
+	// 	memory[4] = 8'h00;	// mfhi t3
+	// 	memory[5] = 8'h00;
+	// 	memory[6] = 8'h58;
+	// 	memory[7] = 8'h10;
+
+	// 	memory[8] = 8'h01;	// div t7 t4
+	// 	memory[9] = 8'hec;
+	// 	memory[10] = 8'h00;
+	// 	memory[11] = 8'h1a;
+
+	// 	memory[12] = 8'h00;	// mflo t4
+	// 	memory[13] = 8'h00;
+	// 	memory[14] = 8'h60;
+	// 	memory[15] = 8'h12;
+	// end
+
+	// initial begin
+	// 	memory[0] = 8'h01;	// mult t1 t2
+	// 	memory[1] = 8'hec;
+	// 	memory[2] = 8'h00;
+	// 	memory[3] = 8'h1a;
+
+	// 	memory[4] = 8'h00;	// mfhi t3
+	// 	memory[5] = 8'h00;
+	// 	memory[6] = 8'h58;
+	// 	memory[7] = 8'h10;
+
+	// 	memory[8] = 8'h01;	// div t7 t4
+	// 	memory[9] = 8'h2a;
+	// 	memory[10] = 8'h00;
+	// 	memory[11] = 8'h18;
+
+	// 	memory[12] = 8'h00;	// mflo t4
+	// 	memory[13] = 8'h00;
+	// 	memory[14] = 8'h60;
+	// 	memory[15] = 8'h12;
+	// end
 	
 	always @(negedge clk or posedge reset) begin
 		if (reset) begin

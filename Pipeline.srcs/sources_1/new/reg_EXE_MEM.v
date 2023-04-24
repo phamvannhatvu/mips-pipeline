@@ -4,6 +4,7 @@ module reg_EXE_MEM (
 	input		[4:0]	write_register_in,
 	input		[31:0]	alu_result_in,
 	input		[31:0]	rt_value_in,
+	input				reg_write_control_in,
 	input   			excep_control_in,
 	input				clk,
 	input				reset,
@@ -16,7 +17,6 @@ module reg_EXE_MEM (
 	output	reg	[31:0]	alu_result_out,
     output  reg			excep_control_out
 );
-
 	// Exception
 
 	always @(posedge clk or posedge reset) begin
@@ -29,9 +29,14 @@ module reg_EXE_MEM (
 			alu_result_out			<= 0;
 			excep_control_out		<= 0;
 		end else begin
+			if (reg_write_control_in == 1'b1) begin
+				wb_control_out[1]	<= wb_control_in[1];
+				wb_control_out[0]	<= 0;
+			end else begin
+				wb_control_out		<= wb_control_in;
+			end
 			mem_read_control_out	<= mem_control_in[3:2];
 			mem_write_control_out	<= mem_control_in[1:0];
-			wb_control_out			<= wb_control_in;
 			write_data				<= rt_value_in;
 			write_register_out		<= write_register_in;
 			alu_result_out			<= alu_result_in;

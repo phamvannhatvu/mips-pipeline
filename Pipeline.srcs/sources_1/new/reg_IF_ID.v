@@ -1,4 +1,4 @@
-module reg_IF_ID(
+module reg_IF_ID (
 	input		[7:0]	pc_in,
 	input		[31:0]	instruction,
 	input				clk,

@@ -5,9 +5,12 @@ module EXE_stage (
     input               alu_src,
     input       [2:0]   alu_op,
     input   			excep_control_in,
+    input               clk,
+    input               reset,
 
     output      [7:0]   alu_status,
     output      [31:0]  alu_result,
+    output              reg_write_out,
     output  reg			excep_control_out
 );
     // Exception chuan bi no cai bum
@@ -70,5 +73,7 @@ module EXE_stage (
 
         .out(alu_result)
     );
+
+    assign reg_write_out = ~ hilo_write_control;
     
 endmodule
