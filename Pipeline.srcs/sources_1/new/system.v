@@ -62,6 +62,7 @@ module system (
 	wire [7:0]	id_branch_address;
 	wire		id_comparator;
 	wire [7:0]	id_calculated_pc;
+	wire		id_regdst_control;
 
 	wire 	    wb_reg_write;
 	wire [4:0]	wb_write_register;
@@ -90,7 +91,8 @@ module system (
 		.control_signal(id_control),
 		.address_write_out(id_write_register),
 		.comparator_out(id_comparator),
-		.pc_calculated(id_calculated_pc)
+		.pc_calculated(id_calculated_pc),
+		.regdst_control_out(id_regdst_control)
 	);
 
 	// reg_ID_EXE
@@ -241,7 +243,7 @@ module system (
 		.pc_in(exe_pc),
 		.calculated_pc_in(exe_pc_calculated),
 		.address_write(exe_write_register),
-		.next_regdst_control_in(id_control[3]),
+		.next_regdst_control_in(id_regdst_control),
 		.next_address_rs(id_rs),
 		.next_address_rt(id_rt),
 

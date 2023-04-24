@@ -21,7 +21,9 @@ module ID_stage (
     output      [4:0]   address_write_out,
 
     output              comparator_out,
-    output      [7:0]   pc_calculated
+    output      [7:0]   pc_calculated,
+
+    output              regdst_control_out
 );
 
     wire nop;   // Determine nop instruction
@@ -53,6 +55,8 @@ module ID_stage (
         
         .control_signal(control_out)
     );
+
+    assign regdst_control_out = control_out[3];
 
     mux_2_to_1 #(14) control_signal_mux (
         .in0(control_out),
