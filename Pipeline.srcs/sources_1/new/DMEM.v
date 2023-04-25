@@ -9,8 +9,6 @@ module DMEM (
 	output	reg [31:0]	data_out
 );
 
-	// Load byte, load haft, load word and store cham ba cham
-
 	// Same as IMEM: 2^8 words
 	reg [7:0]	memory [0:1023];
     
@@ -41,7 +39,7 @@ module DMEM (
     end
     
     // Read with clock
-	always @(negedge clk) begin
+	always @(negedge clk or posedge reset) begin
 	    if (reset) begin
 			data_out		= 32'b0;
 	    end else if (mem_read) begin

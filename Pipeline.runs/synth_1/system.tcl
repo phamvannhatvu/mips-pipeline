@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache {C:/Users/Nhat Khai/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-14628-LAPTOP-TQL8U39E/incrSyn}
+set_param synth.incrementalSynthesisCache {C:/Users/Nhat Khai/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-10224-LAPTOP-TQL8U39E/incrSyn}
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg400-1
@@ -42,16 +42,18 @@ read_verilog -library xil_defaultlib {
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/REG.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/WB_stage.v
+  C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/align_check.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/alu_control.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/control.v
+  C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/hazard_detection.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v
-  C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_4_to_1.v
+  C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_register.v
+  C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_update.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v
+  C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v
-  C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/register8bit.v
-  C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/shift_left_two.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v
   C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v
 }

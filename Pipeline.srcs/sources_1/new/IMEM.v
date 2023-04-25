@@ -50,14 +50,14 @@ module IMEM (
 		memory[2] = 8'h00;
 		memory[3] = 8'h04;
 
-		memory[4] = 8'h01;	// add t0 t1 s2
-		memory[5] = 8'h32;
-		memory[6] = 8'h40;
-		memory[7] = 8'h20;
-		// memory[4] = 8'h02;	// add t0 s2 t1
-		// memory[5] = 8'h49;
+		// memory[4] = 8'h01;	// add t0 t1 s2
+		// memory[5] = 8'h32;
 		// memory[6] = 8'h40;
 		// memory[7] = 8'h20;
+		memory[4] = 8'h02;	// add t0 s2 t1
+		memory[5] = 8'h49;
+		memory[6] = 8'h40;
+		memory[7] = 8'h20;
 
 		memory[8] = 8'h01;	// sub t1 t2 t3
 		memory[9] = 8'h4b;

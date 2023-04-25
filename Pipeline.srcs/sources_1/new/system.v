@@ -60,7 +60,6 @@ module system (
 	wire [13:0] id_control;
 	wire [4:0] 	id_write_register;
 	wire [7:0]	id_branch_address;
-	wire		id_comparator;
 	wire [7:0]	id_calculated_pc;
 	wire		id_regdst_control;
 
@@ -90,7 +89,6 @@ module system (
 		.value_rt(id_value_rt),
 		.control_signal(id_control),
 		.address_write_out(id_write_register),
-		.comparator_out(id_comparator),
 		.pc_calculated(id_calculated_pc),
 		.regdst_control_out(id_regdst_control)
 	);
@@ -105,21 +103,21 @@ module system (
 	wire [31:0]	exe_value_rt;
 	wire [31:0]	exe_immediate;
 	wire [4:0] 	exe_write_register;
-
 	wire		exe_jump_control;
 	wire		exe_branch_control;
-	wire		exe_comparator;
-	wire [7:0]	exe_pc;
 	wire [7:0]	exe_pc_calculated;
+
+	wire [4:0]	exe_rs;
+	wire [4:0]	exe_rt;
 
 	reg_ID_EXE reg_ID_EXE (
 		.rs_value_in(id_value_rs),
 		.rt_value_in(id_value_rt),
 		.immediate_in(id_extended_immediate),
 		.write_register_in(id_write_register),
+		.rs_address_in(id_rs),
+		.rt_address_in(id_rt),
 		.control_in(id_control),
-		.comparator_in(id_comparator),
-		.pc_in(id_pc),
 		.pc_calculated_in(id_calculated_pc),
 		.clk(clk),
 		.reset(SYS_reset),
@@ -133,10 +131,10 @@ module system (
 		.rt_value_out(exe_value_rt),
 		.immediate_out(exe_immediate),
 		.write_register_out(exe_write_register),
+		.rs_address_out(exe_rs),
+		.rt_address_out(exe_rt),
 		.jump_control_out(exe_jump_control),
 		.branch_control_out(exe_branch_control),
-		.comparator_out(exe_comparator),
-		.pc_out(exe_pc),
 		.pc_calculated_out(exe_pc_calculated)
 	);
 
@@ -145,6 +143,8 @@ module system (
 	wire [7:0] 	exe_alu_status;
 	wire		exe_excep_control_out;
 	wire		exe_reg_write_control;
+	wire		exe_comparator;
+	wire [1:0]	exe_wb_new_control;
 
 	EXE_stage EXE_stage (
 		.immediate(exe_immediate),
@@ -153,6 +153,7 @@ module system (
 		.alu_src(exe_alu_src),
 		.alu_op(exe_alu_op),
 		.mem_control(exe_mem_control),
+		.wb_control_in(exe_wb_control),
 		.excep_control_in(exe_excep_control_in),
 		.clk(clk),
 		.reset(SYS_reset),
@@ -160,7 +161,8 @@ module system (
 		.alu_result(exe_alu_result),
 		.alu_status(exe_alu_status),
 		.excep_control_out(exe_excep_control_out),
-		.reg_write_out(exe_reg_write_control)
+		.comparator_out(exe_comparator),
+		.wb_control_out(exe_wb_new_control)
 	);
 
 	// reg_EXE_MEM
@@ -173,13 +175,12 @@ module system (
 	wire 		mem_excep_control;
 
 	reg_EXE_MEM reg_EXE_MEM (
-		.wb_control_in(exe_wb_control),
+		.wb_control_in(exe_wb_new_control),
 		.mem_control_in(exe_mem_control),
 		.write_register_in(exe_write_register),
 		.alu_result_in(exe_alu_result),
 		.rt_value_in(exe_value_rt),
 		.excep_control_in(exe_excep_control_out),
-		.reg_write_control_in(exe_reg_write_control),
 		.clk(clk),
 		.reset(SYS_reset),
 
@@ -238,30 +239,42 @@ module system (
 		.data_write2reg(wb_data_write)
 	);
 
+	// Forward_unit
+	wire [1:0]	fw_control_0;
+	wire [1:0]	fw_control_1;
+	forward_unit forward_unit (
+		.exe_mem_reg_write(mem_wb_control[0]),
+		.exe_mem_address_write(mem_write_register),
+		.mem_wb_reg_write(wb_reg_write),
+		.mem_wb_address_write(wb_write_register),
+		.id_exe_address_rs(exe_rs),
+		.id_exe_address_rt(exe_rt),
+		.id_exe_regdst_control(id_control[3]),
+
+		.operand_0_control(fw_control_0),
+		.operand_1_control(fw_control_1)
+	);
+
 	// Hazard_detection
 	wire		hz_control_pc;
-	wire [7:0]	hz_pc_next;
 	hazard_detection hazard_detection (
 		.jump_control_in(exe_jump_control),
 		.branch_control_in(exe_branch_control),
 		.mem_read_control_in(exe_mem_control[3:2]),
 		.comparator_in(exe_comparator),
-		.pc_in(exe_pc),
-		.calculated_pc_in(exe_pc_calculated),
 		.address_write(exe_write_register),
 		.next_regdst_control_in(id_regdst_control),
 		.next_address_rs(id_rs),
 		.next_address_rt(id_rt),
 
 		.pc_control_out(hz_control_pc),
-		.pc_next(hz_pc_next),
 		.control_signal(hz_control_signal)
 	);
 
 	// PC update
 	mux_2_to_1 #(8) pc_next_mux (
 		.in0(id_pc),
-		.in1(hz_pc_next),
+		.in1(exe_pc_calculated),
 		.sel(hz_control_pc),
 
 		.out(pc_next)

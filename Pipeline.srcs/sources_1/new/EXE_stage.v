@@ -5,13 +5,15 @@ module EXE_stage (
     input               alu_src,
     input       [2:0]   alu_op,
     input       [3:0]   mem_control,
+    input       [1:0]   wb_control_in,
     input   			excep_control_in,
     input               clk,
     input               reset,
 
     output      [7:0]   alu_status,
     output      [31:0]  alu_result,
-    output              reg_write_out,
+    output      [1:0]   wb_control_out,
+    output              comparator_out,
     output  reg			excep_control_out
 );
     // Exception chuan bi no cai bum
@@ -83,6 +85,8 @@ module EXE_stage (
         .align_exception_out(alu_status[3])
     );
 
-    assign reg_write_out = ~ hilo_write_control;
+    assign comparator_out = (rs_value == rt_value);
+    assign wb_control_out[1] = wb_control_in[1];
+    assign wb_control_out[0] = (wb_control_in[0] == 1'b0) ? wb_control_in[0] : ~ hilo_write_control;
     
 endmodule

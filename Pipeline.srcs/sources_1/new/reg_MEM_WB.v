@@ -17,7 +17,8 @@ module reg_MEM_WB (
 
 	// Exception
 
-	always @(posedge reset or posedge clk) begin
+	// always @(posedge reset or posedge clk) begin
+	always @(*) begin
 		if (reset) begin
 			reg_write_control_out	<= 0;
 			mem2reg_control_out		<= 0;

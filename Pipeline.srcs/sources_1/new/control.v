@@ -55,7 +55,7 @@ module control (
 		end else if (opcode == 6'b000100) begin
 			// BEQ
 			//                   32109876543210
-			control_signal = 14'b01000000000000;
+			control_signal = 14'b01000000001000;
 		end else if (opcode == 6'b000010) begin
 			// J
 			//                   32109876543210

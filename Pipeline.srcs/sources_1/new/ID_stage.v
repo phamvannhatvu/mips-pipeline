@@ -11,19 +11,15 @@ module ID_stage (
     input       [31:0]  data_write,
     input               reg_write,
     input       [4:0]   address_write_in,
-
     input               hz_control_signal,
 
+    output              regdst_control_out,
     output      [13:0]  control_signal,
     output      [31:0]  value_rs,
     output      [31:0]  value_rt,
     output      [31:0]  extended_immediate,
     output      [4:0]   address_write_out,
-
-    output              comparator_out,
-    output      [7:0]   pc_calculated,
-
-    output              regdst_control_out
+    output      [7:0]   pc_calculated
 );
 
     wire nop;   // Determine nop instruction
@@ -82,7 +78,5 @@ module ID_stage (
 
     	.pc_out(pc_calculated)
 	);
-
-    assign comparator_out = (value_rs == value_rt);
     
 endmodule
