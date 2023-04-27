@@ -14,10 +14,14 @@ module system (
 	wire [7:0]	if_pc;
 	wire [31:0]	if_instruction;
 
-	wire [7:0]	pc_next;
+	wire [7:0]	id_pc;
+	wire [7:0]	exe_pc_calculated;
+	wire		hz_control_pc;
 
 	IF_stage IF_stage (
-		.pc_in(pc_next),
+		.pc_from_id(id_pc),
+		.pc_from_exe(exe_pc_calculated),
+		.pc_hazard_control(hz_control_pc),
 		.clk(clk),
 		.reset(SYS_reset),
 
@@ -34,7 +38,6 @@ module system (
 	wire [5:0]	id_funct;
 	wire [15:0]	id_immediate;
 	wire [25:0] id_jump_address;
-	wire [7:0]	id_pc;
 
 	reg_IF_ID reg_IF_ID (
 		.pc_in(if_pc),
@@ -64,15 +67,15 @@ module system (
 	wire		id_regdst_control;
 	
 	wire		mem_reg_write;
-	wire [31:0] mem_write_data;
 	wire [4:0]	mem_write_register;
+	wire [31:0]	mem_data;
 
 	wire		hz_control_signal;
 
 	ID_stage ID_stage (
 		.clk(clk),
 		.reset(SYS_reset),
-		.data_write(mem_write_data),
+		.data_write(mem_data),
 		.reg_write(mem_reg_write),
 		.address_write_in(mem_write_register),
 		.opcode(id_opcode),
@@ -105,7 +108,6 @@ module system (
 	wire [4:0] 	exe_write_register;
 	wire		exe_jump_control;
 	wire		exe_branch_control;
-	wire [7:0]	exe_pc_calculated;
 	wire [4:0]	exe_rs;
 	wire [4:0]	exe_rt;
 	wire		exe_regdst_control;
@@ -182,6 +184,7 @@ module system (
 	wire [1:0]	mem_mem_write;
 	wire		mem_mem2reg;
 	wire 		mem_excep_control;
+	wire [31:0] mem_write_data;
 
 	reg_EXE_MEM reg_EXE_MEM (
 		.wb_control_in(exe_wb_new_control),
@@ -204,8 +207,6 @@ module system (
 	);
 
 	// MEM_stage
-	wire [31:0]	mem_data;
-
 	MEM_stage MEM_stage (
 		.mem_read(mem_mem_read),
 		.mem_write(mem_mem_write),
@@ -253,7 +254,6 @@ module system (
 	);
 
 	// Hazard_detection
-	wire		hz_control_pc;
 	hazard_detection hazard_detection (
 		.jump_control_in(exe_jump_control),
 		.branch_control_in(exe_branch_control),
@@ -266,15 +266,6 @@ module system (
 
 		.pc_control_out(hz_control_pc),
 		.control_signal(hz_control_signal)
-	);
-
-	// PC update
-	mux_2_to_1 #(8) pc_next_mux (
-		.in0(id_pc),
-		.in1(exe_pc_calculated),
-		.sel(hz_control_pc),
-
-		.out(pc_next)
 	);
 
 	assign SYS_leds = exe_alu_result;

@@ -52,15 +52,6 @@ module EXE_stage (
         .out(operand_1)
     );
 
-    // wire [31:0] second_operand;
-    // mux_2_to_1 #(32) operand_mux (
-    //     .in0(rt_value),
-    //     .in1(immediate),
-    //     .sel(alu_src),
-
-    //     .out(second_operand)
-    // );
-
     wire [4:0]  alu_control_out;
     wire        exception_out;
     wire        hilo_write_control;
