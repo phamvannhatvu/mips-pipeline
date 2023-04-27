@@ -8,7 +8,6 @@ module MEM_stage (
     input               clk,
     input               reset,
 
-    // output      [31:0]  data_read_out
     output      [31:0]  wb_data
 );
     

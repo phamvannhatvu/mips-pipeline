@@ -67,10 +67,6 @@ module system (
 	wire [31:0] mem_write_data;
 	wire [4:0]	mem_write_register;
 
-	// wire 	    wb_reg_write;
-	// wire [4:0]	wb_write_register;
-	// wire [31:0]	wb_data_write;
-
 	wire		hz_control_signal;
 
 	ID_stage ID_stage (
@@ -185,10 +181,6 @@ module system (
 	wire [1:0]	mem_mem_read;
 	wire [1:0]	mem_mem_write;
 	wire		mem_mem2reg;
-	// wire		mem_reg_write;
-	// // wire [1:0] 	mem_wb_control;
-	// wire [31:0] mem_write_data;
-	// wire [4:0]	mem_write_register;
 	wire 		mem_excep_control;
 
 	reg_EXE_MEM reg_EXE_MEM (
@@ -205,7 +197,6 @@ module system (
 		.mem_write_control_out(mem_mem_write),
 		.mem2reg_control_out(mem_mem2reg),
 		.reg_write_control_out(mem_reg_write),
-		// .wb_control_out(mem_wb_control),
 		.write_data(mem_write_data),
 		.write_register_out(mem_write_register),
 		.alu_result_out(mem_alu_result),
@@ -213,7 +204,6 @@ module system (
 	);
 
 	// MEM_stage
-	// wire [31:0] mem_data_read;
 	wire [31:0]	mem_data;
 
 	MEM_stage MEM_stage (
@@ -226,22 +216,15 @@ module system (
 		.clk(clk),
 		.reset(SYS_reset),
 
-		// .data_read_out(mem_data_read)
 		.wb_data(mem_data)
 	);
 
 	// reg_MEM_WB
-	// wire 		wb_mem2reg;
-	// wire [31:0] wb_data_from_dmem;
-	// wire [31:0] wb_alu_result;
 	wire		wb_reg_write;
 	wire [4:0]	wb_write_register;
 	wire		wb_excep_control;
 
 	reg_MEM_WB reg_MEM_WB (
-		// .wb_control_in(mem_wb_control),
-		// .data_from_dmem_in(mem_data_read),
-		// .alu_result_in(mem_alu_result),
 		.reg_write_control_in(mem_reg_write),
 		.wb_data_in(mem_data),
 		.write_register_in(mem_write_register),
@@ -249,24 +232,11 @@ module system (
 		.clk(clk),
 		.reset(SYS_reset),
 
-		// .reg_write_control_out(wb_reg_write),
-		// .mem2reg_control_out(wb_mem2reg),
-		// .data_from_dmem_out(wb_data_from_dmem),
-		// .alu_result_out(wb_alu_result),
 		.reg_write_control_out(wb_reg_write),
 		.wb_data_out(wb_data),
 		.write_register_out(wb_write_register),
 		.excep_control_out(wb_excep_control)
 	);
-
-	// // WB_stage
-	// WB_stage WB_stage (
-	// 	.data_from_dmem(wb_data_from_dmem),
-	// 	.alu_result(wb_alu_result),
-	// 	.mem2reg(wb_mem2reg),
-
-	// 	.data_write2reg(wb_data_write)
-	// );
 
 	// Forward_unit
 	forward_unit forward_unit (

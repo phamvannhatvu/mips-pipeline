@@ -23,9 +23,6 @@ module alu_control (
                     6'b000010: begin    // SRL
                         control_out     = 5'b01001;
                     end
-                    6'b000011: begin    // SRA
-                        control_out     = 5'b11001;
-                    end
                     6'b011000: begin    // MULT
                         control_out     = 5'b00010;
                         hilo_write      = 1'b1;

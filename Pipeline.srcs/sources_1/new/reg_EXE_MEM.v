@@ -12,7 +12,6 @@ module reg_EXE_MEM (
 	output	reg	[1:0]	mem_write_control_out,
 	output	reg			mem2reg_control_out,
 	output	reg			reg_write_control_out,
-	// output	reg	[1:0]	wb_control_out,
 	output	reg	[31:0]	write_data,
 	output	reg	[4:0]	write_register_out,
 	output	reg	[31:0]	alu_result_out,
@@ -26,13 +25,11 @@ module reg_EXE_MEM (
 			mem_write_control_out	<= 0;
 			mem2reg_control_out		<= 0;
 			reg_write_control_out	<= 0;
-			// wb_control_out			<= 0;
 			write_data				<= 0;
 			write_register_out		<= 0;
 			alu_result_out			<= 0;
 			excep_control_out		<= 0;
 		end else begin
-			// wb_control_out			<= wb_control_in;
 			mem_read_control_out	<= mem_control_in[3:2];
 			mem_write_control_out	<= mem_control_in[1:0];
 			mem2reg_control_out		<= wb_control_in[1];
