@@ -62,19 +62,23 @@ module system (
 	wire [7:0]	id_branch_address;
 	wire [7:0]	id_calculated_pc;
 	wire		id_regdst_control;
+	
+	wire		mem_reg_write;
+	wire [31:0] mem_write_data;
+	wire [4:0]	mem_write_register;
 
-	wire 	    wb_reg_write;
-	wire [4:0]	wb_write_register;
-	wire [31:0]	wb_data_write;
+	// wire 	    wb_reg_write;
+	// wire [4:0]	wb_write_register;
+	// wire [31:0]	wb_data_write;
 
 	wire		hz_control_signal;
 
 	ID_stage ID_stage (
 		.clk(clk),
 		.reset(SYS_reset),
-		.data_write(wb_data_write),
-		.reg_write(wb_reg_write),
-		.address_write_in(wb_write_register),
+		.data_write(mem_write_data),
+		.reg_write(mem_reg_write),
+		.address_write_in(mem_write_register),
 		.opcode(id_opcode),
 		.address_rs(id_rs),
 		.address_rt(id_rt),
@@ -106,9 +110,9 @@ module system (
 	wire		exe_jump_control;
 	wire		exe_branch_control;
 	wire [7:0]	exe_pc_calculated;
-
 	wire [4:0]	exe_rs;
 	wire [4:0]	exe_rt;
+	wire		exe_regdst_control;
 
 	reg_ID_EXE reg_ID_EXE (
 		.rs_value_in(id_value_rs),
@@ -135,7 +139,8 @@ module system (
 		.rt_address_out(exe_rt),
 		.jump_control_out(exe_jump_control),
 		.branch_control_out(exe_branch_control),
-		.pc_calculated_out(exe_pc_calculated)
+		.pc_calculated_out(exe_pc_calculated),
+		.regdst_control_out(exe_regdst_control)
 	);
 
 	// EXE_stage
@@ -146,6 +151,13 @@ module system (
 	wire		exe_comparator;
 	wire [1:0]	exe_wb_new_control;
 
+	wire [31:0] mem_alu_result;
+	wire [31:0]	wb_data;
+	wire [1:0]	fw_control_0;
+	wire [1:0]	fw_control_1;
+
+	wire [31:0]	wb_data_write;
+
 	EXE_stage EXE_stage (
 		.immediate(exe_immediate),
 		.rs_value(exe_value_rs),
@@ -155,6 +167,10 @@ module system (
 		.mem_control(exe_mem_control),
 		.wb_control_in(exe_wb_control),
 		.excep_control_in(exe_excep_control_in),
+		.prev_alu_result(mem_alu_result),
+		.prev_wb_result(wb_data),
+		.operand_0_forward_control(fw_control_0),
+		.operand_1_forward_control(fw_control_1),
 		.clk(clk),
 		.reset(SYS_reset),
 
@@ -168,10 +184,11 @@ module system (
 	// reg_EXE_MEM
 	wire [1:0]	mem_mem_read;
 	wire [1:0]	mem_mem_write;
-	wire [1:0] 	mem_wb_control;
-	wire [31:0] mem_write_data;
-	wire [4:0]	mem_write_register;
-	wire [31:0] mem_alu_result;
+	wire		mem_mem2reg;
+	// wire		mem_reg_write;
+	// // wire [1:0] 	mem_wb_control;
+	// wire [31:0] mem_write_data;
+	// wire [4:0]	mem_write_register;
 	wire 		mem_excep_control;
 
 	reg_EXE_MEM reg_EXE_MEM (
@@ -186,7 +203,9 @@ module system (
 
 		.mem_read_control_out(mem_mem_read),
 		.mem_write_control_out(mem_mem_write),
-		.wb_control_out(mem_wb_control),
+		.mem2reg_control_out(mem_mem2reg),
+		.reg_write_control_out(mem_reg_write),
+		// .wb_control_out(mem_wb_control),
 		.write_data(mem_write_data),
 		.write_register_out(mem_write_register),
 		.alu_result_out(mem_alu_result),
@@ -194,62 +213,70 @@ module system (
 	);
 
 	// MEM_stage
-	wire [31:0] mem_data_read;
+	// wire [31:0] mem_data_read;
+	wire [31:0]	mem_data;
 
 	MEM_stage MEM_stage (
 		.mem_read(mem_mem_read),
 		.mem_write(mem_mem_write),
 		.mem_address(mem_alu_result),
 		.write_data(mem_write_data),
+		.alu_result(mem_alu_result),
+		.mem2reg(mem_mem2reg),
 		.clk(clk),
 		.reset(SYS_reset),
 
-		.data_read_out(mem_data_read)
+		// .data_read_out(mem_data_read)
+		.wb_data(mem_data)
 	);
 
 	// reg_MEM_WB
-	wire 		wb_mem2reg;
-	wire [31:0] wb_data_from_dmem;
-	wire [31:0] wb_alu_result;
+	// wire 		wb_mem2reg;
+	// wire [31:0] wb_data_from_dmem;
+	// wire [31:0] wb_alu_result;
+	wire		wb_reg_write;
+	wire [4:0]	wb_write_register;
 	wire		wb_excep_control;
 
 	reg_MEM_WB reg_MEM_WB (
-		.wb_control_in(mem_wb_control),
-		.data_from_dmem_in(mem_data_read),
-		.alu_result_in(mem_alu_result),
+		// .wb_control_in(mem_wb_control),
+		// .data_from_dmem_in(mem_data_read),
+		// .alu_result_in(mem_alu_result),
+		.reg_write_control_in(mem_reg_write),
+		.wb_data_in(mem_data),
 		.write_register_in(mem_write_register),
 		.excep_control_in(mem_excep_control),
 		.clk(clk),
 		.reset(SYS_reset),
 
+		// .reg_write_control_out(wb_reg_write),
+		// .mem2reg_control_out(wb_mem2reg),
+		// .data_from_dmem_out(wb_data_from_dmem),
+		// .alu_result_out(wb_alu_result),
 		.reg_write_control_out(wb_reg_write),
-		.mem2reg_control_out(wb_mem2reg),
-		.data_from_dmem_out(wb_data_from_dmem),
-		.alu_result_out(wb_alu_result),
+		.wb_data_out(wb_data),
 		.write_register_out(wb_write_register),
 		.excep_control_out(wb_excep_control)
 	);
 
-	// WB_stage
-	WB_stage WB_stage (
-		.data_from_dmem(wb_data_from_dmem),
-		.alu_result(wb_alu_result),
-		.mem2reg(wb_mem2reg),
+	// // WB_stage
+	// WB_stage WB_stage (
+	// 	.data_from_dmem(wb_data_from_dmem),
+	// 	.alu_result(wb_alu_result),
+	// 	.mem2reg(wb_mem2reg),
 
-		.data_write2reg(wb_data_write)
-	);
+	// 	.data_write2reg(wb_data_write)
+	// );
 
 	// Forward_unit
-	wire [1:0]	fw_control_0;
-	wire [1:0]	fw_control_1;
 	forward_unit forward_unit (
-		.exe_mem_reg_write(mem_wb_control[0]),
+		.exe_mem_reg_write(mem_reg_write),
 		.exe_mem_address_write(mem_write_register),
 		.mem_wb_reg_write(wb_reg_write),
 		.mem_wb_address_write(wb_write_register),
 		.id_exe_address_rs(exe_rs),
 		.id_exe_address_rt(exe_rt),
-		.id_exe_regdst_control(id_control[3]),
+		.id_exe_regdst_control(exe_regdst_control),
 
 		.operand_0_control(fw_control_0),
 		.operand_1_control(fw_control_1)

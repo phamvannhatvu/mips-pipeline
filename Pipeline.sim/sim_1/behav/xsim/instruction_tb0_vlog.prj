@@ -8,13 +8,13 @@ verilog xil_defaultlib  \
 "../../../../Pipeline.srcs/sources_1/new/IMEM.v" \
 "../../../../Pipeline.srcs/sources_1/new/MEM_stage.v" \
 "../../../../Pipeline.srcs/sources_1/new/REG.v" \
-"../../../../Pipeline.srcs/sources_1/new/WB_stage.v" \
 "../../../../Pipeline.srcs/sources_1/new/align_check.v" \
 "../../../../Pipeline.srcs/sources_1/new/alu_control.v" \
 "../../../../Pipeline.srcs/sources_1/new/control.v" \
 "../../../../Pipeline.srcs/sources_1/new/forward_unit.v" \
 "../../../../Pipeline.srcs/sources_1/new/hazard_detection.v" \
 "../../../../Pipeline.srcs/sources_1/new/mux_2_to_1.v" \
+"../../../../Pipeline.srcs/sources_1/new/mux_4_to_1.v" \
 "../../../../Pipeline.srcs/sources_1/new/pc_register.v" \
 "../../../../Pipeline.srcs/sources_1/new/pc_update.v" \
 "../../../../Pipeline.srcs/sources_1/new/reg_EXE_MEM.v" \

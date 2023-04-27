@@ -13,17 +13,17 @@ module forward_unit (
 );
 
     always @(*) begin
-        if (exe_mem_reg_write != 1'b0 && exe_mem_address_write != 5'b0 && exe_mem_address_write == id_exe_address_rs) begin
+        if (exe_mem_reg_write == 1'b1 && exe_mem_address_write != 5'b0 && exe_mem_address_write == id_exe_address_rs) begin
             operand_0_control = 2'b01;
-        end else if (mem_wb_reg_write != 1'b0 && mem_wb_address_write != 5'b0 && mem_wb_address_write == id_exe_address_rs) begin
+        end else if (mem_wb_reg_write == 1'b1 && mem_wb_address_write != 5'b0 && mem_wb_address_write == id_exe_address_rs) begin
             operand_0_control = 2'b10;
         end else begin
             operand_0_control = 2'b00;
         end
 
-        if (exe_mem_reg_write != 1'b0 && exe_mem_address_write != 5'b0 && id_exe_regdst_control == 1'b1 && exe_mem_address_write == id_exe_address_rt) begin
+        if (exe_mem_reg_write == 1'b1 && exe_mem_address_write != 5'b0 && id_exe_regdst_control == 1'b1 && exe_mem_address_write == id_exe_address_rt) begin
             operand_1_control = 2'b01;
-        end else if (mem_wb_reg_write != 1'b0 && mem_wb_address_write != 5'b0 && id_exe_regdst_control == 1'b1 && mem_wb_address_write == id_exe_address_rt) begin
+        end else if (mem_wb_reg_write == 1'b1 && mem_wb_address_write != 5'b0 && id_exe_regdst_control == 1'b1 && mem_wb_address_write == id_exe_address_rt) begin
             operand_1_control = 2'b10;
         end else begin
             operand_1_control = 2'b00;

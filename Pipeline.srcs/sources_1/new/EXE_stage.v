@@ -10,6 +10,11 @@ module EXE_stage (
     input               clk,
     input               reset,
 
+    input       [31:0]  prev_alu_result,
+    input       [31:0]  prev_wb_result,
+    input       [1:0]   operand_0_forward_control,
+    input       [1:0]   operand_1_forward_control,
+
     output      [7:0]   alu_status,
     output      [31:0]  alu_result,
     output      [1:0]   wb_control_out,
@@ -18,14 +23,43 @@ module EXE_stage (
 );
     // Exception chuan bi no cai bum
 
-    wire [31:0] second_operand;
-    mux_2_to_1 #(32) operand_mux (
+    wire [31:0] operand_0;
+    mux_4_to_1 #(32) opreand_0_mux (
+        .in0(rs_value),
+        .in1(prev_alu_result),
+        .in2(prev_wb_result),
+        .sel(operand_0_forward_control),
+
+        .out(operand_0)
+    );
+
+    wire [31:0] operand_1_pre;
+    mux_2_to_1 #(32) operand_1_pre_mux (
         .in0(rt_value),
         .in1(immediate),
         .sel(alu_src),
 
-        .out(second_operand)
+        .out(operand_1_pre)
     );
+
+    wire [31:0] operand_1;
+    mux_4_to_1 #(32) opreand_1_mux (
+        .in0(operand_1_pre),
+        .in1(prev_alu_result),
+        .in2(prev_wb_result),
+        .sel(operand_1_forward_control),
+
+        .out(operand_1)
+    );
+
+    // wire [31:0] second_operand;
+    // mux_2_to_1 #(32) operand_mux (
+    //     .in0(rt_value),
+    //     .in1(immediate),
+    //     .sel(alu_src),
+
+    //     .out(second_operand)
+    // );
 
     wire [4:0]  alu_control_out;
     wire        exception_out;
@@ -46,8 +80,8 @@ module EXE_stage (
     wire [31:0] low_register_out;
     ALU ALU (
         .alu_control(alu_control_out),
-        .alu_operand_0(rs_value),
-        .alu_operand_1(second_operand),
+        .alu_operand_0(operand_0),
+        .alu_operand_1(operand_1),
         .shamt(immediate[10:6]),
 
         .alu_result(alu_result_out),

@@ -13,14 +13,14 @@ module DMEM (
 	reg [7:0]	memory [0:1023];
     
     initial begin
-        memory[0] = 8'hca;
-        memory[1] = 8'hca;
-        memory[2] = 8'hca;
-        memory[3] = 8'hca;
-        memory[4] = 8'hca;
-        memory[5] = 8'hca;
-        memory[6] = 8'hca;
-        memory[7] = 8'hca;
+        memory[0] = 8'h00;
+        memory[1] = 8'h00;
+        memory[2] = 8'h00;
+        memory[3] = 8'h64;
+        memory[4] = 8'h00;
+        memory[5] = 8'h00;
+        memory[6] = 8'h00;
+        memory[7] = 8'h65;
     end
     
 	// Write with clock
