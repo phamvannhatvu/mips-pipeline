@@ -19,9 +19,10 @@ module EXE_stage (
     output      [31:0]  alu_result,
     output      [1:0]   wb_control_out,
     output              comparator_out,
-    output  reg			excep_control_out
+    output  			alu_control_excep,
+    output              alu_excep
 );
-    // Exception chuan bi no cai bum
+    
 
     wire [31:0] operand_0;
     mux_4_to_1 #(32) opreand_0_mux (
@@ -53,7 +54,6 @@ module EXE_stage (
     );
 
     wire [4:0]  alu_control_out;
-    wire        exception_out;
     wire        hilo_write_control;
     wire [1:0]  hilo_read_control;
     alu_control alu_control (
@@ -61,7 +61,7 @@ module EXE_stage (
         .alu_op(alu_op),
 
         .control_out(alu_control_out),
-        .exception_out(exception_out),
+        .excep_control_out(alu_control_excep),
         .hilo_write(hilo_write_control),
         .hilo_read(hilo_read_control)
     );
@@ -76,7 +76,7 @@ module EXE_stage (
         .shamt(immediate[10:6]),
 
         .alu_result(alu_result_out),
-        .alu_status(alu_status),
+        .alu_status({alu_status[7:4], alu_status[2:0]}),
         .high_register_out(high_register_out),
         .low_register_out(low_register_out)
     );
@@ -89,6 +89,7 @@ module EXE_stage (
         .read_control(hilo_read_control),
         .clk(clk),
         .reset(reset),
+        .excep_enable(excep_control_in),
 
         .data_out(data_hilo_out)
     );
@@ -113,5 +114,6 @@ module EXE_stage (
     assign comparator_out = (rs_value == rt_value);
     assign wb_control_out[1] = wb_control_in[1];
     assign wb_control_out[0] = (wb_control_in[0] == 1'b0) ? wb_control_in[0] : ~ hilo_write_control;
+    assign alu_excep = (alu_status[6] == 1'b1 || alu_status[3] == 1'b1 || alu_status[2] == 1'b1);
     
 endmodule

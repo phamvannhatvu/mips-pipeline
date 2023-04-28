@@ -15,7 +15,9 @@ initial begin
     reset = 1;
     pc = 0;
     #13  reset = 0;
-    #150 $finish;
+    #140 reset = 1;
+    #180 reset = 0;
+    #220 $finish;
 end
 
 endmodule 

@@ -4,6 +4,7 @@ module IF_stage (
     input               pc_hazard_control,
     input               clk,
     input               reset,
+    input               excep_control_in,
     
     output      [31:0]  instruction_out,
     output      [7:0]   pc_out
@@ -30,7 +31,8 @@ module IF_stage (
         .data_in(pc_in),
         .clk(clk),
         .reset(reset),
-
+        .excep_control_in(excep_control_in),
+        
         .data_out(pc_out)
     );
 

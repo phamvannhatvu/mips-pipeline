@@ -8,8 +8,7 @@ module reg_MEM_WB (
 	
 	output	reg			reg_write_control_out,
 	output	reg	[31:0]	wb_data_out,
-	output	reg	[4:0]	write_register_out,
-    output  reg			excep_control_out
+	output	reg	[4:0]	write_register_out
 );
 
 	// Exception
@@ -19,12 +18,10 @@ module reg_MEM_WB (
 			reg_write_control_out	<= 0;
 			wb_data_out				<= 0;
 			write_register_out		<= 0;
-			excep_control_out		<= 0;
 		end else begin
 			reg_write_control_out	<= reg_write_control_in;
 			wb_data_out				<= wb_data_in;
 			write_register_out		<= write_register_in;
-			excep_control_out		<= excep_control_in;
 		end
 	end
 	

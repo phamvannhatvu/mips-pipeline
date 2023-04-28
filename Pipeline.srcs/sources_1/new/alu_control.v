@@ -3,16 +3,16 @@ module alu_control (
     input       [2:0]   alu_op,
 
     output  reg [4:0]   control_out,
-    output  reg         exception_out,
+    output  reg         excep_control_out,
     output  reg         hilo_write,
     output  reg [1:0]   hilo_read
 );
 
     always @(*) begin
-        control_out     = 5'b0;
-        exception_out   = 1'b0;
-        hilo_write      = 1'b0;
-        hilo_read       = 2'b0;
+        control_out         = 5'b0;
+        excep_control_out   = 1'b0;
+        hilo_write          = 1'b0;
+        hilo_read           = 2'b0;
 
         case (alu_op)
             3'b011: begin               // R-TYPE
@@ -59,7 +59,7 @@ module alu_control (
                         control_out     = 5'b01111;
                     end
                     default: begin      // No instruction
-                        exception_out   = 1'b1;
+                        excep_control_out   = 1'b1;
                     end
                 endcase
             end

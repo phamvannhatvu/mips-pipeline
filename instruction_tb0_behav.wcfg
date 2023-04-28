@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="187400001fs"></ZoomEndTime>
-      <Cursor1Time time="36600000fs"></Cursor1Time>
+      <ZoomStartTime time="27166666fs"></ZoomStartTime>
+      <ZoomEndTime time="190166667fs"></ZoomEndTime>
+      <Cursor1Time time="163000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="216"></NameColumnWidth>
-      <ValueColumnWidth column_width="61"></ValueColumnWidth>
+      <NameColumnWidth column_width="203"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="25" />
    <wvobject fp_name="/instruction_tb0/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -50,6 +50,10 @@
       <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/reg_IF_ID/jump_address" type="array">
+      <obj_property name="ElementShortName">jump_address[25:0]</obj_property>
+      <obj_property name="ObjectShortName">jump_address[25:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/instruction_tb0/uut/hazard_detection/control_signal" type="logic">
       <obj_property name="ElementShortName">control_signal</obj_property>
@@ -89,6 +93,52 @@
    <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file" type="array">
       <obj_property name="ElementShortName">reg_file[0:31][31:0]</obj_property>
       <obj_property name="ObjectShortName">reg_file[0:31][31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/mem_read" type="array">
+      <obj_property name="ElementShortName">mem_read[1:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_read[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/SYS_excep" type="logic">
+      <obj_property name="ElementShortName">SYS_excep</obj_property>
+      <obj_property name="ObjectShortName">SYS_excep</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/exception_handler/alu_control_excep_in" type="logic">
+      <obj_property name="ElementShortName">alu_control_excep_in</obj_property>
+      <obj_property name="ObjectShortName">alu_control_excep_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/exception_handler/alu_excep_in" type="logic">
+      <obj_property name="ElementShortName">alu_excep_in</obj_property>
+      <obj_property name="ObjectShortName">alu_excep_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/exception_handler/exe_excep_in" type="logic">
+      <obj_property name="ElementShortName">exe_excep_in</obj_property>
+      <obj_property name="ObjectShortName">exe_excep_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/exception_handler/pc_out" type="array">
+      <obj_property name="ElementShortName">pc_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_out[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/exe_pc" type="array">
+      <obj_property name="ElementShortName">exe_pc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">exe_pc[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/id_pc" type="array">
+      <obj_property name="ElementShortName">id_pc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">id_pc[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/alu_status" type="array">
+      <obj_property name="ElementShortName">alu_status[7:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_status[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/exception_handler/pc_out" type="array">
+      <obj_property name="ElementShortName">pc_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_out[7:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

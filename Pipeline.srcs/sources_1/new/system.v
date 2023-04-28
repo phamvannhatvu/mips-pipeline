@@ -10,6 +10,26 @@ module system (
 
 	wire		clk = SYS_clk; // & ~exception_handler.exception_output;
 
+	// exception_handler
+	wire [7:0]	exception_pc;
+	wire 		SYS_excep;
+	wire		alu_excep;
+	wire		alu_control_excep;
+	wire 		exe_excep;	
+	wire [7:0]	exe_pc;
+
+	exception_handler exception_handler (
+		.alu_excep_in(alu_excep),
+		.alu_control_excep_in(alu_control_excep),
+		.exe_excep_in(exe_excep),
+		.pc_in(exe_pc),
+		.reset(SYS_reset),
+		.clk(clk),
+
+		.pc_out(exception_pc),
+		.excep_out(SYS_excep)
+	);
+
 	// IF_stage
 	wire [7:0]	if_pc;
 	wire [31:0]	if_instruction;
@@ -24,6 +44,7 @@ module system (
 		.pc_hazard_control(hz_control_pc),
 		.clk(clk),
 		.reset(SYS_reset),
+		.excep_control_in(SYS_excep),
 
 		.instruction_out(if_instruction),
 		.pc_out(if_pc)
@@ -43,7 +64,8 @@ module system (
 		.pc_in(if_pc),
 		.instruction(if_instruction), 
 		.clk(clk),
-		.reset(SYS_reset),
+		.excep_enable(SYS_excep),
+		.reset(reset),
 
 		.rs(id_rs),
 		.rt(id_rt),
@@ -101,7 +123,6 @@ module system (
 	wire [2:0]	exe_alu_op;
 	wire [3:0]	exe_mem_control;
 	wire [1:0]	exe_wb_control;
-	wire 		exe_excep_control_in;
 	wire [31:0]	exe_value_rs;
 	wire [31:0]	exe_value_rt;
 	wire [31:0]	exe_immediate;
@@ -121,14 +142,16 @@ module system (
 		.rt_address_in(id_rt),
 		.control_in(id_control),
 		.pc_calculated_in(id_calculated_pc),
+		.pc_in(id_pc),
 		.clk(clk),
 		.reset(SYS_reset),
+		.excep_enable(SYS_excep),
 
 		.alu_src_control_out(exe_alu_src),
 		.alu_op_control_out(exe_alu_op),
 		.mem_control_out(exe_mem_control),
 		.wb_control_out(exe_wb_control),
-		.excep_control_out(exe_excep_control_in),
+		.excep_control_out(exe_excep),
 		.rs_value_out(exe_value_rs),
 		.rt_value_out(exe_value_rt),
 		.immediate_out(exe_immediate),
@@ -138,13 +161,13 @@ module system (
 		.jump_control_out(exe_jump_control),
 		.branch_control_out(exe_branch_control),
 		.pc_calculated_out(exe_pc_calculated),
+		.pc_out(exe_pc),
 		.regdst_control_out(exe_regdst_control)
 	);
 
 	// EXE_stage
 	wire [31:0]	exe_alu_result;
 	wire [7:0] 	exe_alu_status;
-	wire		exe_excep_control_out;
 	wire		exe_reg_write_control;
 	wire		exe_comparator;
 	wire [1:0]	exe_wb_new_control;
@@ -164,7 +187,7 @@ module system (
 		.alu_op(exe_alu_op),
 		.mem_control(exe_mem_control),
 		.wb_control_in(exe_wb_control),
-		.excep_control_in(exe_excep_control_in),
+		.excep_control_in(SYS_excep),
 		.prev_alu_result(mem_alu_result),
 		.prev_wb_result(wb_data),
 		.operand_0_forward_control(fw_control_0),
@@ -174,16 +197,16 @@ module system (
 
 		.alu_result(exe_alu_result),
 		.alu_status(exe_alu_status),
-		.excep_control_out(exe_excep_control_out),
 		.comparator_out(exe_comparator),
-		.wb_control_out(exe_wb_new_control)
+		.wb_control_out(exe_wb_new_control),
+		.alu_control_excep(alu_control_excep),
+		.alu_excep(alu_excep)
 	);
 
 	// reg_EXE_MEM
 	wire [1:0]	mem_mem_read;
 	wire [1:0]	mem_mem_write;
 	wire		mem_mem2reg;
-	wire 		mem_excep_control;
 	wire [31:0] mem_write_data;
 
 	reg_EXE_MEM reg_EXE_MEM (
@@ -192,8 +215,8 @@ module system (
 		.write_register_in(exe_write_register),
 		.alu_result_in(exe_alu_result),
 		.rt_value_in(exe_value_rt),
-		.excep_control_in(exe_excep_control_out),
 		.clk(clk),
+		.excep_enable(SYS_excep),
 		.reset(SYS_reset),
 
 		.mem_read_control_out(mem_mem_read),
@@ -202,8 +225,7 @@ module system (
 		.reg_write_control_out(mem_reg_write),
 		.write_data(mem_write_data),
 		.write_register_out(mem_write_register),
-		.alu_result_out(mem_alu_result),
-		.excep_control_out(mem_excep_control)
+		.alu_result_out(mem_alu_result)
 	);
 
 	// MEM_stage
@@ -223,20 +245,17 @@ module system (
 	// reg_MEM_WB
 	wire		wb_reg_write;
 	wire [4:0]	wb_write_register;
-	wire		wb_excep_control;
 
 	reg_MEM_WB reg_MEM_WB (
 		.reg_write_control_in(mem_reg_write),
 		.wb_data_in(mem_data),
 		.write_register_in(mem_write_register),
-		.excep_control_in(mem_excep_control),
 		.clk(clk),
 		.reset(SYS_reset),
 
 		.reg_write_control_out(wb_reg_write),
 		.wb_data_out(wb_data),
-		.write_register_out(wb_write_register),
-		.excep_control_out(wb_excep_control)
+		.write_register_out(wb_write_register)
 	);
 
 	// Forward_unit

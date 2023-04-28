@@ -3,7 +3,8 @@ module reg_IF_ID (
 	input		[31:0]	instruction,
 	input				clk,
 	input				reset,
-	
+	input				excep_enable,
+
 	output	reg	[4:0]	rs,
 	output	reg	[4:0]	rd,
 	output	reg	[4:0]	rt,
@@ -16,7 +17,7 @@ module reg_IF_ID (
 );
 
 	always @(posedge clk or posedge reset) begin
-		if (reset) begin
+		if (reset || excep_enable) begin
 			rs				<= 0;
 			rd				<= 0;
 			rt				<= 0;

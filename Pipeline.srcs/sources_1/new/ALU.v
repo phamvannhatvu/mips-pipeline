@@ -5,7 +5,7 @@ module ALU (
 	input		[4:0]	shamt,
 
 	output	reg	[31:0]	alu_result,
-	output	reg	[7:0]	alu_status,
+	output	reg	[6:0]	alu_status,
 	output	reg	[31:0]	high_register_out,
 	output	reg	[31:0]	low_register_out
 );
@@ -13,10 +13,10 @@ module ALU (
 	reg         carry_in;
 	reg [31:0]  alu_operand_0_r;
 	reg [31:0]  alu_operand_1_r;
-
+	//not consider alu_status
 	always @(*) begin
 		alu_result				= 32'b0;
-		alu_status				= 8'b0;
+		alu_status				= 7'b0;
 		high_register_out		= 32'b0;
 		low_register_out		= 32'b0;
 
@@ -68,23 +68,23 @@ module ALU (
 				alu_result = alu_operand_0_r ^ alu_operand_1_r;
 			end
 			3'b111: begin
-				{alu_status[5], alu_result} = alu_operand_0_r + alu_operand_1_r + carry_in;
+				{alu_status[4], alu_result} = alu_operand_0_r + alu_operand_1_r + carry_in;
 			end
 		endcase
 
 		// Overflow check
 		if (alu_control[2:0] == 3'b111) begin
-			alu_status[6] = (alu_status[5] != alu_result[31]);
+			alu_status[5] = (alu_status[4] != alu_result[31] && alu_control[4] == alu_control[3]);
 		end
 
 		// Zero check
 		if (alu_result == 32'b0) begin
-			alu_status[7] = 1'b1;
+			alu_status[6] = 1'b1;
 		end
 
 		// Negative check
 		if (alu_result[31] == 1'b1) begin
-			alu_status[4] = 1'b1;
+			alu_status[3] = 1'b1;
 		end
 	end
 
