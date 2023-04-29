@@ -1,7 +1,8 @@
 module EXE_stage (
     input       [31:0]  immediate,
-    input       [31:0]  rs_value,
-    input       [31:0]  rt_value,
+    input       [26:0]  jump_address,
+    input       [31:0]  rs_value_in,
+    input       [31:0]  rt_value_in,
     input               alu_src,
     input       [2:0]   alu_op,
     input       [3:0]   mem_control,
@@ -14,9 +15,11 @@ module EXE_stage (
     input       [31:0]  prev_wb_result,
     input       [1:0]   operand_0_forward_control,
     input       [1:0]   operand_1_forward_control,
+    input       [1:0]   write_address_forward_control,
 
     output      [7:0]   alu_status,
     output      [31:0]  alu_result,
+    output      [31:0]   rt_value_out,
     output      [1:0]   wb_control_out,
     output              comparator_out,
     output  			alu_control_excep,
@@ -26,7 +29,7 @@ module EXE_stage (
 
     wire [31:0] operand_0;
     mux_4_to_1 #(32) opreand_0_mux (
-        .in0(rs_value),
+        .in0(rs_value_in),
         .in1(prev_alu_result),
         .in2(prev_wb_result),
         .sel(operand_0_forward_control),
@@ -36,7 +39,7 @@ module EXE_stage (
 
     wire [31:0] operand_1_pre;
     mux_2_to_1 #(32) operand_1_pre_mux (
-        .in0(rt_value),
+        .in0(rt_value_in),
         .in1(immediate),
         .sel(alu_src),
 
@@ -53,11 +56,20 @@ module EXE_stage (
         .out(operand_1)
     );
 
+    mux_4_to_1 #(32) rt_value_mux (
+        .in0(rt_value_in),
+        .in1(prev_alu_result),
+        .in2(prev_wb_result),
+        .sel(write_address_forward_control),
+
+        .out(rt_value_out)
+    );
+
     wire [4:0]  alu_control_out;
     wire        hilo_write_control;
     wire [1:0]  hilo_read_control;
     alu_control alu_control (
-        .funct(immediate[5:0]),
+        .jump_address(jump_address),
         .alu_op(alu_op),
 
         .control_out(alu_control_out),
@@ -111,7 +123,7 @@ module EXE_stage (
         .align_exception_out(alu_status[3])
     );
 
-    assign comparator_out = (rs_value == rt_value);
+    assign comparator_out = (rs_value_in == rt_value_in);
     assign wb_control_out[1] = wb_control_in[1];
     assign wb_control_out[0] = (wb_control_in[0] == 1'b0) ? wb_control_in[0] : ~ hilo_write_control;
     assign alu_excep = (alu_status[6] == 1'b1 || alu_status[3] == 1'b1 || alu_status[2] == 1'b1);

@@ -14,6 +14,7 @@ module ID_stage (
     input               hz_control_signal,
 
     output              regdst_control_out,
+    output      [1:0]   mem_write_control_out,
     output      [13:0]  control_signal,
     output      [31:0]  value_rs,
     output      [31:0]  value_rt,
@@ -53,7 +54,8 @@ module ID_stage (
     );
 
     assign regdst_control_out = control_out[3];
-
+    assign mem_write_control_out = control_out[9:8];
+    
     mux_2_to_1 #(14) control_signal_mux (
         .in0(control_out),
         .in1(14'b0),

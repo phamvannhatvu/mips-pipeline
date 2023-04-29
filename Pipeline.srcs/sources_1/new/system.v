@@ -87,6 +87,7 @@ module system (
 	wire [7:0]	id_branch_address;
 	wire [7:0]	id_calculated_pc;
 	wire		id_regdst_control;
+	wire [1:0]	id_mem_write_control;
 	
 	wire		mem_reg_write;
 	wire [4:0]	mem_write_register;
@@ -115,7 +116,8 @@ module system (
 		.control_signal(id_control),
 		.address_write_out(id_write_register),
 		.pc_calculated(id_calculated_pc),
-		.regdst_control_out(id_regdst_control)
+		.regdst_control_out(id_regdst_control),
+		.mem_write_control_out(id_mem_write_control)
 	);
 
 	// reg_ID_EXE
@@ -124,9 +126,10 @@ module system (
 	wire [3:0]	exe_mem_control;
 	wire [1:0]	exe_wb_control;
 	wire [31:0]	exe_value_rs;
-	wire [31:0]	exe_value_rt;
+	wire [31:0]	exe_value_rt_in;
 	wire [31:0]	exe_immediate;
 	wire [4:0] 	exe_write_register;
+	wire [26:0]	exe_jump_address;
 	wire		exe_jump_control;
 	wire		exe_branch_control;
 	wire [4:0]	exe_rs;
@@ -137,6 +140,7 @@ module system (
 		.rs_value_in(id_value_rs),
 		.rt_value_in(id_value_rt),
 		.immediate_in(id_extended_immediate),
+		.jump_address_in(id_jump_address),
 		.write_register_in(id_write_register),
 		.rs_address_in(id_rs),
 		.rt_address_in(id_rt),
@@ -153,12 +157,13 @@ module system (
 		.wb_control_out(exe_wb_control),
 		.excep_control_out(exe_excep),
 		.rs_value_out(exe_value_rs),
-		.rt_value_out(exe_value_rt),
+		.rt_value_out(exe_value_rt_in),
 		.immediate_out(exe_immediate),
 		.write_register_out(exe_write_register),
 		.rs_address_out(exe_rs),
 		.rt_address_out(exe_rt),
 		.jump_control_out(exe_jump_control),
+		.jump_address_out(exe_jump_address),
 		.branch_control_out(exe_branch_control),
 		.pc_calculated_out(exe_pc_calculated),
 		.pc_out(exe_pc),
@@ -171,18 +176,20 @@ module system (
 	wire		exe_reg_write_control;
 	wire		exe_comparator;
 	wire [1:0]	exe_wb_new_control;
-
+	wire [31:0]	exe_value_rt_out;
 	wire [31:0] mem_alu_result;
 	wire [31:0]	wb_data;
 	wire [1:0]	fw_control_0;
 	wire [1:0]	fw_control_1;
+	wire [1:0]	fw_control_write_address;
 
 	wire [31:0]	wb_data_write;
 
 	EXE_stage EXE_stage (
 		.immediate(exe_immediate),
-		.rs_value(exe_value_rs),
-		.rt_value(exe_value_rt),
+		.jump_address(exe_jump_address),
+		.rs_value_in(exe_value_rs),
+		.rt_value_in(exe_value_rt_in),
 		.alu_src(exe_alu_src),
 		.alu_op(exe_alu_op),
 		.mem_control(exe_mem_control),
@@ -192,10 +199,12 @@ module system (
 		.prev_wb_result(wb_data),
 		.operand_0_forward_control(fw_control_0),
 		.operand_1_forward_control(fw_control_1),
+		.write_address_forward_control(fw_control_write_address),
 		.clk(clk),
 		.reset(SYS_reset),
 
 		.alu_result(exe_alu_result),
+		.rt_value_out(exe_value_rt_out),
 		.alu_status(exe_alu_status),
 		.comparator_out(exe_comparator),
 		.wb_control_out(exe_wb_new_control),
@@ -214,7 +223,7 @@ module system (
 		.mem_control_in(exe_mem_control),
 		.write_register_in(exe_write_register),
 		.alu_result_in(exe_alu_result),
-		.rt_value_in(exe_value_rt),
+		.rt_value_in(exe_value_rt_out),
 		.clk(clk),
 		.excep_enable(SYS_excep),
 		.reset(SYS_reset),
@@ -264,12 +273,14 @@ module system (
 		.exe_mem_address_write(mem_write_register),
 		.mem_wb_reg_write(wb_reg_write),
 		.mem_wb_address_write(wb_write_register),
+		.mem_write_control(exe_mem_control[1:0]),
 		.id_exe_address_rs(exe_rs),
 		.id_exe_address_rt(exe_rt),
 		.id_exe_regdst_control(exe_regdst_control),
 
 		.operand_0_control(fw_control_0),
-		.operand_1_control(fw_control_1)
+		.operand_1_control(fw_control_1),
+		.write_address_control(fw_control_write_address)
 	);
 
 	// Hazard_detection
@@ -280,6 +291,7 @@ module system (
 		.comparator_in(exe_comparator),
 		.address_write(exe_write_register),
 		.next_regdst_control_in(id_regdst_control),
+		.next_mem_write_control_in(id_mem_write_control),
 		.next_address_rs(id_rs),
 		.next_address_rt(id_rt),
 

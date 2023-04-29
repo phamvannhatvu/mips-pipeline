@@ -29,10 +29,10 @@ module REG (
 			reg_file[12] <= 14;	// t4
 			reg_file[13] <= 15;	// t5
 			reg_file[14] <= 16;	// t6
-			reg_file[15] <= 17;	// t7
+			reg_file[15] <= 32'h7fffe400;	// t7
 
-			reg_file[16] = 50;	// s0
-			reg_file[17] = 50;	// s1
+			reg_file[16] <= 32'h94000000;	// s0
+			reg_file[17] <= 32'h73000000;	// s1
 		end else if (clk) begin
 			if (reg_write) begin
 				reg_file[address_write]	<= data_write;

@@ -2,6 +2,7 @@ module reg_ID_EXE (
 	input		[31:0]	rs_value_in,
 	input		[31:0]	rt_value_in,
 	input		[31:0]	immediate_in,
+	input		[26:0]	jump_address_in,
 	input		[4:0]	write_register_in,
 	input		[4:0]	rs_address_in,
 	input		[4:0]	rt_address_in,
@@ -13,6 +14,7 @@ module reg_ID_EXE (
 	input				excep_enable,
 
 	output	reg			jump_control_out,
+	output	reg	[26:0]	jump_address_out,
 	output	reg			branch_control_out,
 	output	reg			regdst_control_out,
 	output	reg	[7:0]	pc_calculated_out,
@@ -33,6 +35,7 @@ module reg_ID_EXE (
 	always @(posedge clk or posedge reset) begin
 		if (reset || excep_enable) begin
 			jump_control_out	<= 0;
+			jump_address_out	<= 0;
 			branch_control_out	<= 0;
 			regdst_control_out	<= 0;
 			pc_calculated_out	<= 0;
@@ -50,6 +53,7 @@ module reg_ID_EXE (
 			rt_address_out		<= 0;
 		end else begin
 			jump_control_out	<= control_in[13];
+			jump_address_out	<= jump_address_in;
 			branch_control_out	<= control_in[12];
 			regdst_control_out	<= control_in[3];
 			pc_calculated_out	<= pc_calculated_in;

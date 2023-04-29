@@ -74,7 +74,7 @@ module ALU (
 
 		// Overflow check
 		if (alu_control[2:0] == 3'b111) begin
-			alu_status[5] = (alu_status[4] != alu_result[31] && alu_control[4] == alu_control[3]);
+			alu_status[5] = (alu_status[4] != alu_result[31] && alu_operand_0_r[31] == alu_operand_1_r[31]);
 		end
 
 		// Zero check
