@@ -7,7 +7,6 @@ module control (
 
 	always @(*) begin
 		if (nop) begin				// NOP
-			//					  		  32109876543210
 			control_signal			= 14'b00000000000000;
 		end else begin
 			case (opcode)
@@ -29,7 +28,7 @@ module control (
 				6'b100000: begin	// LB
 					control_signal	= 14'b00010011110001;
 				end
-				6'b100101: begin	// LH
+				6'b100001: begin	// LH
 					control_signal	= 14'b00100011110001;
 				end
 				6'b100011: begin	// LW

@@ -1,24 +1,25 @@
 module ID_stage (
-    input               clk,
-    input               reset,
     input       [5:0]   opcode,
     input       [4:0]   address_rs,
     input       [4:0]   address_rt,
     input       [4:0]   address_rd,
     input       [15:0]  immediate,
     input       [25:0]  jump_immediate,
-    input       [7:0]   pc_in,
+    input       [4:0]   address_write_in,
     input       [31:0]  data_write,
     input               reg_write,
-    input       [4:0]   address_write_in,
     input               hz_control_signal,
+    input       [7:0]   pc_in,
+    input               clk,
+    input               reset,
 
-    output              regdst_control_out,
-    output      [13:0]  control_signal,
+    output      [4:0]   address_write_out,
     output      [31:0]  value_rs,
     output      [31:0]  value_rt,
     output      [31:0]  extended_immediate,
-    output      [4:0]   address_write_out,
+    output      [13:0]  control_signal,
+    output      [1:0]   mem_write_control_out,
+    output              regdst_control_out,
     output      [7:0]   pc_calculated
 );
 
@@ -53,7 +54,8 @@ module ID_stage (
     );
 
     assign regdst_control_out = control_out[3];
-
+    assign mem_write_control_out = control_out[9:8];
+    
     mux_2_to_1 #(14) control_signal_mux (
         .in0(control_out),
         .in1(14'b0),

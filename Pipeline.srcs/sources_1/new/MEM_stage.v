@@ -1,9 +1,9 @@
 module MEM_stage (
+    input       [7:0]   mem_address,
+    input       [31:0]  alu_result,
+    input       [31:0]  write_data,
     input       [1:0]   mem_read,
     input       [1:0]   mem_write,
-    input       [31:0]  mem_address,
-    input       [31:0]  write_data,
-    input       [31:0]  alu_result,
     input               mem2reg,
     input               clk,
     input               reset,
