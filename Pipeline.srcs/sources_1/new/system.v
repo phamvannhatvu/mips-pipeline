@@ -40,6 +40,7 @@ module system (
 		.pc_from_exe(exe_pc_calculated),
 		.pc_hazard_control(hz_control_pc),
 		.excep_enable(SYS_excep),
+		.epc(exception_pc),
 		.clk(SYS_clk),
 		.reset(SYS_reset),
 

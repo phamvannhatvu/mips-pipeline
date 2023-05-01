@@ -5,7 +5,8 @@ module IF_stage (
     input               excep_enable,
     input               clk,
     input               reset,
-    
+    input       [7:0]   epc,
+
     output      [31:0]  instruction_out,
     output      [7:0]   pc_out
 );
@@ -26,12 +27,13 @@ module IF_stage (
         
         .instruction_out(instruction_out)
     );
-    
+
     pc_register #(8) pc_reg (
         .data_in(pc_in),
         .clk(clk),
         .reset(reset),
         .excep_enable(excep_enable),
+        .epc(epc),
         
         .data_out(pc_out)
     );

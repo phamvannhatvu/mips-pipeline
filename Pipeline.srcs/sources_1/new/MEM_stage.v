@@ -12,6 +12,7 @@ module MEM_stage (
 );
     
     wire [31:0] data_read_out;
+
     DMEM data_mem (
         .address(mem_address),
         .data_in(write_data),
