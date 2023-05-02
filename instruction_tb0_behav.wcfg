@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="27166666fs"></ZoomStartTime>
-      <ZoomEndTime time="190166667fs"></ZoomEndTime>
+      <ZoomEndTime time="99878928fs"></ZoomEndTime>
       <Cursor1Time time="163000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="195"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="32" />
+   <WVObjectSize size="33" />
    <wvobject fp_name="/instruction_tb0/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -186,6 +186,9 @@
    <wvobject fp_name="/instruction_tb0/uut/EXE_stage/ALU/alu_status" type="array">
       <obj_property name="ElementShortName">alu_status[6:0]</obj_property>
       <obj_property name="ObjectShortName">alu_status[6:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_write" type="logic">
+      <obj_property name="ElementShortName">reg_write</obj_property>
+      <obj_property name="ObjectShortName">reg_write</obj_property>
    </wvobject>
 </wave_config>
