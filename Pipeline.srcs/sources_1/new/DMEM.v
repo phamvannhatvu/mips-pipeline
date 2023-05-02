@@ -63,6 +63,7 @@ module DMEM (
 					data_write_in = data_in << 16;
 				end else begin
 					wea = 4'b0011;
+					data_write_in = data_in;
 				end
 			end
 			2'b01	: begin
@@ -81,11 +82,15 @@ module DMEM (
 						wea = 4'b0010;
 					end 
 					2'b11 : begin
+						data_write_in = data_in;
 						wea = 4'b0001;
 					end 
 				endcase
 			end
-			default	: wea = 0;
+			default	: begin
+				data_write_in = 0;
+				wea = 0;
+			end 
 		endcase
 	end
 	// // Same as IMEM: 2^8 words

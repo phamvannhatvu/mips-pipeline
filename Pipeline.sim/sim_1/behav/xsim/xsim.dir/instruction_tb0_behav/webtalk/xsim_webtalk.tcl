@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.sim/sim_1/behav/xsim/xsim.dir/instruction_tb0_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Mon May  1 23:18:28 2023" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue May  2 13:12:26 2023" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2258646" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "76960db567ae5e3fb75c0e45bd089803" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "79a996866b294bd8885cd3c41d5dcd3c" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "710" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "777" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "AMD Ryzen 5 4600H with Radeon Graphics         " -context "user_environment"
@@ -31,12 +31,12 @@ webtalk_add_data -client xsim -key HWCosim -value "false" -context "xsim\\comman
 webtalk_add_data -client xsim -key DPI_Used -value "false" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Debug -value "typical" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Simulation_Image_Code -value "291 KB" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Image_Data -value "33 KB" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Image_Data -value "34 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Processes -value "495" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "46" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "1.09_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "75812_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 360433894 -regid "" -xml D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.sim/sim_1/behav/xsim/xsim.dir/instruction_tb0_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.sim/sim_1/behav/xsim/xsim.dir/instruction_tb0_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.sim/sim_1/behav/xsim/xsim.dir/instruction_tb0_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "1.14_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "76244_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 501215344 -regid "" -xml D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.sim/sim_1/behav/xsim/xsim.dir/instruction_tb0_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.sim/sim_1/behav/xsim/xsim.dir/instruction_tb0_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.sim/sim_1/behav/xsim/xsim.dir/instruction_tb0_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
