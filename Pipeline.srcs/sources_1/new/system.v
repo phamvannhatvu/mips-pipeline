@@ -9,6 +9,7 @@ module system (
 );
 
 	// IF_stage
+	wire [31:0]	if_instruction;
 	wire [7:0]	if_pc;
 	wire [7:0]	id_pc;
 	wire [7:0]	exe_pc_calculated;
