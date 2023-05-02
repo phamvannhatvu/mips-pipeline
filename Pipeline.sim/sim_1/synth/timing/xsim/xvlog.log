@@ -1,0 +1,19 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.sim/sim_1/synth/timing/xsim/instruction_tb0_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module EXE_stage
+INFO: [VRFC 10-311] analyzing module ID_stage
+INFO: [VRFC 10-311] analyzing module IF_stage
+INFO: [VRFC 10-311] analyzing module IMEM
+INFO: [VRFC 10-311] analyzing module REG
+INFO: [VRFC 10-311] analyzing module WB_stage
+INFO: [VRFC 10-311] analyzing module mux_2_to_1__parameterized2
+INFO: [VRFC 10-311] analyzing module pc_register
+INFO: [VRFC 10-311] analyzing module reg_EXE_MEM
+INFO: [VRFC 10-311] analyzing module reg_HI_LO
+INFO: [VRFC 10-311] analyzing module reg_ID_EXE
+INFO: [VRFC 10-311] analyzing module reg_IF_ID
+INFO: [VRFC 10-311] analyzing module reg_MEM_WB
+INFO: [VRFC 10-311] analyzing module system
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sim_1/new/instruction_tb0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instruction_tb0

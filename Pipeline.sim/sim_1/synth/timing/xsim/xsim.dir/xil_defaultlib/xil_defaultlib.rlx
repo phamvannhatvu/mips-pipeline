@@ -1,0 +1,6 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.sim/sim_1/synth/timing/xsim/instruction_tb0_time_synth.v,1682411948,verilog,,C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sim_1/new/instruction_tb0.v,,ALU;EXE_stage;ID_stage;IF_stage;IMEM;REG;WB_stage;glbl;mux_2_to_1__parameterized2;pc_register;reg_EXE_MEM;reg_HI_LO;reg_ID_EXE;reg_IF_ID;reg_MEM_WB;system,,,,,,,,
+C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sim_1/new/instruction_tb0.v,1681979854,verilog,,,,instruction_tb0,,,,,,,,

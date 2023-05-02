@@ -1,0 +1,1019 @@
+
+*** Running vivado
+    with args -log system.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source system.tcl -notrace
+Command: synth_design -top system -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9224 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 338.168 ; gain = 100.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IF_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IF_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IMEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IMEM' (1#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc_register' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_register.v:1]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pc_register' (2#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_register.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_stage' (3#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IF_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_IF_ID' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_IF_ID' (4#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'REG' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
+WARNING: [Synth 8-5788] Register reg_file_reg in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'reg_file_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "reg_file_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'REG' (5#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extender' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extender' (6#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'control' (7#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+	Parameter N bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1' (8#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized0' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+	Parameter N bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized0' (8#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc_update' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_update.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized1' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized1' (8#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc_update' (9#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_update.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_stage' (10#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_ID_EXE' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_ID_EXE' (11#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EXE_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized2' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized2' (11#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu_control' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'alu_control' (12#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (13#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_HI_LO' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:1]
+WARNING: [Synth 8-5788] Register reg_hilo_reg[0] in module reg_HI_LO is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:19]
+WARNING: [Synth 8-5788] Register reg_hilo_reg[1] in module reg_HI_LO is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'reg_HI_LO' (14#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:1]
+INFO: [Synth 8-6157] synthesizing module 'align_check' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/align_check.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'align_check' (15#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/align_check.v:1]
+WARNING: [Synth 8-3848] Net excep_control_out in module/entity EXE_stage does not have driver. [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'EXE_stage' (16#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_EXE_MEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_EXE_MEM' (17#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEM_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
+WARNING: [Synth 8-5788] Register memory_reg in module DMEM is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'memory_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: Invalid write data for RAM. 
+	2: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	3: Unable to determine number of words or word size in RAM. 
+	4: No valid read/write found for RAM. 
+RAM "memory_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'DMEM' (18#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_stage' (19#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_MEM_WB' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_MEM_WB' (20#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:1]
+INFO: [Synth 8-6157] synthesizing module 'WB_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/WB_stage.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'WB_stage' (21#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/WB_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard_detection' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/hazard_detection.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_detection' (22#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/hazard_detection.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'system' (23#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:1]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[31]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[30]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[29]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[28]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[27]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[26]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[25]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[24]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[23]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[22]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[21]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[20]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[19]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[18]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[17]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[16]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[15]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[14]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[13]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[12]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[11]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[10]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[9]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[8]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[7]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[6]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[5]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[4]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[3]
+WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[2]
+WARNING: [Synth 8-3331] design EXE_stage has unconnected port excep_control_out
+WARNING: [Synth 8-3331] design EXE_stage has unconnected port excep_control_in
+WARNING: [Synth 8-3331] design reg_ID_EXE has unconnected port control_in[3]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[11]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[10]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[9]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[8]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[7]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[6]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[5]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[4]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[3]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[2]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[1]
+WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[0]
+WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[15]
+WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[14]
+WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[13]
+WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[12]
+WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[11]
+WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[10]
+WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[9]
+WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[8]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[25]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[24]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[23]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[22]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[21]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[20]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[19]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[18]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[17]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[16]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[15]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[14]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[13]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[12]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[11]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[10]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[9]
+WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[8]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_load
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[7]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[6]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[5]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[4]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[3]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[2]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[1]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[0]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[2]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[1]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 732.906 ; gain = 494.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 732.906 ; gain = 494.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 732.906 ; gain = 494.797
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element instruction_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:97]
+INFO: [Synth 8-5587] ROM size for "control_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "exception_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hilo_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hilo_read" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "high_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "low_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:50]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:27 ; elapsed = 00:04:51 . Memory (MB): peak = 974.371 ; gain = 736.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |DMEM__GB0     |           1|     44011|
+|2     |DMEM__GB1     |           1|      9187|
+|3     |DMEM__GB2     |           1|     13220|
+|4     |DMEM__GB3     |           1|     24911|
+|5     |DMEM__GB4     |           1|     12853|
+|6     |DMEM__GB5     |           1|     10331|
+|7     |DMEM__GB6     |           1|     36608|
+|8     |DMEM__GB7     |           1|     43726|
+|9     |DMEM__GB8     |           1|     24879|
+|10    |DMEM__GB9     |           1|     26056|
+|11    |system__GC0   |           1|     18321|
++------+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 45    
+	               26 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1032  
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input   8192 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 24    
+	   4 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 2     
+	  15 Input     14 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2045  
+	   5 Input      8 Bit        Muxes := 312   
+	   4 Input      8 Bit        Muxes := 828   
+	  17 Input      8 Bit        Muxes := 4     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 312   
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 60    
+	  20 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1059  
+	   5 Input      1 Bit        Muxes := 768   
+	   4 Input      1 Bit        Muxes := 256   
+	  20 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module DMEM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1024  
++---Muxes : 
+	   2 Input   8192 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2038  
+	   5 Input      8 Bit        Muxes := 312   
+	   4 Input      8 Bit        Muxes := 828   
+	   5 Input      3 Bit        Muxes := 312   
+	   4 Input      2 Bit        Muxes := 60    
+	   2 Input      1 Bit        Muxes := 1018  
+	   5 Input      1 Bit        Muxes := 768   
+	   4 Input      1 Bit        Muxes := 256   
+Module IMEM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	                8 Bit    Registers := 4     
++---Muxes : 
+	  17 Input      8 Bit        Muxes := 4     
+Module pc_register 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+Module reg_IF_ID 
+Detailed RTL Component Info : 
++---Registers : 
+	               26 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+Module REG 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 34    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module sign_extender 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module control 
+Detailed RTL Component Info : 
++---Muxes : 
+	  15 Input     14 Bit        Muxes := 1     
+Module mux_2_to_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+Module mux_2_to_1__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module mux_2_to_1__parameterized1__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module mux_2_to_1__parameterized1__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module pc_update 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+Module reg_ID_EXE 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+Module mux_2_to_1__parameterized2__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module alu_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	  20 Input      5 Bit        Muxes := 1     
+	  20 Input      2 Bit        Muxes := 1     
+	  20 Input      1 Bit        Muxes := 2     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     33 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   4 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module reg_HI_LO 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 1     
+Module mux_2_to_1__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module align_check 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module reg_EXE_MEM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module reg_MEM_WB 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+Module mux_2_to_1__parameterized2__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module hazard_detection 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+Module mux_2_to_1__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design system has unconnected port SYS_load
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[7]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[6]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[5]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[4]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[3]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[2]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[1]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[0]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[2]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[1]
+WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[0]
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "high_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "low_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP high_register_out0, operation Mode is: A*B.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: Generating DSP high_register_out0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: Generating DSP high_register_out0, operation Mode is: A*B.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: Generating DSP high_register_out0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
+WARNING: [Synth 8-6014] Unused sequential element reg_IF_ID/shamt_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:24]
+WARNING: [Synth 8-6014] Unused sequential element reg_IF_ID/funct_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:25]
+WARNING: [Synth 8-6014] Unused sequential element reg_ID_EXE/excep_control_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:36]
+WARNING: [Synth 8-6014] Unused sequential element reg_EXE_MEM/excep_control_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:30]
+WARNING: [Synth 8-6014] Unused sequential element reg_MEM_WB/excep_control_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:27]
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/pc_calculated_out_reg[0]' (FDC) to 'reg_ID_EXE/pc_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[31]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[23]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[7]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[15]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[14]' (FDC) to 'reg_IF_ID/rd_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[15]' (FDC) to 'reg_IF_ID/immediate_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[10]' (FDC) to 'reg_IF_ID/immediate_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[11]' (FDC) to 'reg_IF_ID/rd_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[12]' (FDC) to 'reg_IF_ID/rd_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[13]' (FDC) to 'reg_IF_ID/rd_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/opcode_reg[5]' (FDC) to 'reg_IF_ID/opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[24]' (FDC) to 'reg_IF_ID/rs_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[25]' (FDC) to 'reg_IF_ID/rs_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[22]' (FDC) to 'reg_IF_ID/rs_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[23]' (FDC) to 'reg_IF_ID/rs_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rs_reg[2]' (FDC) to 'reg_IF_ID/rt_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[18]' (FDC) to 'reg_IF_ID/rt_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[21]' (FDC) to 'reg_IF_ID/rs_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[6]' (FDC) to 'reg_IF_ID/immediate_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[7]' (FDC) to 'reg_IF_ID/immediate_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/immediate_reg[7]' (FDC) to 'reg_IF_ID/immediate_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[5]' (FDC) to 'reg_IF_ID/immediate_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/immediate_reg[15]' (FDC) to 'reg_IF_ID/immediate_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[8]' (FDC) to 'reg_IF_ID/immediate_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[9]' (FDC) to 'reg_IF_ID/immediate_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[19]' (FDC) to 'reg_IF_ID/rt_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[20]' (FDC) to 'reg_IF_ID/rt_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[16]' (FDC) to 'reg_IF_ID/rt_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[17]' (FDC) to 'reg_IF_ID/rt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[29]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[31]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[27]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[28]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[30]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[19]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[15]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[23]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[21]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[17]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[25]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[20]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[16]' (FDC) to 'reg_ID_EXE/immediate_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[24]' (FDC) to 'reg_ID_EXE/immediate_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[22]' (FDC) to 'reg_ID_EXE/immediate_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[18]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[26]' (FDC) to 'reg_ID_EXE/immediate_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/alu_src_control_out_reg' (FDC) to 'reg_ID_EXE/alu_op_control_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[7]' (FDC) to 'reg_ID_EXE/immediate_out_reg[2]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:41 ; elapsed = 00:07:33 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |DMEM__GB0     |           1|     33305|
+|2     |DMEM__GB1     |           1|      9430|
+|3     |DMEM__GB2     |           1|     12769|
+|4     |DMEM__GB3     |           1|     20774|
+|5     |DMEM__GB4     |           1|     15795|
+|6     |DMEM__GB5     |           1|      9399|
+|7     |DMEM__GB6     |           1|     10881|
+|8     |DMEM__GB7     |           1|      5854|
+|9     |DMEM__GB8     |           1|     10271|
+|10    |DMEM__GB9     |           1|      9275|
+|11    |system__GC0   |           1|     11202|
++------+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:06:44 ; elapsed = 00:07:36 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |DMEM__GB0     |           1|     33305|
+|2     |DMEM__GB1     |           1|      9424|
+|3     |DMEM__GB2     |           1|     12753|
+|4     |DMEM__GB3     |           1|     20774|
+|5     |DMEM__GB4     |           1|     15795|
+|6     |DMEM__GB5     |           1|      9391|
+|7     |DMEM__GB6     |           1|     10880|
+|8     |DMEM__GB7     |           1|      5854|
+|9     |DMEM__GB8     |           1|     10271|
+|10    |DMEM__GB9     |           1|      9275|
+|11    |system__GC0   |           1|     11202|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'i_0/reg_ID_EXE/wb_control_out_reg[0]' (FDC) to 'i_0/reg_ID_EXE/wb_control_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/reg_ID_EXE/wb_control_out_reg[1]' (FDC) to 'i_0/reg_ID_EXE/alu_op_control_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'i_0/IF_stage/pc_reg/data_out_reg[2]' (FDC_1) to 'i_0/IF_stage/imem/instruction_out_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_0/IF_stage/imem/instruction_out_reg[22]' (FDC_1) to 'i_0/IF_stage/imem/instruction_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'i_0/IF_stage/imem/instruction_out_reg[21]' (FDC_1) to 'i_0/IF_stage/imem/instruction_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_0/reg_IF_ID/pc_out_reg[2]' (FDC) to 'i_0/reg_IF_ID/rs_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/reg_IF_ID/rs_reg[1]' (FDC) to 'i_0/reg_IF_ID/rt_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/reg_IF_ID/rs_reg[0]' (FDC) to 'i_0/reg_IF_ID/rt_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/IF_stage/imem/instruction_out_reg[19]' (FDC_1) to 'i_0/IF_stage/imem/instruction_out_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\IF_stage/imem/instruction_out_reg[9] )
+INFO: [Synth 8-3886] merging instance 'i_0/reg_IF_ID/rt_reg[3]' (FDC) to 'i_0/reg_IF_ID/immediate_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/reg_ID_EXE/alu_op_control_out_reg[0]' (FDC) to 'i_0/reg_ID_EXE/alu_op_control_out_reg[1]'
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:06:54 ; elapsed = 00:07:47 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |DMEM__GB0     |           1|     26004|
+|2     |DMEM__GB1     |           1|      8694|
+|3     |DMEM__GB2     |           1|      8328|
+|4     |DMEM__GB3     |           1|     11566|
+|5     |DMEM__GB4     |           1|     12024|
+|6     |DMEM__GB5     |           1|      9035|
+|7     |DMEM__GB6     |           1|      9278|
+|8     |DMEM__GB7     |           1|      4939|
+|9     |DMEM__GB8     |           1|      8382|
+|10    |DMEM__GB9     |           1|      7254|
+|11    |system__GC0   |           1|      4611|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[205][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[206][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[207][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[208][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[201][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[202][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[203][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[204][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[197][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[198][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[199][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[200][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[193][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[194][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[195][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[196][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[221][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[222][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[223][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[224][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[217][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[218][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[219][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[220][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[213][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[214][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[215][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[216][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[209][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[210][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[211][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[212][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[237][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[238][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[239][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[240][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[233][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[234][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[235][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[236][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[229][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[230][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[231][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[232][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[225][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[226][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[227][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[228][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[253][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[254][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[255][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[256][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[249][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[250][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[251][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[252][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[245][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[246][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[247][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[248][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[241][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[242][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[243][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[244][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[141][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[142][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[143][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[144][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[137][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[138][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[139][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[140][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[133][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[134][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[135][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[136][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[129][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[130][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[131][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[132][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[157][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[158][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[159][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[160][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[153][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[154][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[155][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[156][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[149][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[150][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[151][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[152][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[145][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[146][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[147][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[148][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[173][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[174][3]_P )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[175][3]_P )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[24]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rs_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[3]'
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][7]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][7]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][6]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][6]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][5]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][5]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][4]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][4]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][3]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][3]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][2]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][2]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][1]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][1]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][0]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][0]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][7]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][7]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][6]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][6]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][5]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][5]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][4]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][4]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][3]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][3]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][2]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][2]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][1]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][1]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][0]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][0]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][7]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][7]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][6]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][6]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][5]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][5]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][4]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][4]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][3]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][3]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][2]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][2]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][1]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][1]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][0]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][0]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][7]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][7]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][6]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][6]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][5]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][5]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][4]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][4]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][3]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][3]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][2]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][2]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][1]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][1]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][0]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][0]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][7]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][7]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][6]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][6]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][5]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][5]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][4]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][4]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][3]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][3]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][2]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][2]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][1]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][1]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][0]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][0]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][7]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][7]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][6]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][6]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][5]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][5]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][4]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][4]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][3]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][3]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][2]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][2]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][1]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][1]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][0]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][0]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[684][7]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[684][7]_P) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[684][6]_LDC) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[684][6]_P) is unused and will be removed from module system.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:07:00 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:00 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   592|
+|3     |DSP48E1 |     4|
+|4     |LUT1    |   127|
+|5     |LUT2    |   156|
+|6     |LUT3    |  2060|
+|7     |LUT4    |    54|
+|8     |LUT5    |    79|
+|9     |LUT6    |   402|
+|10    |MUXF7   |    78|
+|11    |MUXF8   |    23|
+|12    |FDCE    |   331|
+|13    |FDPE    |    64|
+|14    |FDRE    |   512|
+|15    |LDC     |    64|
+|16    |IBUF    |     2|
+|17    |OBUF    |    27|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------------+---------------------------+------+
+|      |Instance         |Module                     |Cells |
++------+-----------------+---------------------------+------+
+|1     |top              |                           |  4576|
+|2     |  EXE_stage      |EXE_stage                  |  3060|
+|3     |    ALU          |ALU                        |  2740|
+|4     |    reg_HI_LO    |reg_HI_LO                  |   320|
+|5     |  ID_stage       |ID_stage                   |   879|
+|6     |    regFile      |REG                        |   879|
+|7     |  IF_stage       |IF_stage                   |    10|
+|8     |    imem         |IMEM                       |     9|
+|9     |    pc_reg       |pc_register                |     1|
+|10    |  WB_stage       |WB_stage                   |    32|
+|11    |    data_reg_sel |mux_2_to_1__parameterized2 |    32|
+|12    |  reg_EXE_MEM    |reg_EXE_MEM                |    38|
+|13    |  reg_ID_EXE     |reg_ID_EXE                 |   443|
+|14    |  reg_IF_ID      |reg_IF_ID                  |    29|
+|15    |  reg_MEM_WB     |reg_MEM_WB                 |    55|
++------+-----------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 24780 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:01 ; elapsed = 00:07:55 . Memory (MB): peak = 982.152 ; gain = 744.043
+Synthesis Optimization Complete : Time (s): cpu = 00:07:01 ; elapsed = 00:07:55 . Memory (MB): peak = 982.152 ; gain = 744.043
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 763 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 64 instances were transformed.
+  LDC => LDCE: 64 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+298 Infos, 208 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:07:04 ; elapsed = 00:08:01 . Memory (MB): peak = 982.152 ; gain = 757.367
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1/system.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_utilization_synth.rpt -pb system_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 982.152 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 25 15:26:41 2023...
