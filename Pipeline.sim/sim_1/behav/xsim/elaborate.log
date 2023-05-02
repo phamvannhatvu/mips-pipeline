@@ -1,0 +1,50 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/SoftWare/VIVADO/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 79a996866b294bd8885cd3c41d5dcd3c --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot instruction_tb0_behav xil_defaultlib.instruction_tb0 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.exception_handler
+Compiling module xil_defaultlib.mux_2_to_1(N=8)
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="zyn...
+Compiling module xil_defaultlib.imem_lib
+Compiling module xil_defaultlib.IMEM
+Compiling module xil_defaultlib.pc_register(N=8)
+Compiling module xil_defaultlib.IF_stage
+Compiling module xil_defaultlib.reg_IF_ID
+Compiling module xil_defaultlib.REG
+Compiling module xil_defaultlib.sign_extender
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.mux_2_to_1(N=14)
+Compiling module xil_defaultlib.mux_2_to_1(N=5)
+Compiling module xil_defaultlib.pc_update
+Compiling module xil_defaultlib.ID_stage
+Compiling module xil_defaultlib.reg_ID_EXE
+Compiling module xil_defaultlib.mux_4_to_1(N=32)
+Compiling module xil_defaultlib.mux_2_to_1(N=32)
+Compiling module xil_defaultlib.alu_control
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.reg_HI_LO
+Compiling module xil_defaultlib.align_check
+Compiling module xil_defaultlib.EXE_stage
+Compiling module xil_defaultlib.reg_EXE_MEM
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="zyn...
+Compiling module xil_defaultlib.dmem_lib
+Compiling module xil_defaultlib.DMEM
+Compiling module xil_defaultlib.MEM_stage
+Compiling module xil_defaultlib.reg_MEM_WB
+Compiling module xil_defaultlib.forward_unit
+Compiling module xil_defaultlib.hazard_detection
+Compiling module xil_defaultlib.system
+Compiling module xil_defaultlib.instruction_tb0
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot instruction_tb0_behav
