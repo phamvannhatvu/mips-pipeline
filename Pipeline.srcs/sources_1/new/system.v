@@ -42,7 +42,8 @@ module system (
 		.excep_enable(SYS_excep),
 		.clk(SYS_clk),
 		.reset(SYS_reset),
-
+		.epc(exception_pc),
+	
 		.instruction_out(if_instruction),
 		.pc_out(if_pc)
 	);

@@ -13,11 +13,11 @@ module reg_HI_LO (
     reg [31:0]  reg_hilo [0:1];
 
     always @(posedge clk or negedge clk or posedge reset) begin
-        if (reset || excep_enable) begin
+        if (reset) begin
             data_out        <= 0;
             reg_hilo[0]     <= 0;
             reg_hilo[1]     <= 0;
-        end else begin
+        end else if (excep_enable == 1'b0) begin
             if (clk) begin
                 if (write_control == 1'b1) begin
                     reg_hilo[0] <= low_register_in;
