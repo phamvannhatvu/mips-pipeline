@@ -45,6 +45,7 @@ module system (
 		.clk(clk),
 		.reset(SYS_reset),
 		.excep_control_in(SYS_excep),
+		.epc(exception_pc),
 
 		.instruction_out(if_instruction),
 		.pc_out(if_pc)

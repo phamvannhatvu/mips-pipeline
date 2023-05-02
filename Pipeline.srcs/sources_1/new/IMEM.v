@@ -6,7 +6,7 @@ module IMEM (
 	output	reg	[31:0]	instruction_out
 );
 
-	reg [7:0]	memory [0:1023];
+	reg [7:0]	memory [0:255];
 	
 	always @(negedge clk or posedge reset) begin
 		if (reset) begin		

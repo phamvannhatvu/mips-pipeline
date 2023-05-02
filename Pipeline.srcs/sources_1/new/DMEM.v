@@ -10,7 +10,7 @@ module DMEM (
 );
 
 	// Same as IMEM: 2^8 words
-	reg [7:0]	memory [0:1023];
+	reg [7:0]	memory [0:255];
     
 	// Write with clock
 	always @(posedge clk or posedge reset) begin
