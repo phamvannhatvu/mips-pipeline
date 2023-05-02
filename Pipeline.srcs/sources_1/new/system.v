@@ -13,16 +13,16 @@ module system (
 	wire [7:0]	if_pc;
 	wire [7:0]	id_pc;
 	wire [7:0]	exe_pc_calculated;
-	wire		hz_control_pc;
 	wire [7:0]	exception_pc;
+	wire		hz_control_pc;
 	wire 		SYS_excep;
 
 	IF_stage IF_stage (
-		.SYS_load(SYS_load),
 		.SYS_pc_val(SYS_pc_val),
 		.pc_from_id(id_pc),
 		.pc_from_exe(exe_pc_calculated),
 		.epc(exception_pc),
+		.SYS_load(SYS_load),
 		.pc_hazard_control(hz_control_pc),
 		.excep_enable(SYS_excep),
 		.clk(SYS_clk),
