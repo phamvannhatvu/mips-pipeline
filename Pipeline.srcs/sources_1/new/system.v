@@ -3,30 +3,10 @@ module system (
 	input				SYS_reset,
 	input				SYS_load,
 	input		[7:0]	SYS_pc_val,
-	input		[2:0]	SYS_output_sel,
+	input		[3:0]	SYS_output_sel,
 
 	output		[26:0]	SYS_leds
 );
-
-	// Exception_handler
-	wire [7:0]	exception_pc;
-	wire 		SYS_excep;
-	wire 		exe_excep;	
-	wire		alu_excep;
-	wire		alu_control_excep;
-	wire [7:0]	exe_pc;
-
-	exception_handler exception_handler (
-		.exe_excep_in(exe_excep),
-		.alu_excep_in(alu_excep),
-		.alu_control_excep_in(alu_control_excep),
-		.pc_in(exe_pc),
-		.reset(SYS_reset),
-		.clk(SYS_clk),
-
-		.pc_out(exception_pc),
-		.excep_out(SYS_excep)
-	);
 
 	// IF_stage
 	wire [31:0]	if_instruction;
@@ -34,16 +14,20 @@ module system (
 	wire [7:0]	id_pc;
 	wire [7:0]	exe_pc_calculated;
 	wire		hz_control_pc;
+	wire [7:0]	exception_pc;
+	wire 		SYS_excep;
 
 	IF_stage IF_stage (
+		.SYS_load(SYS_load),
+		.SYS_pc_val(SYS_pc_val),
 		.pc_from_id(id_pc),
 		.pc_from_exe(exe_pc_calculated),
+		.epc(exception_pc),
 		.pc_hazard_control(hz_control_pc),
 		.excep_enable(SYS_excep),
 		.clk(SYS_clk),
 		.reset(SYS_reset),
-		.epc(exception_pc),
-	
+
 		.instruction_out(if_instruction),
 		.pc_out(if_pc)
 	);
@@ -133,7 +117,9 @@ module system (
 	wire [2:0]	exe_alu_op;
 	wire 		exe_alu_src;
 	wire		exe_regdst_control;
+	wire 		exe_excep;
 	wire [1:0]	exe_wb_control;
+	wire [7:0]	exe_pc;
 
 	reg_ID_EXE reg_ID_EXE (
 		.rs_address_in(id_rs),
@@ -179,11 +165,19 @@ module system (
 	wire [7:0] 	exe_alu_status;
 	wire		exe_comparator;
 	wire [1:0]	exe_wb_new_control;
+	wire		alu_control_excep;
+	wire		alu_excep;
 	wire [31:0] mem_alu_result;
 	wire [31:0]	wb_data;
 	wire [1:0]	fw_control_0;
 	wire [1:0]	fw_control_1;
 	wire [1:0]	fw_control_write_address;
+
+	wire [31:0]	exe_operand_0;
+	wire [31:0]	exe_operand_1;
+	wire [31:0]	exe_alu_out;
+	wire [31:0]	exe_hilo_out;
+	wire [31:0]	exe_alu_control;
 
 	EXE_stage EXE_stage (
 		.rs_address_in(exe_rs),
@@ -212,7 +206,12 @@ module system (
 		.comparator_out(exe_comparator),
 		.wb_control_out(exe_wb_new_control),
 		.alu_control_excep(alu_control_excep),
-		.alu_excep(alu_excep)
+		.alu_excep(alu_excep),
+		.operand_0(exe_operand_0),
+		.operand_1(exe_operand_1),
+		.alu_out(exe_alu_out),
+		.data_hilo_out(exe_hilo_out),
+		.alu_control_out(exe_alu_control)
 	);
 
 	// reg_EXE_MEM
@@ -241,6 +240,8 @@ module system (
 	);
 
 	// MEM_stage
+	wire [31:0]	mem_data_read;
+
 	MEM_stage MEM_stage (
 		.mem_address(mem_alu_result[7:0]),
 		.alu_result(mem_alu_result),
@@ -251,7 +252,8 @@ module system (
 		.clk(SYS_clk),
 		.reset(SYS_reset),
 
-		.wb_data(mem_data)
+		.wb_data(mem_data),
+		.data_read_out(mem_data_read)
 	);
 
 	// reg_MEM_WB
@@ -303,6 +305,40 @@ module system (
 		.control_signal(hz_control_signal)
 	);
 
-	assign SYS_leds = exe_alu_result;
+	// Exception_handler
+	exception_handler exception_handler (
+		.exe_excep_in(exe_excep),
+		.alu_excep_in(alu_excep),
+		.alu_control_excep_in(alu_control_excep),
+		.pc_in(exe_pc),
+		.reset(SYS_reset),
+		.clk(SYS_clk),
+
+		.pc_out(exception_pc),
+		.excep_out(SYS_excep)
+	);
+
+	// System_control
+	system_control system_control (
+		.SYS_output_sel(SYS_output_sel),
+		.imem_instruction(if_instruction),
+		.reg_rs_value(id_value_rs),
+		.reg_rt_value(id_value_rt),
+		.id_pc_calculated(id_calculated_pc),
+		.alu_operand_0(exe_operand_0),
+		.alu_operand_1(exe_operand_1),
+		.alu_out(exe_alu_out),
+		.hilo_reg_out(exe_hilo_out),
+		.exe_out(exe_alu_result),
+		.exe_write_data(exe_value_rt_out),
+		.alu_status(exe_alu_status),
+		.dmem_data(mem_data_read),
+		.control(id_control),
+		.alu_control(exe_alu_control),
+		.pc(if_pc),
+		.epc(exception_pc),
+
+		.SYS_led(SYS_leds)
+	);
 
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Apr 25 15:27:50 2023
+| Date             : Tue May  2 17:57:08 2023
 | Host             : LAPTOP-TQL8U39E running 64-bit major release  (build 9200)
 | Command          : report_power -file system_power_routed.rpt -pb system_power_summary_routed.pb -rpx system_power_routed.rpx
 | Design           : system
@@ -29,42 +29,44 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 62.358 (Junction temp exceeded!) |
-| Design Power Budget (W)  | Unspecified*                     |
-| Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 61.319                           |
-| Device Static (W)        | 1.039                            |
-| Effective TJA (C/W)      | 11.5                             |
-| Max Ambient (C)          | 0.0                              |
-| Junction Temperature (C) | 125.0                            |
-| Confidence Level         | Low                              |
-| Setting File             | ---                              |
-| Simulation Activity File | ---                              |
-| Design Nets Matched      | NA                               |
-+--------------------------+----------------------------------+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 125.370 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 124.328                           |
+| Device Static (W)        | 1.042                             |
+| Effective TJA (C/W)      | 11.5                              |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    29.249 |     4556 |       --- |             --- |
-|   LUT as Logic |    24.676 |     2743 |     53200 |            5.16 |
-|   CARRY4       |     4.459 |      592 |     13300 |            4.45 |
-|   Register     |     0.085 |      971 |    106400 |            0.91 |
-|   F7/F8 Muxes  |     0.028 |      101 |     53200 |            0.19 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    26.149 |     4248 |       --- |             --- |
-| DSPs           |     1.670 |        4 |       220 |            1.82 |
-| I/O            |     4.251 |       29 |       125 |           23.20 |
-| Static Power   |     1.039 |          |           |                 |
-| Total          |    62.358 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic             |    52.552 |     9727 |       --- |             --- |
+|   LUT as Logic          |    43.681 |     4931 |     53200 |            9.27 |
+|   CARRY4                |     4.528 |      606 |     13300 |            4.56 |
+|   Register              |     3.272 |     3027 |    106400 |            2.84 |
+|   F7/F8 Muxes           |     1.070 |      670 |     53200 |            1.26 |
+|   BUFG                  |    <0.001 |       12 |        32 |           37.50 |
+|   Others                |     0.000 |       25 |       --- |             --- |
+|   LUT as Shift Register |     0.000 |        2 |     17400 |            0.01 |
+| Signals                 |    60.753 |     8052 |       --- |             --- |
+| Block RAM               |     0.010 |      1.5 |       140 |            1.07 |
+| DSPs                    |     2.700 |        4 |       220 |            1.82 |
+| I/O                     |     8.313 |       40 |       125 |           32.00 |
+| Static Power            |     1.042 |          |           |                 |
+| Total                   |   125.370 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -73,16 +75,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    57.367 |      57.069 |      0.299 |
-| Vccaux    |       1.800 |     0.448 |       0.348 |      0.100 |
+| Vccint    |       1.000 |   116.358 |     116.059 |      0.300 |
+| Vccaux    |       1.800 |     0.777 |       0.677 |      0.100 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     2.014 |       2.013 |      0.001 |
+| Vcco18    |       1.800 |     3.918 |       3.917 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.026 |       0.000 |      0.026 |
+| Vccbram   |       1.000 |     0.029 |       0.001 |      0.028 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -144,24 +146,40 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------+-----------+
-| Name             | Power (W) |
-+------------------+-----------+
-| system           |    61.319 |
-|   EXE_stage      |    50.388 |
-|     ALU          |    50.205 |
-|     reg_HI_LO    |     0.184 |
-|   ID_stage       |     0.657 |
-|     regFile      |     0.657 |
-|   IF_stage       |     0.035 |
-|     imem         |     0.028 |
-|     pc_reg       |     0.006 |
-|   WB_stage       |     0.350 |
-|     data_reg_sel |     0.350 |
-|   reg_EXE_MEM    |     0.048 |
-|   reg_ID_EXE     |     4.945 |
-|   reg_IF_ID      |     0.524 |
-|   reg_MEM_WB     |     0.114 |
-+------------------+-----------+
++--------------------------------------------------+-----------+
+| Name                                             | Power (W) |
++--------------------------------------------------+-----------+
+| system                                           |   124.328 |
+|   EXE_stage                                      |    52.691 |
+|     ALU                                          |    52.194 |
+|     reg_HI_LO                                    |     0.496 |
+|   ID_stage                                       |    52.452 |
+|     pc_update                                    |     0.011 |
+|     regFile                                      |    52.441 |
+|   IF_stage                                       |     0.562 |
+|     imem                                         |     0.558 |
+|       imem                                       |     0.407 |
+|         U0                                       |     0.407 |
+|           inst_blk_mem_gen                       |     0.407 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.407 |
+|               valid.cstr                         |     0.407 |
+|                 ramloop[0].ram.r                 |     0.407 |
+|                   prim_init.ram                  |     0.407 |
+|     pc_reg                                       |     0.005 |
+|   MEM_stage                                      |     0.004 |
+|     data_mem                                     |     0.004 |
+|       dmem                                       |    <0.001 |
+|         U0                                       |    <0.001 |
+|           inst_blk_mem_gen                       |    <0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
+|               valid.cstr                         |    <0.001 |
+|                 ramloop[0].ram.r                 |    <0.001 |
+|                   prim_init.ram                  |    <0.001 |
+|   exception_handler                              |     0.092 |
+|   reg_EXE_MEM                                    |     0.071 |
+|   reg_ID_EXE                                     |     6.888 |
+|   reg_IF_ID                                      |     1.717 |
+|   reg_MEM_WB                                     |     1.281 |
++--------------------------------------------------+-----------+
 
 

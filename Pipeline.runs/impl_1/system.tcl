@@ -67,16 +67,19 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache {C:/Users/Nhat Khai/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-10224-LAPTOP-TQL8U39E/incrSyn}
+  set_param synth.incrementalSynthesisCache {C:/Users/Nhat Khai/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1152-LAPTOP-TQL8U39E/incrSyn}
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.cache/wt [current_project]
-  set_property parent.project_path C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.xpr [current_project]
-  set_property ip_output_repo C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/HCMUT/HK222/CO2007/Assignment/mips-pipeline-memory_unit/Pipeline.cache/wt [current_project]
+  set_property parent.project_path C:/HCMUT/HK222/CO2007/Assignment/mips-pipeline-memory_unit/Pipeline.xpr [current_project]
+  set_property ip_output_repo C:/HCMUT/HK222/CO2007/Assignment/mips-pipeline-memory_unit/Pipeline.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1/system.dcp
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+  add_files -quiet C:/HCMUT/HK222/CO2007/Assignment/mips-pipeline-memory_unit/Pipeline.runs/synth_1/system.dcp
+  read_ip -quiet C:/HCMUT/HK222/CO2007/Assignment/mips-pipeline-memory_unit/Pipeline.srcs/sources_1/ip/dmem_lib/dmem_lib.xci
+  read_ip -quiet C:/HCMUT/HK222/CO2007/Assignment/mips-pipeline-memory_unit/Pipeline.srcs/sources_1/ip/imem_lib/imem_lib.xci
   link_design -top system -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]

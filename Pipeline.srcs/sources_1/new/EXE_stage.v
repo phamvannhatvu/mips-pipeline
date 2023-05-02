@@ -26,11 +26,15 @@ module EXE_stage (
     output              comparator_out,
     output      [1:0]   wb_control_out,
     output  			alu_control_excep,
-    output              alu_excep
+    output              alu_excep,
+
+    output      [31:0]  operand_0,
+    output      [31:0]  operand_1,
+    output      [31:0]  alu_out,
+    output      [31:0]  data_hilo_out,
+    output      [4:0]   alu_control_out
 );
     
-
-    wire [31:0] operand_0;
     mux_4_to_1 #(32) opreand_0_mux (
         .in0(rs_value_in),
         .in1(prev_alu_result),
@@ -49,7 +53,6 @@ module EXE_stage (
         .out(operand_1_pre)
     );
 
-    wire [31:0] operand_1;
     mux_4_to_1 #(32) opreand_1_mux (
         .in0(operand_1_pre),
         .in1(prev_alu_result),
@@ -68,7 +71,6 @@ module EXE_stage (
         .out(rt_value_out)
     );
 
-    wire [4:0]  alu_control_out;
     wire        hilo_write_control;
     wire [1:0]  hilo_read_control;
     alu_control alu_control (
@@ -84,7 +86,6 @@ module EXE_stage (
         .hilo_read(hilo_read_control)
     );
 
-    wire [31:0] alu_result_out;
     wire [31:0] high_register_out;
     wire [31:0] low_register_out;
     ALU ALU (
@@ -93,13 +94,12 @@ module EXE_stage (
         .alu_operand_1(operand_1),
         .shamt(shamt_in),
 
-        .alu_result(alu_result_out),
+        .alu_result(alu_out),
         .alu_status({alu_status[7:4], alu_status[2:0]}),
         .high_register_out(high_register_out),
         .low_register_out(low_register_out)
     );
 
-    wire [31:0] data_hilo_out;
     reg_HI_LO reg_HI_LO (
         .high_register_in(high_register_out),
         .low_register_in(low_register_out),
@@ -107,14 +107,13 @@ module EXE_stage (
         .read_control(hilo_read_control),
         .clk(clk),
         .reset(reset),
-        .excep_enable(excep_enable),
 
         .data_out(data_hilo_out)
     );
 
     wire hilo_read_enable = hilo_read_control[0] | hilo_read_control[1];
     mux_2_to_1 #(32) result_mux (
-        .in0(alu_result_out),
+        .in0(alu_out),
         .in1(data_hilo_out),
         .sel(hilo_read_enable),
 
@@ -124,7 +123,7 @@ module EXE_stage (
     align_check align_check (
         .mem_control_in(mem_control),
         .alu_op_in(alu_op),
-        .alu_result_in(alu_result_out),
+        .alu_result_in(alu_out),
 
         .align_exception_out(alu_status[3])
     );

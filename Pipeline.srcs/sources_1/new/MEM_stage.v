@@ -8,10 +8,11 @@ module MEM_stage (
     input               clk,
     input               reset,
 
-    output      [31:0]  wb_data
+    output      [31:0]  wb_data,
+
+    output      [31:0]  data_read_out
 );
-    
-    wire [31:0] data_read_out;
+
     DMEM data_mem (
         .address(mem_address),
         .data_in(write_data),

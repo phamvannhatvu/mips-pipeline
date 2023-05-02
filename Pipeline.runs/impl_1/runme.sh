@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/impl_1'
+HD_PWD='C:/HCMUT/HK222/CO2007/Assignment/mips-pipeline-memory_unit/Pipeline.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
