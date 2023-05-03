@@ -1,9 +1,9 @@
 module IF_stage (
-    input               SYS_load,
     input       [7:0]   SYS_pc_val,
     input       [7:0]   pc_from_id,
     input       [7:0]   pc_from_exe,
     input       [7:0]   epc,
+    input               SYS_load,
     input               pc_hazard_control,
     input               excep_enable,
     input               clk,
@@ -22,16 +22,6 @@ module IF_stage (
 		.out(pc_in)
 	);
 
-    pc_register #(8) pc_reg (
-        .data_in(pc_in),
-        .clk(clk),
-        .reset(reset),
-        .excep_enable(excep_enable),
-        .epc(epc),
-        
-        .data_out(pc_out)
-    );
-
     wire [7:0]  real_pc;
     mux_2_to_1 #(8) real_pc_mux (
         .in0(pc_in),
@@ -41,10 +31,20 @@ module IF_stage (
         .out(real_pc)
     );
 
-    IMEM imem (
-        .reset(reset),
+    pc_register #(8) pc_reg (
+        .data_in(real_pc),
+        .epc(epc),
+        .excep_enable(excep_enable),
         .clk(clk),
+        .reset(reset),
+        
+        .data_out(pc_out)
+    );
+
+    IMEM imem (
         .pc(real_pc),
+        .clk(clk),
+        .reset(reset),
         
         .instruction_out(instruction_out)
     );
