@@ -17,7 +17,7 @@ module REG (
 		if (reset) begin
 			value_rs		<= 0;
 			value_rt		<= 0;
-			for (i = 0; i <= 32; i = i + 1) begin
+			for (i = 0; i <= 31; i = i + 1) begin
 				reg_file[i] <= 0;
 			end
 		end else if (clk) begin

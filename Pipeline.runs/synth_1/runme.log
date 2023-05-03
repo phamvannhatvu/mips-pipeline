@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16684 
+INFO: Helper process launched with PID 19712 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 382.723 ; gain = 100.754
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 382.535 ; gain = 98.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/system.v:1]
 INFO: [Synth 8-6157] synthesizing module 'IF_stage' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/IF_stage.v:1]
@@ -109,27 +109,7 @@ INFO: [Synth 8-6157] synthesizing module 'reg_IF_ID' [D:/Studying/Academic/HCMUT
 INFO: [Synth 8-6155] done synthesizing module 'reg_IF_ID' (14#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:1]
 INFO: [Synth 8-6157] synthesizing module 'ID_stage' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:1]
 INFO: [Synth 8-6157] synthesizing module 'REG' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
-WARNING: [Synth 8-5788] Register reg_file_reg[1] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[2] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[3] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[4] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[5] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[6] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[7] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[18] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[19] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[20] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[21] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[22] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[23] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[24] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[25] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[26] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[27] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[28] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[29] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[30] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
-WARNING: [Synth 8-5788] Register reg_file_reg[31] in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:20]
+WARNING: [Synth 8-324] index 32 out of range [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:21]
 INFO: [Synth 8-6155] done synthesizing module 'REG' (15#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
 INFO: [Synth 8-6157] synthesizing module 'sign_extender' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'sign_extender' (16#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
@@ -171,7 +151,7 @@ INFO: [Synth 8-6157] synthesizing module 'reg_EXE_MEM' [D:/Studying/Academic/HCM
 INFO: [Synth 8-6155] done synthesizing module 'reg_EXE_MEM' (27#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:1]
 INFO: [Synth 8-6157] synthesizing module 'MEM_stage' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
 INFO: [Synth 8-6157] synthesizing module 'DMEM' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
-INFO: [Synth 8-638] synthesizing module 'dmem_lib' [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/synth/dmem_lib.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'dmem_lib' [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/synth/dmem_lib.vhd:78]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -240,14 +220,14 @@ INFO: [Synth 8-638] synthesizing module 'dmem_lib' [d:/Studying/Academic/HCMUT/2
 	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
 	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
 	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
-	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter C_COUNT_36K_BRAM bound to: 1 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     5.9299 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at 'd:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/synth/dmem_lib.vhd:253]
-INFO: [Synth 8-256] done synthesizing module 'dmem_lib' (28#1) [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/synth/dmem_lib.vhd:80]
-WARNING: [Synth 8-350] instance 'dmem' of module 'dmem_lib' requires 16 connections, but only 13 given [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:21]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at 'd:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/synth/dmem_lib.vhd:251]
+INFO: [Synth 8-256] done synthesizing module 'dmem_lib' (28#1) [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/synth/dmem_lib.vhd:78]
+WARNING: [Synth 8-350] instance 'dmem' of module 'dmem_lib' requires 14 connections, but only 13 given [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:21]
 INFO: [Synth 8-6155] done synthesizing module 'DMEM' (29#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'MEM_stage' (30#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
 INFO: [Synth 8-6157] synthesizing module 'reg_MEM_WB' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:1]
@@ -363,7 +343,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unco
 WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[11]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:01:28 . Memory (MB): peak = 726.320 ; gain = 444.352
+Finished RTL Elaboration : Time (s): cpu = 00:01:12 ; elapsed = 00:01:18 . Memory (MB): peak = 726.781 ; gain = 443.125
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -472,10 +452,10 @@ WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[0] to constant 0 [D:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:01:29 . Memory (MB): peak = 726.320 ; gain = 444.352
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 726.781 ; gain = 443.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:01:29 . Memory (MB): peak = 726.320 ; gain = 444.352
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 726.781 ; gain = 443.125
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -495,16 +475,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 830.918 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 831.066 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:01:42 . Memory (MB): peak = 830.918 ; gain = 548.949
+Finished Constraint Validation : Time (s): cpu = 00:01:22 ; elapsed = 00:01:31 . Memory (MB): peak = 831.066 ; gain = 547.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:01:42 . Memory (MB): peak = 830.918 ; gain = 548.949
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:22 ; elapsed = 00:01:31 . Memory (MB): peak = 831.066 ; gain = 547.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -512,7 +492,7 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for MEM_stage/data_mem/dmem. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for IF_stage/imem/imem. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:01:42 . Memory (MB): peak = 830.918 ; gain = 548.949
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:01:31 . Memory (MB): peak = 831.066 ; gain = 547.410
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "control_signal" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
@@ -532,7 +512,7 @@ INFO: [Synth 8-5545] ROM "high_register_out" won't be mapped to RAM because addr
 INFO: [Synth 8-5545] ROM "low_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ALU.v:48]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:01:43 . Memory (MB): peak = 830.918 ; gain = 548.949
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:23 ; elapsed = 00:01:32 . Memory (MB): peak = 831.066 ; gain = 547.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -550,20 +530,19 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 3     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
-	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
 	               32 Bit    Registers := 43    
 	               26 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 5     
 	                6 Bit    Registers := 3     
-	                5 Bit    Registers := 13    
+	                5 Bit    Registers := 11    
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 17    
+	                1 Bit    Registers := 9     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 60    
+	   2 Input     32 Bit        Muxes := 38    
 	   4 Input     32 Bit        Muxes := 6     
 	   8 Input     32 Bit        Muxes := 2     
 	   3 Input     32 Bit        Muxes := 2     
@@ -629,7 +608,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 34    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 27    
+	   2 Input     32 Bit        Muxes := 5     
 Module sign_extender 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -733,13 +712,6 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-Module blk_mem_gen_prim_width__parameterized0 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 2     
-+---Registers : 
-	                5 Bit    Registers := 2     
-	                1 Bit    Registers := 8     
 Module DMEM 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -820,26 +792,26 @@ INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[16]' (FDC) t
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[24]' (FDC) to 'reg_ID_EXE/immediate_out_reg[22]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[22]' (FDC) to 'reg_ID_EXE/immediate_out_reg[18]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[18]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[25]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[24]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[23]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[22]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[21]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[20]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[19]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[18]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[17]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[16]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[15]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[14]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[13]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[12]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[11]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[10]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[9]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[8]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[7]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/jump_address_reg[6]) is unused and will be removed from module system.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[25]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[24]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[23]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[22]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[21]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[20]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[19]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[18]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[17]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[16]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[15]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[14]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[13]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[12]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[11]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[10]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[9]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[8]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[7]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[6]) is unused and will be removed from module reg_IF_ID.
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/pc_out_reg[0]' (FDC) to 'reg_ID_EXE/pc_calculated_out_reg[0]'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[0]'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[1]'
@@ -849,7 +821,7 @@ INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[4]' (FDC) to '
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[5]' (FDC) to 'reg_IF_ID/immediate_reg[5]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/alu_op_control_out_reg[2]' (FDC) to 'reg_ID_EXE/alu_src_control_out_reg'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:01:59 . Memory (MB): peak = 830.918 ; gain = 548.949
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:37 ; elapsed = 00:01:47 . Memory (MB): peak = 831.066 ; gain = 547.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -879,13 +851,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:02:13 . Memory (MB): peak = 859.695 ; gain = 577.727
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:49 ; elapsed = 00:02:00 . Memory (MB): peak = 862.938 ; gain = 579.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:02:14 . Memory (MB): peak = 866.207 ; gain = 584.238
+Finished Timing Optimization : Time (s): cpu = 00:01:50 ; elapsed = 00:02:01 . Memory (MB): peak = 869.688 ; gain = 586.031
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -896,26 +868,22 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (IF_stage/pc_reg/data_out_reg[0]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_IF_ID/pc_out_reg[0]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (exception_handler/pc_out_reg[0]) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (reg_ID_EXE/pc_calculated_out_reg[0]) is unused and will be removed from module system.
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[1]'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[14]'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[15]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[13]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[12]'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[11]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[1]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[4]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[3]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[5]' (FDC) to 'reg_IF_ID/immediate_reg[5]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[9]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[10]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[8]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[7]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[13]'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[2]'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[5]' (FDC) to 'reg_IF_ID/immediate_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[4]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[11]' (FDC) to 'reg_ID_EXE/rd_address_out_reg[0]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[3]' (FDC) to 'reg_ID_EXE/funct_out_reg[3]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[7]' (FDC) to 'reg_ID_EXE/shamt_out_reg[1]'
@@ -933,7 +901,7 @@ INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[2]' (FDC) to
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[10]' (FDC) to 'reg_ID_EXE/shamt_out_reg[4]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/rd_address_out_reg[4]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:02:18 . Memory (MB): peak = 990.668 ; gain = 708.699
+Finished Technology Mapping : Time (s): cpu = 00:01:52 ; elapsed = 00:02:04 . Memory (MB): peak = 988.848 ; gain = 705.191
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -957,7 +925,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:02:19 . Memory (MB): peak = 990.668 ; gain = 708.699
+Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:02:05 . Memory (MB): peak = 988.848 ; gain = 705.191
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -970,7 +938,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:02:19 . Memory (MB): peak = 990.668 ; gain = 708.699
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:02:05 . Memory (MB): peak = 988.848 ; gain = 705.191
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -982,39 +950,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:02:20 . Memory (MB): peak = 990.668 ; gain = 708.699
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:54 ; elapsed = 00:02:06 . Memory (MB): peak = 988.848 ; gain = 705.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:02:20 . Memory (MB): peak = 990.668 ; gain = 708.699
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:54 ; elapsed = 00:02:06 . Memory (MB): peak = 988.848 ; gain = 705.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:02:20 . Memory (MB): peak = 990.668 ; gain = 708.699
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:02:06 . Memory (MB): peak = 988.848 ; gain = 705.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:02:20 . Memory (MB): peak = 990.668 ; gain = 708.699
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+-------------------+-----------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name        | RTL Name                                                                                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+-------------------+-----------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|blk_mem_gen_v8_4_1 | inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 2     | NO           | NO                 | YES               | 2      | 0       | 
-+-------------------+-----------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:54 ; elapsed = 00:02:06 . Memory (MB): peak = 988.848 ; gain = 705.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1033,82 +987,81 @@ Report Cell Usage:
 |1     |BUFG     |    12|
 |2     |CARRY4   |   606|
 |3     |DSP48E1  |     4|
-|4     |LUT1     |   158|
-|5     |LUT2     |   442|
-|6     |LUT3     |  2714|
-|7     |LUT4     |   313|
-|8     |LUT5     |   368|
-|9     |LUT6     |  1516|
-|10    |MUXF7    |   472|
-|11    |MUXF8    |   198|
+|4     |LUT1     |   159|
+|5     |LUT2     |   641|
+|6     |LUT3     |  2242|
+|7     |LUT4     |   186|
+|8     |LUT5     |   233|
+|9     |LUT6     |  1715|
+|10    |MUXF7    |   532|
+|11    |MUXF8    |   258|
 |12    |RAMB18E1 |     1|
 |13    |RAMB36E1 |     1|
-|14    |SRL16E   |     2|
-|15    |FDCE     |  1481|
-|16    |FDPE     |  1088|
-|17    |FDRE     |    12|
-|18    |LDC      |   448|
-|19    |IBUF     |    13|
-|20    |OBUF     |    27|
+|14    |FDCE     |  1485|
+|15    |FDPE     |  1088|
+|16    |LDC      |    96|
+|17    |IBUF     |    15|
+|18    |OBUF     |    27|
 +------+---------+------+
 
 Report Instance Areas: 
 +------+---------------------------------------------------+----------------------------------------------+------+
 |      |Instance                                           |Module                                        |Cells |
 +------+---------------------------------------------------+----------------------------------------------+------+
-|1     |top                                                |                                              |  9876|
-|2     |  EXE_stage                                        |EXE_stage                                     |  3061|
-|3     |    ALU                                            |ALU                                           |  2738|
-|4     |    reg_HI_LO                                      |reg_HI_LO                                     |   320|
-|5     |  ID_stage                                         |ID_stage                                      |  4595|
-|6     |    pc_update                                      |pc_update                                     |     9|
-|7     |    regFile                                        |REG                                           |  4586|
-|8     |  IF_stage                                         |IF_stage                                      |    55|
-|9     |    imem                                           |IMEM                                          |    41|
-|10    |      imem                                         |imem_lib                                      |     1|
-|11    |        U0                                         |blk_mem_gen_v8_4_1                            |     1|
-|12    |          inst_blk_mem_gen                         |blk_mem_gen_v8_4_1_synth                      |     1|
-|13    |            \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top                               |     1|
-|14    |              \valid.cstr                          |blk_mem_gen_generic_cstr                      |     1|
-|15    |                \ramloop[0].ram.r                  |blk_mem_gen_prim_width                        |     1|
-|16    |                  \prim_init.ram                   |blk_mem_gen_prim_wrapper_init                 |     1|
-|17    |    pc_reg                                         |pc_register                                   |    14|
-|18    |  MEM_stage                                        |MEM_stage                                     |    41|
-|19    |    data_mem                                       |DMEM                                          |    41|
-|20    |      dmem                                         |dmem_lib                                      |    23|
-|21    |        U0                                         |blk_mem_gen_v8_4_1__parameterized1            |    23|
-|22    |          inst_blk_mem_gen                         |blk_mem_gen_v8_4_1_synth__parameterized0      |    23|
-|23    |            \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized0               |    23|
-|24    |              \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized0      |    23|
-|25    |                \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized0        |    23|
-|26    |                  \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized0 |     5|
-|27    |  exception_handler                                |exception_handler                             |    21|
-|28    |  reg_EXE_MEM                                      |reg_EXE_MEM                                   |   326|
-|29    |  reg_ID_EXE                                       |reg_ID_EXE                                    |  1264|
-|30    |  reg_IF_ID                                        |reg_IF_ID                                     |   146|
-|31    |  reg_MEM_WB                                       |reg_MEM_WB                                    |   314|
+|1     |top                                                |                                              |  9301|
+|2     |  MEM_stage                                        |MEM_stage                                     |     7|
+|3     |    data_mem                                       |DMEM                                          |     7|
+|4     |      dmem                                         |dmem_lib                                      |     1|
+|5     |        U0                                         |blk_mem_gen_v8_4_1__parameterized1            |     1|
+|6     |          inst_blk_mem_gen                         |blk_mem_gen_v8_4_1_synth__parameterized0      |     1|
+|7     |            \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized0               |     1|
+|8     |              \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized0      |     1|
+|9     |                \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized0        |     1|
+|10    |                  \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized0 |     1|
+|11    |  EXE_stage                                        |EXE_stage                                     |  3060|
+|12    |    ALU                                            |ALU                                           |  2740|
+|13    |    reg_HI_LO                                      |reg_HI_LO                                     |   320|
+|14    |  ID_stage                                         |ID_stage                                      |  4105|
+|15    |    pc_update                                      |pc_update                                     |     9|
+|16    |    regFile                                        |REG                                           |  4096|
+|17    |  IF_stage                                         |IF_stage                                      |    57|
+|18    |    imem                                           |IMEM                                          |    41|
+|19    |      imem                                         |imem_lib                                      |     1|
+|20    |        U0                                         |blk_mem_gen_v8_4_1                            |     1|
+|21    |          inst_blk_mem_gen                         |blk_mem_gen_v8_4_1_synth                      |     1|
+|22    |            \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top                               |     1|
+|23    |              \valid.cstr                          |blk_mem_gen_generic_cstr                      |     1|
+|24    |                \ramloop[0].ram.r                  |blk_mem_gen_prim_width                        |     1|
+|25    |                  \prim_init.ram                   |blk_mem_gen_prim_wrapper_init                 |     1|
+|26    |    pc_reg                                         |pc_register                                   |    16|
+|27    |  exception_handler                                |exception_handler                             |    17|
+|28    |  reg_EXE_MEM                                      |reg_EXE_MEM                                   |   485|
+|29    |  reg_ID_EXE                                       |reg_ID_EXE                                    |  1186|
+|30    |  reg_IF_ID                                        |reg_IF_ID                                     |   142|
+|31    |  reg_MEM_WB                                       |reg_MEM_WB                                    |    42|
+|32    |  system_control                                   |system_control                                |   145|
 +------+---------------------------------------------------+----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:02:20 . Memory (MB): peak = 990.668 ; gain = 708.699
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:54 ; elapsed = 00:02:06 . Memory (MB): peak = 988.848 ; gain = 705.191
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 477 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:02:10 . Memory (MB): peak = 990.668 ; gain = 604.102
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:02:20 . Memory (MB): peak = 990.668 ; gain = 708.699
+Synthesis finished with 0 errors, 0 critical warnings and 473 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:01:56 . Memory (MB): peak = 988.848 ; gain = 600.906
+Synthesis Optimization Complete : Time (s): cpu = 00:01:54 ; elapsed = 00:02:06 . Memory (MB): peak = 988.848 ; gain = 705.191
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1743 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1513 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 4 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 448 instances were transformed.
-  LDC => LDCE: 448 instances
+  A total of 96 instances were transformed.
+  LDC => LDCE: 96 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-157 Infos, 245 Warnings, 0 Critical Warnings and 0 Errors encountered.
+157 Infos, 221 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:02:25 . Memory (MB): peak = 990.668 ; gain = 713.914
+synth_design: Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 988.848 ; gain = 712.594
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1/system.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_utilization_synth.rpt -pb system_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.116 . Memory (MB): peak = 990.668 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue May  2 22:14:27 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 988.848 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May  3 12:28:17 2023...
