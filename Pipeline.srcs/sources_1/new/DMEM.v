@@ -24,7 +24,7 @@ module DMEM (
 		.clka(clk),
 		.rsta(reset),
 		.dina(data_write_in),
-		.ena(write_enable),
+		.ena(0),
 		.wea(wea),
 
 		// b: read

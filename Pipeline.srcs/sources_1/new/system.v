@@ -177,7 +177,7 @@ module system (
 	wire [31:0]	exe_operand_1;
 	wire [31:0]	exe_alu_out;
 	wire [31:0]	exe_hilo_out;
-	wire [31:0]	exe_alu_control;
+	wire [4:0]	exe_alu_control;
 
 	EXE_stage EXE_stage (
 		.rs_address_in(exe_rs),

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="27166666fs"></ZoomStartTime>
-      <ZoomEndTime time="99878928fs"></ZoomEndTime>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="163000001fs"></ZoomEndTime>
       <Cursor1Time time="163000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="195"></NameColumnWidth>
+      <NameColumnWidth column_width="191"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="33" />
+   <WVObjectSize size="6" />
    <wvobject fp_name="/instruction_tb0/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -49,146 +49,5 @@
       <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
       <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/hazard_detection/control_signal" type="logic">
-      <obj_property name="ElementShortName">control_signal</obj_property>
-      <obj_property name="ObjectShortName">control_signal</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/ALU/alu_operand_0" type="array">
-      <obj_property name="ElementShortName">alu_operand_0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_operand_0[31:0]</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/ALU/alu_operand_1" type="array">
-      <obj_property name="ElementShortName">alu_operand_1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_operand_1[31:0]</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/ALU/alu_control" type="array">
-      <obj_property name="ElementShortName">alu_control[4:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_control[4:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/ALU/alu_result" type="array">
-      <obj_property name="ElementShortName">alu_result[31:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_result[31:0]</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/reg_HI_LO/reg_hilo" type="array">
-      <obj_property name="ElementShortName">reg_hilo[0:1][31:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_hilo[0:1][31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/SYS_excep" type="logic">
-      <obj_property name="ElementShortName">SYS_excep</obj_property>
-      <obj_property name="ObjectShortName">SYS_excep</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/exe_excep" type="logic">
-      <obj_property name="ElementShortName">exe_excep</obj_property>
-      <obj_property name="ObjectShortName">exe_excep</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/alu_excep" type="logic">
-      <obj_property name="ElementShortName">alu_excep</obj_property>
-      <obj_property name="ObjectShortName">alu_excep</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/alu_control_excep" type="logic">
-      <obj_property name="ElementShortName">alu_control_excep</obj_property>
-      <obj_property name="ObjectShortName">alu_control_excep</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/exception_handler/pc_out" type="array">
-      <obj_property name="ElementShortName">pc_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_out[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/address" type="array">
-      <obj_property name="ElementShortName">address[7:0]</obj_property>
-      <obj_property name="ObjectShortName">address[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/data_in" type="array">
-      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/mem_write" type="array">
-      <obj_property name="ElementShortName">mem_write[1:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_write[1:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/mem_read" type="array">
-      <obj_property name="ElementShortName">mem_read[1:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_read[1:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/reset" type="logic">
-      <obj_property name="ElementShortName">reset</obj_property>
-      <obj_property name="ObjectShortName">reset</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/data_out" type="array">
-      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/read_enable" type="logic">
-      <obj_property name="ElementShortName">read_enable</obj_property>
-      <obj_property name="ObjectShortName">read_enable</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/word_address" type="array">
-      <obj_property name="ElementShortName">word_address[5:0]</obj_property>
-      <obj_property name="ObjectShortName">word_address[5:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/data_word_out" type="array">
-      <obj_property name="ElementShortName">data_word_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_word_out[31:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/wea" type="array">
-      <obj_property name="ElementShortName">wea[3:0]</obj_property>
-      <obj_property name="ObjectShortName">wea[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/data_word_out" type="array">
-      <obj_property name="ElementShortName">data_word_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_word_out[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/MEM_stage/data_mem/write_enable" type="logic">
-      <obj_property name="ElementShortName">write_enable</obj_property>
-      <obj_property name="ObjectShortName">write_enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/IF_stage/pc_reg/data_out" type="array">
-      <obj_property name="ElementShortName">data_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/ALU/alu_status" type="array">
-      <obj_property name="ElementShortName">alu_status[6:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_status[6:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_write" type="logic">
-      <obj_property name="ElementShortName">reg_write</obj_property>
-      <obj_property name="ObjectShortName">reg_write</obj_property>
    </wvobject>
 </wave_config>

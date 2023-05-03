@@ -67,9 +67,7 @@ COMPONENT dmem_lib
     web : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     addrb : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
     dinb : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    rsta_busy : OUT STD_LOGIC;
-    rstb_busy : OUT STD_LOGIC
+    doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -93,9 +91,7 @@ your_instance_name : dmem_lib
     web => web,
     addrb => addrb,
     dinb => dinb,
-    doutb => doutb,
-    rsta_busy => rsta_busy,
-    rstb_busy => rstb_busy
+    doutb => doutb
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 
