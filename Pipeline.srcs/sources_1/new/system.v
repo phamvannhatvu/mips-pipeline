@@ -4,8 +4,12 @@ module system (
 	input				SYS_load,
 	input		[7:0]	SYS_pc_val,
 	input		[3:0]	SYS_output_sel,
+	input				BOARD_clk,
 
-	output		[26:0]	SYS_leds
+	output		[26:0]	SYS_leds,
+	output		[7:0]	LCD_data,
+	output				LCD_rs,
+	output				LCD_enable
 );
 
 	// IF_stage
@@ -339,6 +343,19 @@ module system (
 		.epc(exception_pc),
 
 		.SYS_led(SYS_leds)
+	);
+
+	//lcd_control
+	lcd_control lcd_control(
+		.pc(id_calculated_pc),
+		.out_sel(SYS_output_sel),
+		.out_val(SYS_leds),
+		.clk(BOARD_clk),
+		.reset(SYS_reset),
+
+		.data(LCD_data),
+		.rs(LCD_rs),
+		.enable(LCD_enable)
 	);
 
 endmodule
