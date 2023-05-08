@@ -2,13 +2,30 @@ module lcd_control (
     input [7:0]     pc,
     input [3:0]     out_sel,
     input [31:0]    out_val,
-    input           clk,
+    input           BOARD_clk,
     input           reset,
+    input           SYS_clk,
 
     output reg [7:0]    data,
     output reg          rs,
     output reg          enable
 );
+    //freq divider
+    reg [20:0] count;
+    reg clk;
+    always @(posedge BOARD_clk or posedge reset) begin
+        if (reset) begin
+            count    <= 0;
+            clk     <= 0;
+        end else begin
+            if (count == 1300000) begin
+                clk = ~clk;
+                count <= 0;
+            end
+            count <= count + 1;
+        end
+    end
+
     //pattern: PC:xx Sel:x-Out:xxxxxxxx
     reg [1:0]   state;
     reg [4:0]   idx; 
@@ -25,19 +42,21 @@ module lcd_control (
     wire [7:0] pattern_out6;
     wire [7:0] pattern_out7;
 
+    reg out_val_change;
+
     pattern_generator gen_pc0(
         .in(pc[7:4]),
         .out(pattern_pc0)
     );
     
     pattern_generator gen_pc1(
-        .in(out_sel),
+        .in(pc[3:0]),
         .out(pattern_pc1)
     );
     
     pattern_generator gen_sel(
         .in(out_sel),
-        .out(pattern_pc1)
+        .out(pattern_sel)
     );
     
     pattern_generator gen_out0(
@@ -80,59 +99,74 @@ module lcd_control (
         .out(pattern_out7)
     );
 
+    wire out_val_change_rst = (reset || (state == 2'b01));
+    always @(negedge SYS_clk or posedge out_val_change_rst) begin
+        if (out_val_change_rst) begin
+            out_val_change <= 0;
+        end else begin
+            out_val_change <= 1;
+        end
+    end
+
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             state   <= 2'b00;
             idx     <= 0;
             enable  <= 0;
             rs      <= 0;
+            data    <= 0;
         end else begin
             if (enable == 0) begin 
                 enable <= 1;
             end else begin
                 enable <= 0;
-                if (state == 2'b00) begin //turn on
+                if (state == 2'b00) begin //set 2 lines 
                     rs      <= 0; 
-                    state   <= 2'b01;
-                    data    <= 8'b00001111;
-                end else if (state == 2'b01) begin //set 2 lines 
+                    if (out_val_change) state <= 2'b01;
+                    data    <= 8'b00111000;
+                end else if (state == 2'b01) begin //turn on cursor
                     rs      <= 0;
                     state   <= 2'b10;
-                    data    <= 8'b00111000;
+                    data    <= 8'b00001111;
                 end else if (state == 2'b10) begin //clear
                     rs      <= 0;
                     state   <= 2'b11;
                     data    <= 2'b00000001;
                     idx     <= 0;
                 end else begin
-                    case (idx)
-                        0   : begin rs <= 1; data <= 8'b01010000; end
-                        1   : begin rs <= 1; data <= 8'b01000011; end
-                        2   : begin rs <= 1; data <= 8'b00111010; end
-                        3   : begin rs <= 1; data <= pattern_pc0; end
-                        4   : begin rs <= 1; data <= pattern_pc1; end
-                        5   : begin rs <= 1; data <= 8'b00000000; end
-                        6   : begin rs <= 1; data <= 8'b01010011; end
-                        7   : begin rs <= 1; data <= 8'b01100101; end
-                        8   : begin rs <= 1; data <= 8'b01101100; end
-                        9   : begin rs <= 1; data <= 8'b00111010; end
-                        10  : begin rs <= 1; data <= pattern_sel; end
-                        11  : begin rs <= 0; data <= 8'b01000000; end
-                        12  : begin rs <= 1; data <= 8'b01001111; end
-                        13  : begin rs <= 1; data <= 8'b01110101; end
-                        14  : begin rs <= 1; data <= 8'b01110100; end
-                        15  : begin rs <= 1; data <= 8'b00111010; end
-                        16  : begin rs <= 1; data <= pattern_out0; end
-                        17  : begin rs <= 1; data <= pattern_out1; end
-                        18  : begin rs <= 1; data <= pattern_out2; end
-                        19  : begin rs <= 1; data <= pattern_out3; end
-                        20  : begin rs <= 1; data <= pattern_out4; end
-                        21  : begin rs <= 1; data <= pattern_out5; end
-                        22  : begin rs <= 1; data <= pattern_out6; end
-                        23  : begin rs <= 1; data <= pattern_out7; end
-                    endcase
-                    idx <= idx + 1;
-                    if (idx == 23) state <= 2'b10; 
+                    if (idx == 25) begin
+                        if (out_val_change == 1) state <= 2'b01;
+                        rs <= 0; data <= 8'b00001100;
+                    end else begin
+                        case (idx)
+                            0   : begin rs <= 1; data <= 8'b01010000; end
+                            1   : begin rs <= 1; data <= 8'b01000011; end
+                            2   : begin rs <= 1; data <= 8'b00111010; end
+                            3   : begin rs <= 1; data <= pattern_pc0; end
+                            4   : begin rs <= 1; data <= pattern_pc1; end
+                            5   : begin rs <= 1; data <= 8'b00010000; end
+                            6   : begin rs <= 1; data <= 8'b00010000; end
+                            7   : begin rs <= 1; data <= 8'b01010011; end
+                            8   : begin rs <= 1; data <= 8'b01100101; end
+                            9   : begin rs <= 1; data <= 8'b01101100; end
+                            10  : begin rs <= 1; data <= 8'b00111010; end
+                            11  : begin rs <= 1; data <= pattern_sel; end
+                            12  : begin rs <= 0; data <= 8'b01000000; end
+                            13  : begin rs <= 1; data <= 8'b01001111; end
+                            14  : begin rs <= 1; data <= 8'b01110101; end
+                            15  : begin rs <= 1; data <= 8'b01110100; end
+                            16  : begin rs <= 1; data <= 8'b00111010; end
+                            17  : begin rs <= 1; data <= pattern_out0; end
+                            18  : begin rs <= 1; data <= pattern_out1; end
+                            19  : begin rs <= 1; data <= pattern_out2; end
+                            20  : begin rs <= 1; data <= pattern_out3; end
+                            21  : begin rs <= 1; data <= pattern_out4; end
+                            22  : begin rs <= 1; data <= pattern_out5; end
+                            23  : begin rs <= 1; data <= pattern_out6; end
+                            24  : begin rs <= 1; data <= pattern_out7; end
+                        endcase
+                        idx <= idx + 1;
+                    end
                 end
             end 
         end

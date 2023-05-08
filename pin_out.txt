@@ -1,0 +1,14 @@
+SYS_output_sel[0:3] => GPIO[26:29]
+SYS_pc_val[0:7] => GPIO[30:37]
+
+SYS_reset => btn0
+SYS_load => btn1
+
+SYS_clk => SW0
+
+BOARD_clk => Board clk
+
+
+LCD_data[0:7] => GPIO[0:7]
+LCD_enable => GPIO[8]
+LCD_rs => GPIO[9]

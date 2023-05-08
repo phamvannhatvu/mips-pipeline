@@ -30,10 +30,14 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Studying/Academic/HCMUT/222/Comp
 INFO: [VRFC 10-311] analyzing module forward_unit
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/hazard_detection.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module hazard_detection
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/lcd_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lcd_control
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux_2_to_1
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_4_to_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux_4_to_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pattern_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pattern_generator
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pc_register.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pc_register
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pc_update.v" into library xil_defaultlib

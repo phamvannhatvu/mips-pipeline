@@ -6,12 +6,12 @@ module system (
 	input		[3:0]	SYS_output_sel,
 	input				BOARD_clk,
 
-	output		[26:0]	SYS_leds,
 	output		[7:0]	LCD_data,
 	output				LCD_rs,
 	output				LCD_enable
 );
-
+    wire [31:0]	SYS_leds;
+    
 	// IF_stage
 	wire [31:0]	if_instruction;
 	wire [7:0]	if_pc;
@@ -350,8 +350,9 @@ module system (
 		.pc(id_calculated_pc),
 		.out_sel(SYS_output_sel),
 		.out_val(SYS_leds),
-		.clk(BOARD_clk),
+		.BOARD_clk(BOARD_clk),
 		.reset(SYS_reset),
+		.SYS_clk(SYS_clk),
 
 		.data(LCD_data),
 		.rs(LCD_rs),

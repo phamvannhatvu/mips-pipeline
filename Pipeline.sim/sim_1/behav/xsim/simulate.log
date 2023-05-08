@@ -6,4 +6,4 @@ Block Memory Generator module instruction_tb0.uut.IF_stage.imem.imem.inst.native
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
 Block Memory Generator module instruction_tb0.uut.MEM_stage.data_mem.dmem.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-$finish called at time : 163 ns : File "D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sim_1/new/instruction_tb0.v" Line 17
+$finish called at time : 266 ns : File "D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sim_1/new/instruction_tb0.v" Line 38
