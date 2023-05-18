@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun May  7 19:22:13 2023
+| Date         : Wed May 10 12:20:16 2023
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file system_control_sets_placed.rpt
 | Design       : system
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |   298 |
-| Unused register locations in slices containing registers |  1368 |
+| Unused register locations in slices containing registers |  1374 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,7 +35,7 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |          225 |
-|      6 |            1 |
+|      4 |            1 |
 |     10 |            1 |
 |    16+ |           71 |
 +--------+--------------+
@@ -48,10 +48,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |             956 |          261 |
+| No           | No                    | Yes                    |            1002 |          267 |
 | No           | Yes                   | No                     |             192 |           96 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |            4268 |          674 |
+| Yes          | No                    | Yes                    |            4272 |          675 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -62,304 +62,304 @@ Table of Contents
 +--------------------------------------+-----------------------------------------------+-------------------------------------+------------------+----------------+
 |             Clock Signal             |                 Enable Signal                 |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
 +--------------------------------------+-----------------------------------------------+-------------------------------------+------------------+----------------+
-|  EXE_stage/ALU/reg_hilo_reg[1][19]_P |                                               | EXE_stage/ALU/reg_hilo_reg[1][19]_C |                1 |              2 |
 |  EXE_stage/ALU/reg_hilo_reg[1][31]_P |                                               | EXE_stage/ALU/reg_hilo_reg[1][31]_C |                1 |              2 |
-|  n_0_6507_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][30]_C   |                1 |              2 |
-|  n_3_6504_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][27]_C   |                1 |              2 |
-|  n_4_6503_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][26]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][0]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][0]_C    |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][13]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][13]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][14]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][14]_C   |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][6]_P_1   |                                               | reg_ID_EXE/reg_hilo_reg[1][6]_C     |                1 |              2 |
+|  BOARD_clk_IBUF_BUFG                 | debouncer_clk/button_out                      | SYS_reset_IBUF                      |                1 |              2 |
+|  n_7_6527_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][23]_C   |                1 |              2 |
+|  n_1_6533_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][29]_C   |                1 |              2 |
+|  n_9_6525_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][21]_C   |                1 |              2 |
+|  n_0_6534_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][30]_C   |                1 |              2 |
+|  n_3_6531_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][27]_C   |                1 |              2 |
+|  n_5_6529_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][25]_C   |                1 |              2 |
+|  n_6_6528_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][24]_C   |                1 |              2 |
+|  n_2_6532_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][28]_C   |                1 |              2 |
+|  n_8_6526_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][22]_C   |                1 |              2 |
+|  n_4_6530_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][26]_C   |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][8]_P_0   |                                               | reg_ID_EXE/reg_hilo_reg[1][8]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | EXE_stage/ALU/reg_hilo_reg[1][31]_C |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | EXE_stage/ALU/reg_hilo_reg[1][31]_P |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][25]_P_1  |                                               | reg_ID_EXE/reg_hilo_reg[1][25]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][23]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][23]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][11]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][11]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][12]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][12]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][14]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][14]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][17]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][19]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][21]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][22]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][15]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][21]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][0]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][13]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][16]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][16]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][10]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][1]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][18]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][20]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][20]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][18]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][0]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][13]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][17]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][10]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][19]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][1]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][15]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][19]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][30]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][4]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][19]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][1]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][14]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][1]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][15]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][24]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][7]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][27]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][0]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][29]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][13]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][28]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][14]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][15]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][23]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][4]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][6]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][22]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][28]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][3]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][5]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][27]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][31]_P_15 |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][26]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][9]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][23]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][6]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][0]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][25]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][2]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][3]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][8]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][10]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][29]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][2]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][10]_P_0  |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][11]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][12]_C_14 |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][12]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][25]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][30]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][8]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][11]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][31]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][13]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][5]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][24]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][7]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][16]_C_0  |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][16]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][17]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][26]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[0][9]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][17]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][18]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][18]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][21]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][22]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][22]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][28]_C_3  |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][6]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][9]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][24]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][2]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][29]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][4]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][2]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][7]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][28]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][4]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][7]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][26]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][29]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][6]_P_1   |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][8]_P_0   |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][5]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][9]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][25]_P_1  |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][23]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][25]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][27]_P_0  |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][30]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][30]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][26]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][20]_C_0  |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][3]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][8]_C     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][20]_P    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][21]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][3]_C_0   |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][24]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][27]_C    |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][5]_P     |                1 |              2 |
+| ~SYS_clk_BUFG                        |                                               | reg_ID_EXE/reg_hilo_reg[1][23]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][27]_P_0  |                                               | reg_ID_EXE/reg_hilo_reg[1][27]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][30]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][30]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][3]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][3]_C_0   |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][20]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][20]_C_0  |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][5]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][5]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][3]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][3]_C     |                1 |              2 |
 |  reg_EXE_MEM/reg_file_reg[0][15]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][15]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][16]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][16]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][12]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][12]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][11]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][11]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][10]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][10]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][17]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][17]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][20]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][20]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][1]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][1]_C    |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][2]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][2]_C    |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][0]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][0]_C    |                1 |              2 |
 |  reg_EXE_MEM/reg_file_reg[0][5]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][5]_C    |                1 |              2 |
 |  reg_EXE_MEM/reg_file_reg[0][6]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][6]_C    |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][7]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][7]_C    |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][18]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][18]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][3]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][3]_C    |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][9]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][9]_C    |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][31]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][31]_C   |                1 |              2 |
-|  reg_EXE_MEM/reg_file_reg[0][8]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][8]_C    |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][12]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][12]_C   |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][2]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][2]_C    |                1 |              2 |
 |  reg_EXE_MEM/reg_file_reg[0][4]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][4]_C    |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][17]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][17]_C   |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][7]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][7]_C    |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][14]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][14]_C   |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][3]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][3]_C    |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][16]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][16]_C   |                1 |              2 |
 |  reg_EXE_MEM/reg_file_reg[0][19]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][19]_C   |                1 |              2 |
-|  n_5_6502_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][25]_C   |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][0]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][0]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][10]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][10]_C    |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][13]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][13]_C   |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][1]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][1]_C    |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][18]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][18]_C   |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][31]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][31]_C   |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][20]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][20]_C   |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][10]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][10]_C   |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][11]_P   |                                               | reg_EXE_MEM/reg_file_reg[0][11]_C   |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][9]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][9]_C    |                1 |              2 |
+|  reg_EXE_MEM/reg_file_reg[0][8]_P    |                                               | reg_EXE_MEM/reg_file_reg[0][8]_C    |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[0][11]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][11]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][22]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][22]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][20]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][20]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][15]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][15]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][13]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][13]_C    |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[0][12]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][12]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][19]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][19]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][9]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][9]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][30]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][30]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][8]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][8]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][10]_P_0  |                                               | reg_ID_EXE/reg_hilo_reg[1][10]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][24]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][24]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][4]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][4]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][18]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][18]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][28]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][28]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][5]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][5]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][17]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][17]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][29]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][29]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][26]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][26]_C    |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[0][14]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][14]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][21]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][21]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][0]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][0]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][13]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][13]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][16]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][16]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][1]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][1]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][20]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][20]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][18]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][18]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][17]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][17]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][10]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][10]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][19]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][19]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][15]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][15]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][19]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][19]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][1]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][1]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][24]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][24]_C    |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[0][7]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][7]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][0]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][0]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][29]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][29]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][13]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][13]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][28]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][28]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][14]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][14]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][15]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][15]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][4]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][4]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][22]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][22]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][5]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][5]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][27]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][27]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][31]_P_15 |                                               | reg_ID_EXE/reg_hilo_reg[0][31]_C    |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[0][23]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][23]_C    |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[0][6]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][6]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][21]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][21]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][27]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][27]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][0]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][0]_C     |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[0][25]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][25]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][8]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][8]_C     |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[0][2]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][2]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][31]_P_15 |                                               | reg_ID_EXE/reg_hilo_reg[0][31]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][1]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][1]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][3]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][3]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[0][16]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][16]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][14]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][14]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][21]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][21]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][16]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][16]_C_0  |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][10]_P_0  |                                               | reg_ID_EXE/reg_hilo_reg[1][10]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][12]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][12]_C_14 |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][30]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][30]_C    |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[1][11]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][11]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][26]_P_0  |                                               | reg_ID_EXE/reg_hilo_reg[1][26]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][29]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][29]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][1]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][1]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][20]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][20]_C_0  |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][24]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][24]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][25]_P_2  |                                               | reg_ID_EXE/reg_hilo_reg[1][25]_C_2  |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][12]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][12]_C_60 |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][27]_P_0  |                                               | reg_ID_EXE/reg_hilo_reg[1][27]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][28]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][28]_C_1  |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][2]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][2]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][15]_P_0  |                                               | EXE_stage/ALU/reg_hilo_reg[1][15]_C |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][22]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][22]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][23]_P_0  |                                               | reg_ID_EXE/reg_hilo_reg[1][23]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][18]_P_0  |                                               | reg_ID_EXE/reg_hilo_reg[1][18]_C_0  |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][16]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][16]_C_0  |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][26]_P    |                                               | reg_ID_EXE/reg_hilo_reg[0][26]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[0][9]_P     |                                               | reg_ID_EXE/reg_hilo_reg[0][9]_C     |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[1][17]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][17]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][13]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][13]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][5]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][5]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][7]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][7]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][30]_P_0  |                                               | reg_ID_EXE/reg_hilo_reg[1][30]_C    |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][3]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][3]_C_0   |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][4]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][4]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][18]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][18]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][21]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][21]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][22]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][22]_C    |                1 |              2 |
 |  reg_ID_EXE/reg_hilo_reg[1][9]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][9]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][6]_P_1   |                                               | reg_ID_EXE/reg_hilo_reg[1][6]_C     |                1 |              2 |
-|  reg_ID_EXE/reg_hilo_reg[1][8]_P_0   |                                               | reg_ID_EXE/reg_hilo_reg[1][8]_C     |                1 |              2 |
-|  n_7_6500_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][23]_C   |                1 |              2 |
-|  n_9_6498_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][21]_C   |                1 |              2 |
-|  n_8_6499_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][22]_C   |                1 |              2 |
-|  n_6_6501_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][24]_C   |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | EXE_stage/ALU/reg_hilo_reg[1][15]_C |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | EXE_stage/ALU/reg_hilo_reg[1][19]_C |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | EXE_stage/ALU/reg_hilo_reg[1][19]_P |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | EXE_stage/ALU/reg_hilo_reg[1][31]_C |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | EXE_stage/ALU/reg_hilo_reg[1][31]_P |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | lcd_control/out_val_change_rst      |                1 |              2 |
-|  n_1_6506_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][29]_C   |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][0]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][0]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][10]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][10]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][11]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][11]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][12]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][22]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][30]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][20]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][4]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][6]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][22]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][15]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][13]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][12]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][19]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][7]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][27]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][9]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][9]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][10]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][30]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][15]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][24]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][1]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][8]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][10]_P_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][25]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][21]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][0]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][24]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][26]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][4]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][5]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][18]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][28]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][28]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][23]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][2]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][5]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][17]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][18]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][19]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][13]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][29]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][26]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][3]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][14]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][20]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][7]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][0]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][23]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][11]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][8]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][6]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][16]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][31]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][14]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][17]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][21]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][27]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][25]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][2]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][31]_P_15 |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][29]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][1]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][3]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[0][16]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][14]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][21]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][25]_C_2  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][13]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][16]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][11]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][26]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][16]_C_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][22]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][14]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][26]_P_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][28]_C_1  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][29]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][29]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][2]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][24]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][1]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][1]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][20]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][24]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][20]_C_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][25]_P_2  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][12]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][27]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][17]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][27]_P_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][28]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][2]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][30]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][15]_P_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][22]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][23]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][23]_P_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][18]_C_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][18]_P_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][21]_C    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][12]_C_60 |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][17]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][13]_P    |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][5]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][7]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][30]_P_0  |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][3]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][4]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][6]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][4]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][8]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][5]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][9]_P     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][3]_C_0   |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][6]_P_1   |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][8]_P_0   |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][9]_C     |                1 |              2 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/reg_hilo_reg[1][7]_C     |                1 |              2 |
-|  n_2_6505_BUFG                       |                                               | reg_EXE_MEM/reg_file_reg[0][28]_C   |                1 |              2 |
-|  lcd_control/clk_reg_n_10            |                                               | SYS_reset_IBUF                      |                1 |              6 |
-|  lcd_control/clk_reg_n_10            | lcd_control/idx[4]_i_1_n_10                   | SYS_reset_IBUF                      |                2 |             10 |
-|  lcd_control/clk_reg_n_10            | lcd_control/data[6]_i_1_n_10                  | SYS_reset_IBUF                      |                5 |             16 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | SYS_reset_IBUF                      |                5 |             16 |
-| ~SYS_clk_IBUF_BUFG                   | reg_ID_EXE/E[0]                               | SYS_reset_IBUF                      |                5 |             18 |
-|  BOARD_clk_IBUF_BUFG                 |                                               | SYS_reset_IBUF                      |                7 |             44 |
-| ~SYS_clk_IBUF_BUFG                   |                                               | reg_ID_EXE/data_out_reg[30]         |               18 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][20]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][20]_P   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][5]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][5]_P    |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][16]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][16]_P   |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][11]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][11]_C   |               12 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][21]_P_i_1_n_10   | n_9_6498_BUFG                       |               12 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][26]_P_i_1_n_10   | n_4_6503_BUFG                       |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][11]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][11]_P   |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][1]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][1]_P    |                6 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][30]_P_i_1_n_10   | n_0_6507_BUFG                       |               11 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][7]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][7]_P    |                7 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][19]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][19]_P   |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][18]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][18]_P   |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][8]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][8]_P    |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][0]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][0]_C    |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][14]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][14]_P   |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][15]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][15]_P   |                7 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][24]_P_i_1_n_10   | n_6_6501_BUFG                       |               11 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][25]_P_i_1_n_10   | n_5_6502_BUFG                       |               12 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][29]_P_i_1_n_10   | n_1_6506_BUFG                       |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][12]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][12]_P   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][27]_P_i_1_n_10   | n_3_6504_BUFG                       |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][28]_P_i_1_n_10   | n_2_6505_BUFG                       |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][23]_P_i_1_n_10   | n_7_6500_BUFG                       |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][4]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][4]_P    |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][3]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][3]_P    |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][10]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][10]_P   |                6 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][6]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][6]_P    |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][9]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][9]_P    |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][0]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][0]_P    |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][31]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][31]_P   |                7 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][22]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][22]_C   |               12 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][14]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][14]_C   |               11 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][16]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][16]_C   |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][18]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][18]_C   |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][19]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][19]_C   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][1]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][1]_C    |               14 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][25]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][25]_C   |               11 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][24]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][24]_C   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][27]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][27]_C   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][17]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][17]_C   |               12 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][2]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][2]_C    |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][26]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][26]_C   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][30]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][30]_C   |               11 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][31]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][31]_C   |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][3]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][3]_C    |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][15]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][15]_C   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][29]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][29]_C   |               11 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][23]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][23]_C   |               11 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][20]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][20]_C   |               14 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][28]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][28]_C   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][21]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][21]_C   |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][7]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][7]_C    |               12 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][9]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][9]_C    |                9 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][4]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][4]_C    |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][6]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][6]_C    |               11 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][5]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][5]_C    |               12 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][8]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][8]_C    |               11 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][10]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][10]_C   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][22]_P_i_1_n_10   | n_8_6499_BUFG                       |                7 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][12]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][12]_C   |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file_reg[0][13]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][13]_C   |               10 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][13]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][13]_P   |               12 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][2]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][2]_P    |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | ID_stage/regFile/reg_file[0][17]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][17]_P   |                8 |             64 |
-| ~SYS_clk_IBUF_BUFG                   | data_mem/neg_clk                              | SYS_reset_IBUF                      |               44 |            128 |
-|  SYS_clk_IBUF_BUFG                   |                                               | SYS_reset_IBUF                      |              101 |            568 |
+|  reg_ID_EXE/reg_hilo_reg[1][24]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][24]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][29]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][29]_C    |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][4]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][4]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][2]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][2]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][28]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][28]_C_3  |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][7]_P     |                                               | reg_ID_EXE/reg_hilo_reg[1][7]_C     |                1 |              2 |
+|  reg_ID_EXE/reg_hilo_reg[1][26]_P    |                                               | reg_ID_EXE/reg_hilo_reg[1][26]_C    |                1 |              2 |
+|  lcd_control/CLK                     |                                               | SYS_reset_IBUF                      |                1 |              4 |
+|  lcd_control/CLK                     | lcd_control/idx[4]_i_1_n_10                   | SYS_reset_IBUF                      |                3 |             10 |
+| ~SYS_clk_BUFG                        |                                               | SYS_reset_IBUF                      |                4 |             16 |
+| ~SYS_clk_BUFG                        | reg_ID_EXE/E[0]                               | SYS_reset_IBUF                      |                4 |             18 |
+|  lcd_control/CLK                     | lcd_control/data[7]_i_1_n_10                  | SYS_reset_IBUF                      |                3 |             18 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][27]_P_i_1_n_10   | n_3_6531_BUFG                       |                7 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][13]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][13]_P   |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][14]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][14]_C   |               13 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][10]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][10]_P   |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][26]_P_i_1_n_10   | n_4_6530_BUFG                       |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][15]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][15]_P   |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][8]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][8]_P    |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][23]_P_i_1_n_10   | n_7_6527_BUFG                       |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][7]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][7]_P    |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][9]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][9]_P    |               12 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][10]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][10]_C   |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][29]_P_i_1_n_10   | n_1_6533_BUFG                       |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][11]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][11]_C   |               11 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][20]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][20]_P   |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][6]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][6]_P    |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][0]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][0]_C    |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][24]_P_i_1_n_10   | n_6_6528_BUFG                       |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][26]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][26]_C   |               11 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][27]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][27]_C   |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][5]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][5]_C    |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][31]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][31]_C   |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][6]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][6]_C    |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][21]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][21]_C   |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][18]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][18]_C   |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][19]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][19]_C   |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][30]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][30]_C   |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][25]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][25]_C   |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][20]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][20]_C   |               11 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][24]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][24]_C   |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][28]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][28]_C   |               11 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][12]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][12]_P   |               14 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][2]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][2]_C    |               11 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][22]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][22]_C   |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][3]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][3]_C    |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][29]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][29]_C   |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][23]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][23]_C   |               13 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][1]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][1]_C    |               15 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][4]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][4]_C    |                7 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][17]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][17]_C   |               11 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][9]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][9]_C    |               11 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][7]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][7]_C    |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][8]_LDC_n_10  | reg_EXE_MEM/reg_file_reg[0][8]_C    |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][18]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][18]_P   |                8 |             64 |
+| ~SYS_clk_BUFG                        |                                               | debouncer_clk/data_out_reg[31]      |               23 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][19]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][19]_P   |                7 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][25]_P_i_1_n_10   | n_5_6529_BUFG                       |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][31]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][31]_P   |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][0]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][0]_P    |               11 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][14]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][14]_P   |               13 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][22]_P_i_1_n_10   | n_8_6526_BUFG                       |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][30]_P_i_1_n_10   | n_0_6534_BUFG                       |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][16]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][16]_P   |               11 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][28]_P_i_1_n_10   | n_2_6532_BUFG                       |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][17]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][17]_P   |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][12]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][12]_C   |               13 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][21]_P_i_1_n_10   | n_9_6525_BUFG                       |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][5]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][5]_P    |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][13]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][13]_C   |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][11]_P_i_1_n_10   | reg_EXE_MEM/reg_file_reg[0][11]_P   |               10 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][3]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][3]_P    |               12 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][15]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][15]_C   |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][1]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][1]_P    |                7 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][2]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][2]_P    |                9 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file_reg[0][16]_LDC_n_10 | reg_EXE_MEM/reg_file_reg[0][16]_C   |                8 |             64 |
+| ~SYS_clk_BUFG                        | ID_stage/regFile/reg_file[0][4]_P_i_1_n_10    | reg_EXE_MEM/reg_file_reg[0][4]_P    |                9 |             64 |
+|  BOARD_clk_IBUF_BUFG                 |                                               | SYS_reset_IBUF                      |               12 |             94 |
+| ~SYS_clk_BUFG                        | data_mem/neg_clk                              | SYS_reset_IBUF                      |               45 |            128 |
+|  SYS_clk_BUFG                        |                                               | SYS_reset_IBUF                      |               99 |            568 |
 +--------------------------------------+-----------------------------------------------+-------------------------------------+------------------+----------------+
 
 

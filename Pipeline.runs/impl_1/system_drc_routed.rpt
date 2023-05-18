@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun May  7 19:22:47 2023
+| Date         : Wed May 10 12:20:48 2023
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_drc -file system_drc_routed.rpt -pb system_drc_routed.pb -rpx system_drc_routed.rpx
 | Design       : system
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 146
+             Violations found: 145
 +-----------+----------+----------------------------+------------+
 | Rule      | Severity | Description                | Violations |
 +-----------+----------+----------------------------+------------+
@@ -33,7 +33,6 @@ Table of Contents
 | DPOP-1    | Warning  | PREG Output pipelining     | 4          |
 | DPOP-2    | Warning  | MREG Output pipelining     | 4          |
 | PDRC-153  | Warning  | Gated clock check          | 86         |
-| PLCK-12   | Warning  | Clock Placer Checks        | 1          |
 | REQP-1839 | Warning  | RAMB36 async control check | 20         |
 | REQP-1840 | Warning  | RAMB18 async control check | 20         |
 | ZPS7-1    | Warning  | PS7 block required         | 1          |
@@ -133,332 +132,332 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net EXE_stage/ALU/reg_hilo_reg[1][19]_P is a gated clock net sourced by a combinational pin EXE_stage/ALU/reg_hilo_reg[1][19]_LDC_i_1/O, cell EXE_stage/ALU/reg_hilo_reg[1][19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net EXE_stage/ALU/reg_hilo_reg[1][31]_P is a gated clock net sourced by a combinational pin EXE_stage/ALU/reg_hilo_reg[1][31]_LDC_i_1/O, cell EXE_stage/ALU/reg_hilo_reg[1][31]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net EXE_stage/ALU/reg_hilo_reg[1][31]_P is a gated clock net sourced by a combinational pin EXE_stage/ALU/reg_hilo_reg[1][31]_LDC_i_1/O, cell EXE_stage/ALU/reg_hilo_reg[1][31]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][0]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][0]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][0]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][0]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][10]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][10]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][10]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][10]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][11]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][11]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][11]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][11]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][12]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][12]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][12]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][12]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][13]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][13]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][13]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][13]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][14]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][14]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][14]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][14]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][15]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][15]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][15]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][15]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][16]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][16]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][16]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][16]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][17]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][17]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][17]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][17]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][18]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][18]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][18]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][18]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][19]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][19]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][19]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][19]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][1]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][1]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][1]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][1]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][20]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][20]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][20]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][20]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][2]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][2]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][2]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][2]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][31]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][31]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][31]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#17 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][31]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][31]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][31]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][3]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][3]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#18 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][3]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][3]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][4]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][4]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#19 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][4]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][4]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][5]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][5]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#20 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][5]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][5]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][6]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][6]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#21 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][6]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][6]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][7]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][7]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#22 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][7]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][7]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][8]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][8]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#23 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][8]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][8]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_EXE_MEM/reg_file_reg[0][9]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][9]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#24 Warning
 Gated clock check  
-Net reg_EXE_MEM/reg_file_reg[0][9]_P is a gated clock net sourced by a combinational pin reg_EXE_MEM/reg_file_reg[0][9]_LDC_i_1/O, cell reg_EXE_MEM/reg_file_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][0]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][0]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#25 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][0]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][0]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][10]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][10]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#26 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][10]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][10]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][11]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][11]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#27 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][11]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][11]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][12]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][12]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#28 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][12]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][12]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][13]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][13]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#29 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][13]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][13]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][14]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][14]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#30 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][14]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][14]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][15]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][15]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#31 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][15]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][15]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][16]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][16]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#32 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][16]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][16]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][17]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][17]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#33 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][17]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][17]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][18]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][18]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#34 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][18]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][18]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][19]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][19]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#35 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][19]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][19]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][1]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][1]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#36 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][1]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][1]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][20]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][20]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#37 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][20]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][20]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][21]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][21]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][21]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#38 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][21]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][21]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][21]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][22]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][22]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][22]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#39 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][22]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][22]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][22]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][23]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][23]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#40 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][23]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][23]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][24]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][24]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][24]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#41 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][24]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][24]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][24]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][25]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][25]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][25]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#42 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][25]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][25]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][25]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][26]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][26]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][26]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#43 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][26]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][26]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][26]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][27]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][27]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][27]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#44 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][27]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][27]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][27]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][28]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][28]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][28]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#45 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][28]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][28]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][28]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][29]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][29]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][29]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#46 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][29]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][29]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][29]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][2]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][2]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#47 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][2]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][2]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][30]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][30]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][30]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#48 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][30]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][30]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][30]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][31]_P_15 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][31]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][31]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#49 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][31]_P_15 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][31]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][31]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][3]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][3]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#50 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][3]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][3]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][4]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][4]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#51 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][4]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][4]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][5]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][5]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#52 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][5]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][5]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][6]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][6]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#53 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][6]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][6]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][7]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][7]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#54 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][7]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][7]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][8]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][8]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#55 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][8]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][8]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[0][9]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][9]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#56 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[0][9]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[0][9]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[0][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][0]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][0]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#57 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][0]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][0]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][10]_P_0 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][10]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#58 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][10]_P_0 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][10]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][11]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][11]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#59 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][11]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][11]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][12]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][12]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#60 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][12]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][12]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][13]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][13]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#61 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][13]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][13]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][14]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][14]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#62 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][14]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][14]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][15]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][15]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#63 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][15]_P_0 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][15]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][16]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][16]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#64 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][16]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][16]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][17]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][17]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#65 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][17]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][17]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][18]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][18]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#66 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][18]_P_0 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][18]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][19]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][19]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#67 Warning
@@ -483,7 +482,7 @@ Related violations: <none>
 
 PDRC-153#71 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][23]_P_0 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][23]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][23]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][23]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#72 Warning
@@ -493,12 +492,12 @@ Related violations: <none>
 
 PDRC-153#73 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][25]_P_2 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][25]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][25]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][25]_P_1 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][25]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][25]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#74 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][26]_P_0 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][26]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][26]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][26]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][26]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][26]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#75 Warning
@@ -523,7 +522,7 @@ Related violations: <none>
 
 PDRC-153#79 Warning
 Gated clock check  
-Net reg_ID_EXE/reg_hilo_reg[1][30]_P_0 is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][30]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][30]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net reg_ID_EXE/reg_hilo_reg[1][30]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][30]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][30]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#80 Warning
@@ -559,17 +558,6 @@ Related violations: <none>
 PDRC-153#86 Warning
 Gated clock check  
 Net reg_ID_EXE/reg_hilo_reg[1][9]_P is a gated clock net sourced by a combinational pin reg_ID_EXE/reg_hilo_reg[1][9]_LDC_i_1/O, cell reg_ID_EXE/reg_hilo_reg[1][9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PLCK-12#1 Warning
-Clock Placer Checks  
-Poor placement for routing between an IO pin and BUFG. 
-Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
- This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
-
-	SYS_clk_IBUF_inst (IBUF.O) is locked to M20
-	SYS_clk_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y0
-
 Related violations: <none>
 
 REQP-1839#1 Warning
@@ -699,37 +687,37 @@ Related violations: <none>
 
 REQP-1840#6 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#7 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#8 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#9 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#10 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#11 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#12 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[30]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#13 Warning
@@ -739,37 +727,37 @@ Related violations: <none>
 
 REQP-1840#14 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#15 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rt_value_out_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#16 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rt_value_out_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#17 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rt_value_out_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#18 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rs_value_out_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rt_value_out_reg[26]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#19 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rt_value_out_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rt_value_out_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#20 Warning
 RAMB18 async control check  
-The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rt_value_out_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: IF_stage/imem/imem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (reg_ID_EXE/rt_value_out_reg[29]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 ZPS7-1#1 Warning

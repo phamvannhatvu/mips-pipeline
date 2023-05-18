@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun May  7 19:22:58 2023
+| Date         : Wed May 10 12:20:56 2023
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file system_timing_summary_routed.rpt -pb system_timing_summary_routed.pb -rpx system_timing_summary_routed.rpx -warn_on_violation
 | Design       : system
@@ -52,9 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 22 register/latch pins with no clock driven by root clock pin: BOARD_clk (HIGH)
-
- There are 2674 register/latch pins with no clock driven by root clock pin: SYS_clk (HIGH)
+ There are 48 register/latch pins with no clock driven by root clock pin: BOARD_clk (HIGH)
 
  There are 96 register/latch pins with no clock driven by root clock pin: SYS_reset (HIGH)
 
@@ -122,7 +120,9 @@ Table of Contents
 
  There are 2 register/latch pins with no clock driven by root clock pin: MEM_stage/data_mem/dmem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/DOBDO[9] (HIGH)
 
- There are 16 register/latch pins with no clock driven by root clock pin: lcd_control/clk_reg/Q (HIGH)
+ There are 2673 register/latch pins with no clock driven by root clock pin: debouncer_clk/button_out_reg/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: lcd_control/enable_reg/Q (HIGH)
 
  There are 72 register/latch pins with no clock driven by root clock pin: reg_EXE_MEM/alu_result_out_reg[0]/Q (HIGH)
 
@@ -214,15 +214,15 @@ Table of Contents
 
  There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/funct_out_reg[0]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/funct_out_reg[2]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/funct_out_reg[1]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/funct_out_reg[3]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/funct_out_reg[2]/Q (HIGH)
 
  There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/funct_out_reg[4]/Q (HIGH)
 
  There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/funct_out_reg[5]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/immediate_out_reg[1]/Q (HIGH)
+ There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/immediate_out_reg[3]/Q (HIGH)
 
  There are 64 register/latch pins with no clock driven by root clock pin: reg_ID_EXE/rd_address_out_reg[0]/Q (HIGH)
 
@@ -483,7 +483,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 7518 pins that are not constrained for maximum delay. (HIGH)
+ There are 7571 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -497,7 +497,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 9 ports with no output delay specified. (HIGH)
+ There are 14 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="49061040fs"></ZoomStartTime>
-      <ZoomEndTime time="57256041fs"></ZoomEndTime>
+      <ZoomStartTime time="44333334fs"></ZoomStartTime>
+      <ZoomEndTime time="310333334fs"></ZoomEndTime>
       <Cursor1Time time="266000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="179"></NameColumnWidth>
+      <NameColumnWidth column_width="159"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="12" />
    <wvobject fp_name="/instruction_tb0/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -33,14 +33,14 @@
       <obj_property name="ObjectShortName">pc[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/instruction_tb0/out" type="array">
-      <obj_property name="ElementShortName">out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+      <obj_property name="ElementShortName">out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">out[3:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/instruction_tb0/uut/IF_stage/pc_in" type="array">
       <obj_property name="ElementShortName">pc_in[7:0]</obj_property>
       <obj_property name="ObjectShortName">pc_in[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
@@ -70,60 +70,8 @@
       <obj_property name="ElementShortName">exception</obj_property>
       <obj_property name="ObjectShortName">exception</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/lcd_control/data" type="array">
-      <obj_property name="ElementShortName">data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data[7:0]</obj_property>
-      <obj_property name="Radix">ASCIIRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/lcd_control/rs" type="logic">
-      <obj_property name="ElementShortName">rs</obj_property>
-      <obj_property name="ObjectShortName">rs</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/lcd_control/enable" type="logic">
-      <obj_property name="ElementShortName">enable</obj_property>
-      <obj_property name="ObjectShortName">enable</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/lcd_control/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/lcd_control/pc" type="array">
-      <obj_property name="ElementShortName">pc[7:0]</obj_property>
-      <obj_property name="ObjectShortName">pc[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/lcd_control/pattern_pc0" type="array">
-      <obj_property name="ElementShortName">pattern_pc0[7:0]</obj_property>
-      <obj_property name="ObjectShortName">pattern_pc0[7:0]</obj_property>
-      <obj_property name="Radix">ASCIIRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/lcd_control/pattern_pc1" type="array">
-      <obj_property name="ElementShortName">pattern_pc1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">pattern_pc1[7:0]</obj_property>
-      <obj_property name="Radix">ASCIIRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/lcd_control/out_val_change" type="logic">
-      <obj_property name="ElementShortName">out_val_change</obj_property>
-      <obj_property name="ObjectShortName">out_val_change</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/IF_stage/pc_out" type="array">
-      <obj_property name="ElementShortName">pc_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/IF_stage/instruction_out" type="array">
-      <obj_property name="ElementShortName">instruction_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">instruction_out[31:0]</obj_property>
+   <wvobject fp_name="/instruction_tb0/load" type="logic">
+      <obj_property name="ElementShortName">load</obj_property>
+      <obj_property name="ObjectShortName">load</obj_property>
    </wvobject>
 </wave_config>

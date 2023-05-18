@@ -1,5 +1,5 @@
 module system (
-	input				SYS_clk,
+	input				SW_clk,
 	input				SYS_reset,
 	input				SYS_load,
 	input		[7:0]	SYS_pc_val,
@@ -8,9 +8,10 @@ module system (
 
 	output		[7:0]	LCD_data,
 	output				LCD_rs,
-	output				LCD_enable
+	output				LCD_enable,
+	output      [31:0]  SYS_leds
+//	output		[3:0]	out_leds
 );
-    wire [31:0]	SYS_leds;
     
 	// IF_stage
 	wire [31:0]	if_instruction;
@@ -20,6 +21,18 @@ module system (
 	wire [7:0]	exception_pc;
 	wire		hz_control_pc;
 	wire 		SYS_excep;
+
+	wire  		SYS_clk = SW_clk;
+//	wire [31:0] SYS_leds;
+
+//	assign out_leds = SYS_leds[3:0];
+//	debouncer debouncer_clk (
+//		.clk(BOARD_clk),
+//		.reset(SYS_reset),
+//		.button_in(SW_clk),
+
+//		.button_out(SYS_clk)
+//	);
 
 	IF_stage IF_stage (
 		.SYS_pc_val(SYS_pc_val),
