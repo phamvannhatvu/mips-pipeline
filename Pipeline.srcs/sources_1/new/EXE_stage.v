@@ -128,7 +128,7 @@ module EXE_stage (
         .align_exception_out(alu_status[3])
     );
 
-    assign comparator_out = (rs_value_in == rt_value_in);
+    assign comparator_out = (operand_0 == operand_1);
     assign wb_control_out[1] = wb_control_in[1];
     assign wb_control_out[0] = (wb_control_in[0] == 1'b0) ? wb_control_in[0] : ~ hilo_write_control;
     assign alu_excep = (alu_status[6] == 1'b1 || alu_status[3] == 1'b1 || alu_status[2] == 1'b1);
