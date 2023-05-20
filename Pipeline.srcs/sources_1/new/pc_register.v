@@ -1,9 +1,9 @@
 module pc_register #(parameter N = 1) (
     input       [N-1:0] data_in,
+    input       [N-1:0] epc,
+    input               excep_enable,
     input               clk,
     input               reset,
-    input               excep_enable,
-    input       [N-1:0] epc,
 
     output  reg [N-1:0] data_out
 );

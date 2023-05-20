@@ -2,12 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Apr 25 15:18:37 2023
-# Process ID: 15688
-# Current directory: C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1
+# Start of session at: Thu May 18 15:05:28 2023
+# Process ID: 4564
+# Current directory: D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1
 # Command line: vivado.exe -log system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system.tcl
-# Log file: C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1/system.vds
-# Journal file: C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1\vivado.jou
+# Log file: D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1/system.vds
+# Journal file: D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source system.tcl -notrace
 Command: synth_design -top system -part xc7z020clg400-1
@@ -15,217 +15,534 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9224 
+INFO: Helper process launched with PID 9884 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 338.168 ; gain = 100.059
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 382.883 ; gain = 100.484
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'system' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:1]
-INFO: [Synth 8-6157] synthesizing module 'IF_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IF_stage.v:1]
-INFO: [Synth 8-6157] synthesizing module 'IMEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'IMEM' (1#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:1]
-INFO: [Synth 8-6157] synthesizing module 'pc_register' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'system' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/system.v:1]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/debouncer.v:3]
+	Parameter CYCLE_DEBOUNCE bound to: 25000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (1#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/debouncer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'IF_stage' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/IF_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
 	Parameter N bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'pc_register' (2#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_register.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'IF_stage' (3#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IF_stage.v:1]
-INFO: [Synth 8-6157] synthesizing module 'reg_IF_ID' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'reg_IF_ID' (4#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ID_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:1]
-INFO: [Synth 8-6157] synthesizing module 'REG' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
-WARNING: [Synth 8-5788] Register reg_file_reg in module REG is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
-WARNING: [Synth 8-4767] Trying to implement RAM 'reg_file_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
-Reason is one or more of the following :
-	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
-RAM "reg_file_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'REG' (5#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sign_extender' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sign_extender' (6#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
-INFO: [Synth 8-6157] synthesizing module 'control' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/control.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'control' (7#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/control.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1' (2#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc_register' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pc_register.v:1]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pc_register' (3#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pc_register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'IMEM' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:1]
+INFO: [Synth 8-638] synthesizing module 'imem_lib' [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/imem_lib/synth/imem_lib.vhd:68]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: imem_lib.mif - type: string 
+	Parameter C_INIT_FILE bound to: imem_lib.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 64 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 64 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 6 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 64 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 64 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 6 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     3.375199 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at 'd:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/imem_lib/synth/imem_lib.vhd:230]
+INFO: [Synth 8-256] done synthesizing module 'imem_lib' (12#1) [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/imem_lib/synth/imem_lib.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'IMEM' (13#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'IF_stage' (14#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/IF_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_IF_ID' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_IF_ID' (15#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ID_stage' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'REG' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'REG' (16#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/REG.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sign_extender' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sign_extender' (17#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/sign_extender.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'control' (18#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized0' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
 	Parameter N bound to: 14 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1' (8#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized0' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized0' (18#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized1' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
 	Parameter N bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized0' (8#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
-INFO: [Synth 8-6157] synthesizing module 'pc_update' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_update.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized1' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
-	Parameter N bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized1' (8#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'pc_update' (9#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/pc_update.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'ID_stage' (10#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:1]
-INFO: [Synth 8-6157] synthesizing module 'reg_ID_EXE' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'reg_ID_EXE' (11#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:1]
-INFO: [Synth 8-6157] synthesizing module 'EXE_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized2' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized1' (18#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc_update' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pc_update.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pc_update' (19#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pc_update.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ID_stage' (20#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_ID_EXE' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_ID_EXE' (21#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:1]
+INFO: [Synth 8-6157] synthesizing module 'EXE_stage' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4_to_1' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_4_to_1.v:1]
 	Parameter N bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized2' (11#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
-INFO: [Synth 8-6157] synthesizing module 'alu_control' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:17]
-INFO: [Synth 8-6155] done synthesizing module 'alu_control' (12#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (13#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:1]
-INFO: [Synth 8-6157] synthesizing module 'reg_HI_LO' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:1]
-WARNING: [Synth 8-5788] Register reg_hilo_reg[0] in module reg_HI_LO is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:19]
-WARNING: [Synth 8-5788] Register reg_hilo_reg[1] in module reg_HI_LO is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'reg_HI_LO' (14#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:1]
-INFO: [Synth 8-6157] synthesizing module 'align_check' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/align_check.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'align_check' (15#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/align_check.v:1]
-WARNING: [Synth 8-3848] Net excep_control_out in module/entity EXE_stage does not have driver. [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:16]
-INFO: [Synth 8-6155] done synthesizing module 'EXE_stage' (16#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:1]
-INFO: [Synth 8-6157] synthesizing module 'reg_EXE_MEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'reg_EXE_MEM' (17#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MEM_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
-INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
-WARNING: [Synth 8-5788] Register memory_reg in module DMEM is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
-WARNING: [Synth 8-4767] Trying to implement RAM 'memory_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
-Reason is one or more of the following :
-	1: Invalid write data for RAM. 
-	2: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
-	3: Unable to determine number of words or word size in RAM. 
-	4: No valid read/write found for RAM. 
-RAM "memory_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'DMEM' (18#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'MEM_stage' (19#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
-INFO: [Synth 8-6157] synthesizing module 'reg_MEM_WB' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'reg_MEM_WB' (20#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:1]
-INFO: [Synth 8-6157] synthesizing module 'WB_stage' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/WB_stage.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'WB_stage' (21#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/WB_stage.v:1]
-INFO: [Synth 8-6157] synthesizing module 'hazard_detection' [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/hazard_detection.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'hazard_detection' (22#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/hazard_detection.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'system' (23#1) [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/system.v:1]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[31]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[30]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[29]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[28]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[27]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[26]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[25]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[24]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[23]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[22]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[21]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[20]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[19]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[18]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[17]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[16]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[15]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[14]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[13]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[12]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[11]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[10]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[9]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[8]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[7]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[6]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[5]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[4]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[3]
-WARNING: [Synth 8-3331] design align_check has unconnected port alu_result_in[2]
-WARNING: [Synth 8-3331] design EXE_stage has unconnected port excep_control_out
-WARNING: [Synth 8-3331] design EXE_stage has unconnected port excep_control_in
-WARNING: [Synth 8-3331] design reg_ID_EXE has unconnected port control_in[3]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[11]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[10]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[9]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[8]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[7]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[6]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[5]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[4]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[3]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[2]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[1]
-WARNING: [Synth 8-3331] design pc_update has unconnected port control_in[0]
-WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[15]
-WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[14]
-WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[13]
-WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[12]
-WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[11]
-WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[10]
-WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[9]
-WARNING: [Synth 8-3331] design pc_update has unconnected port immediate_in[8]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[25]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[24]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[23]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[22]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[21]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[20]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[19]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[18]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[17]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[16]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[15]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[14]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[13]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[12]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[11]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[10]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[9]
-WARNING: [Synth 8-3331] design pc_update has unconnected port jump_immediate_in[8]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_load
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[7]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[6]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[5]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[4]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[3]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[2]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[1]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[0]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[2]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[1]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[0]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4_to_1' (22#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_4_to_1.v:1]
+WARNING: [Synth 8-350] instance 'opreand_0_mux' of module 'mux_4_to_1' requires 6 connections, but only 5 given [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_to_1__parameterized2' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_to_1__parameterized2' (22#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/mux_2_to_1.v:1]
+WARNING: [Synth 8-350] instance 'opreand_1_mux' of module 'mux_4_to_1' requires 6 connections, but only 5 given [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-350] instance 'rt_value_mux' of module 'mux_4_to_1' requires 6 connections, but only 5 given [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+INFO: [Synth 8-6157] synthesizing module 'alu_control' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'alu_control' (23#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/alu_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ALU.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (24#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_HI_LO' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_HI_LO' (25#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_HI_LO.v:1]
+INFO: [Synth 8-6157] synthesizing module 'align_check' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/align_check.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'align_check' (26#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/align_check.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'EXE_stage' (27#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_EXE_MEM' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_EXE_MEM' (28#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MEM_stage' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DMEM' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
+INFO: [Synth 8-638] synthesizing module 'dmem_lib' [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/synth/dmem_lib.vhd:78]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: dmem_lib.mif - type: string 
+	Parameter C_INIT_FILE bound to: dmem_lib.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 64 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 64 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 6 - type: integer 
+	Parameter C_HAS_RSTB bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 64 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 64 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 6 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 1 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     5.9299 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at 'd:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/synth/dmem_lib.vhd:251]
+INFO: [Synth 8-256] done synthesizing module 'dmem_lib' (29#1) [d:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/synth/dmem_lib.vhd:78]
+WARNING: [Synth 8-350] instance 'dmem' of module 'dmem_lib' requires 14 connections, but only 13 given [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'DMEM' (30#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/DMEM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_stage' (31#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/MEM_stage.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_MEM_WB' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_MEM_WB' (32#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:1]
+INFO: [Synth 8-6157] synthesizing module 'forward_unit' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/forward_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'forward_unit' (33#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/forward_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard_detection' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/hazard_detection.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_detection' (34#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/hazard_detection.v:1]
+INFO: [Synth 8-6157] synthesizing module 'exception_handler' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/exception_handler.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'exception_handler' (35#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/exception_handler.v:1]
+INFO: [Synth 8-6157] synthesizing module 'system_control' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/system_control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'system_control' (36#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/system_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lcd_control' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/lcd_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pattern_generator' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pattern_generator.v:1]
+INFO: [Synth 8-226] default block is never used [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pattern_generator.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pattern_generator' (37#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/pattern_generator.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/lcd_control.v:122]
+INFO: [Synth 8-6155] done synthesizing module 'lcd_control' (38#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/lcd_control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'system' (39#1) [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/system.v:1]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized0 has unconnected port SSRA
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized0 has unconnected port SSRB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized0 has unconnected port SLEEP
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized0 has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized0 has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized0 has unconnected port ECCPIPECE
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr__parameterized0 has unconnected port REGCEA[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr__parameterized0 has unconnected port REGCEB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr__parameterized0 has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr__parameterized0 has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port SBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port DBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[5]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[4]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[3]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[2]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[1]
+WARNING: [Synth 8-3331] design blk_mem_output_block__parameterized0 has unconnected port RDADDRECC_I[0]
+WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port REGCEA
+WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port REGCEB
+WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_input_block__parameterized0 has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AClk
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWID[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWID[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWID[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWID[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[31]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[30]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[29]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[28]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[27]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[26]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[25]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[24]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[23]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[22]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[21]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[20]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[19]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[18]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[17]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[16]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[15]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[14]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[13]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[12]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[11]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[10]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWADDR[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWLEN[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWLEN[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWLEN[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWLEN[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWLEN[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWLEN[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWLEN[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWLEN[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWSIZE[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWSIZE[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWSIZE[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWBURST[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWBURST[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_AWVALID
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[31]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[30]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[29]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[28]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[27]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[26]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[25]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[24]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[23]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[22]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[21]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[20]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[19]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[18]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[17]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[16]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[15]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[14]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[13]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[12]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[11]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[10]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[7]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 732.906 ; gain = 494.797
+Finished RTL Elaboration : Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 723.570 ; gain = 441.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[31] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[30] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[29] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[28] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[27] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[26] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[25] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[24] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[23] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[22] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[21] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[20] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[19] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[18] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[17] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[16] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[15] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[14] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[13] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[12] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[11] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[10] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[9] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[8] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[7] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[6] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[5] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[4] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[3] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[2] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[1] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_0_mux:in3[0] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:38]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[31] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[30] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[29] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[28] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[27] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[26] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[25] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[24] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[23] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[22] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[21] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[20] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[19] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[18] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[17] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[16] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[15] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[14] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[13] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[12] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[11] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[10] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[9] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[8] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[7] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[6] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[5] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[4] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[3] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[2] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[1] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin opreand_1_mux:in3[0] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:56]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[31] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[30] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[29] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[28] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[27] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[26] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[25] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[24] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[23] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[22] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[21] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[20] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[19] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[18] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[17] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[16] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[15] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[14] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[13] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[12] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[11] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[10] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[9] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[8] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[7] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[6] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[5] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[4] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[3] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[2] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[1] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[0] to constant 0 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v:65]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 732.906 ; gain = 494.797
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 723.570 ; gain = 441.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 723.570 ; gain = 441.172
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc]
+Finished Parsing XDC File [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 832.453 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 832.453 ; gain = 550.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 732.906 ; gain = 494.797
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 832.453 ; gain = 550.055
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "memory" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element instruction_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/IMEM.v:97]
-INFO: [Synth 8-5587] ROM size for "control_out" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "exception_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "hilo_write" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "hilo_read" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for MEM_stage/data_mem/dmem. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for IF_stage/imem/imem. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 832.453 ; gain = 550.055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "button_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_signal" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "excep_control_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "excep_control_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "high_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "low_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/ALU.v:50]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ALU.v:48]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lcd_control'
+INFO: [Synth 8-5546] ROM "enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "idx" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+                 iSTATE2 |                               01 |                               01
+                 iSTATE0 |                               10 |                               10
+*
+                  iSTATE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'lcd_control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:27 ; elapsed = 00:04:51 . Memory (MB): peak = 974.371 ; gain = 736.262
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:01:32 . Memory (MB): peak = 832.453 ; gain = 550.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+--------------+------------+----------+
-|      |RTL Partition |Replication |Instances |
-+------+--------------+------------+----------+
-|1     |DMEM__GB0     |           1|     44011|
-|2     |DMEM__GB1     |           1|      9187|
-|3     |DMEM__GB2     |           1|     13220|
-|4     |DMEM__GB3     |           1|     24911|
-|5     |DMEM__GB4     |           1|     12853|
-|6     |DMEM__GB5     |           1|     10331|
-|7     |DMEM__GB6     |           1|     36608|
-|8     |DMEM__GB7     |           1|     43726|
-|9     |DMEM__GB8     |           1|     24879|
-|10    |DMEM__GB9     |           1|     26056|
-|11    |system__GC0   |           1|     18321|
-+------+--------------+------------+----------+
-No constraint files found.
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -233,45 +550,59 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
 	   3 Input     33 Bit       Adders := 1     
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 3     
-	   2 Input      4 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 45    
+	               32 Bit    Registers := 43    
 	               26 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 1032  
-	                6 Bit    Registers := 2     
-	                5 Bit    Registers := 7     
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 12    
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 8     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 12    
 +---Muxes : 
-	   2 Input   8192 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 24    
-	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 38    
+	   4 Input     32 Bit        Muxes := 6     
 	   8 Input     32 Bit        Muxes := 2     
 	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
 	  15 Input     14 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2045  
-	   5 Input      8 Bit        Muxes := 312   
-	   4 Input      8 Bit        Muxes := 828   
-	  17 Input      8 Bit        Muxes := 4     
-	   8 Input      8 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 1     
-	  20 Input      5 Bit        Muxes := 1     
-	   5 Input      3 Bit        Muxes := 312   
+	   2 Input      8 Bit        Muxes := 9     
+	   4 Input      8 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 15    
+	  14 Input      5 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	  14 Input      3 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 60    
-	  20 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1059  
-	   5 Input      1 Bit        Muxes := 768   
-	   4 Input      1 Bit        Muxes := 256   
-	  20 Input      1 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	  14 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 22    
+	   5 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+	  27 Input      1 Bit        Muxes := 1     
+	  26 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -279,35 +610,28 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module DMEM 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                8 Bit    Registers := 1024  
-+---Muxes : 
-	   2 Input   8192 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 2038  
-	   5 Input      8 Bit        Muxes := 312   
-	   4 Input      8 Bit        Muxes := 828   
-	   5 Input      3 Bit        Muxes := 312   
-	   4 Input      2 Bit        Muxes := 60    
-	   2 Input      1 Bit        Muxes := 1018  
-	   5 Input      1 Bit        Muxes := 768   
-	   4 Input      1 Bit        Muxes := 256   
-Module IMEM 
+Module debouncer 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 3     
+	   2 Input     25 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 4     
+	               25 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	  17 Input      8 Bit        Muxes := 4     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module mux_2_to_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
 Module pc_register 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
 Module reg_IF_ID 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -316,12 +640,18 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 1     
 	                6 Bit    Registers := 2     
 	                5 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 4     
 Module REG 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 34    
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 32    
+	   2 Input     32 Bit        Muxes := 5     
 Module sign_extender 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -330,46 +660,61 @@ Module control
 Detailed RTL Component Info : 
 +---Muxes : 
 	  15 Input     14 Bit        Muxes := 1     
-Module mux_2_to_1 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     14 Bit        Muxes := 1     
 Module mux_2_to_1__parameterized0 
 Detailed RTL Component Info : 
 +---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+Module mux_2_to_1__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
 	   2 Input      5 Bit        Muxes := 1     
-Module mux_2_to_1__parameterized1__1 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-Module mux_2_to_1__parameterized1__2 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
 Module pc_update 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
 Module reg_ID_EXE 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 3     
 	                8 Bit    Registers := 2     
-	                5 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
-Module mux_2_to_1__parameterized2__2 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module mux_4_to_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module mux_2_to_1__parameterized2 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 Module alu_control 
 Detailed RTL Component Info : 
 +---Muxes : 
-	  20 Input      5 Bit        Muxes := 1     
-	  20 Input      2 Bit        Muxes := 1     
-	  20 Input      1 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	  14 Input      5 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
+	  14 Input      3 Bit        Muxes := 1     
+	  14 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
 Module ALU 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -378,11 +723,10 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 6     
-	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 8     
 	   8 Input     32 Bit        Muxes := 2     
 	   3 Input     32 Bit        Muxes := 2     
-	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 4     
 Module reg_HI_LO 
@@ -392,42 +736,78 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 14    
 	   2 Input      1 Bit        Muxes := 1     
-Module mux_2_to_1__parameterized2 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
 Module align_check 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
+Module EXE_stage 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module reg_EXE_MEM 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
-	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      2 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+Module DMEM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
 Module reg_MEM_WB 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-Module mux_2_to_1__parameterized2__1 
-Detailed RTL Component Info : 
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+Module forward_unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
 Module hazard_detection 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 2     
-Module mux_2_to_1__parameterized1 
+Module exception_handler 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module lcd_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               21 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
+	   2 Input     21 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	  27 Input      1 Bit        Muxes := 1     
+	  26 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -440,51 +820,10 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design system has unconnected port SYS_load
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[7]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[6]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[5]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[4]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[3]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[2]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[1]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_pc_val[0]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[2]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[1]
-WARNING: [Synth 8-3331] design system has unconnected port SYS_output_sel[0]
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5545] ROM "alu_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "high_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "low_register_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -500,72 +839,54 @@ DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
 DSP Report: Generating DSP high_register_out0, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
 DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
-WARNING: [Synth 8-6014] Unused sequential element reg_IF_ID/shamt_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:24]
-WARNING: [Synth 8-6014] Unused sequential element reg_IF_ID/funct_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_IF_ID.v:25]
-WARNING: [Synth 8-6014] Unused sequential element reg_ID_EXE/excep_control_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:36]
-WARNING: [Synth 8-6014] Unused sequential element reg_EXE_MEM/excep_control_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_EXE_MEM.v:30]
-WARNING: [Synth 8-6014] Unused sequential element reg_MEM_WB/excep_control_out_reg was removed.  [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_MEM_WB.v:27]
+INFO: [Synth 8-5546] ROM "enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "debouncer_clk/button_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[15]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[16]' (FDC) to 'reg_ID_EXE/immediate_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[17]' (FDC) to 'reg_ID_EXE/immediate_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[18]' (FDC) to 'reg_ID_EXE/immediate_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[19]' (FDC) to 'reg_ID_EXE/immediate_out_reg[20]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[20]' (FDC) to 'reg_ID_EXE/immediate_out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[21]' (FDC) to 'reg_ID_EXE/immediate_out_reg[22]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[22]' (FDC) to 'reg_ID_EXE/immediate_out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[23]' (FDC) to 'reg_ID_EXE/immediate_out_reg[24]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[24]' (FDC) to 'reg_ID_EXE/immediate_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[25]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[26]' (FDC) to 'reg_ID_EXE/immediate_out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[27]' (FDC) to 'reg_ID_EXE/immediate_out_reg[28]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[28]' (FDC) to 'reg_ID_EXE/immediate_out_reg[29]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[29]' (FDC) to 'reg_ID_EXE/immediate_out_reg[30]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[30]' (FDC) to 'reg_ID_EXE/immediate_out_reg[31]'
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[25]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[24]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[23]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[22]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[21]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[20]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[19]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[18]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[17]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[16]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[15]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[14]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[13]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[12]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[11]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[10]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[9]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[8]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[7]) is unused and will be removed from module reg_IF_ID.
+WARNING: [Synth 8-3332] Sequential element (jump_address_reg[6]) is unused and will be removed from module reg_IF_ID.
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/pc_out_reg[0]' (FDC) to 'reg_ID_EXE/pc_calculated_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[5]' (FDC) to 'reg_IF_ID/immediate_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/alu_op_control_out_reg[2]' (FDC) to 'reg_ID_EXE/alu_src_control_out_reg'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[0]'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[1]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/pc_calculated_out_reg[0]' (FDC) to 'reg_ID_EXE/pc_out_reg[0]'
-INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[31]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[26]'
-INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[23]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[18]'
-INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[7]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[2]'
-INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[15]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[10]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[14]' (FDC) to 'reg_IF_ID/rd_reg[3]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[14]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[15]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[15]' (FDC) to 'reg_IF_ID/immediate_reg[15]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[10]' (FDC) to 'reg_IF_ID/immediate_reg[15]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[11]' (FDC) to 'reg_IF_ID/rd_reg[0]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[11]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[12]' (FDC) to 'reg_IF_ID/rd_reg[1]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[12]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[13]' (FDC) to 'reg_IF_ID/rd_reg[2]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[13]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/opcode_reg[5]' (FDC) to 'reg_IF_ID/opcode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[24]' (FDC) to 'reg_IF_ID/rs_reg[3]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[25]' (FDC) to 'reg_IF_ID/rs_reg[4]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[22]' (FDC) to 'reg_IF_ID/rs_reg[1]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[23]' (FDC) to 'reg_IF_ID/rs_reg[2]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rs_reg[2]' (FDC) to 'reg_IF_ID/rt_reg[2]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[18]' (FDC) to 'reg_IF_ID/rt_reg[2]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[21]' (FDC) to 'reg_IF_ID/rs_reg[0]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[6]' (FDC) to 'reg_IF_ID/immediate_reg[6]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[7]' (FDC) to 'reg_IF_ID/immediate_reg[7]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[7]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/immediate_reg[7]' (FDC) to 'reg_IF_ID/immediate_reg[2]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[4]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[5]' (FDC) to 'reg_IF_ID/immediate_reg[5]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[3]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/immediate_reg[15]' (FDC) to 'reg_IF_ID/immediate_reg[10]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[8]' (FDC) to 'reg_IF_ID/immediate_reg[8]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[9]' (FDC) to 'reg_IF_ID/immediate_reg[9]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[19]' (FDC) to 'reg_IF_ID/rt_reg[3]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[20]' (FDC) to 'reg_IF_ID/rt_reg[4]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[16]' (FDC) to 'reg_IF_ID/rt_reg[0]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[17]' (FDC) to 'reg_IF_ID/rt_reg[1]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[29]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[31]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[27]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[28]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[30]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[19]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[15]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[23]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[21]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[17]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[25]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[20]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[16]' (FDC) to 'reg_ID_EXE/immediate_out_reg[18]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[24]' (FDC) to 'reg_ID_EXE/immediate_out_reg[18]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[22]' (FDC) to 'reg_ID_EXE/immediate_out_reg[18]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[18]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[26]' (FDC) to 'reg_ID_EXE/immediate_out_reg[10]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/alu_src_control_out_reg' (FDC) to 'reg_ID_EXE/alu_op_control_out_reg[2]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[7]' (FDC) to 'reg_ID_EXE/immediate_out_reg[2]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:41 ; elapsed = 00:07:33 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 832.453 ; gain = 550.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -587,88 +908,72 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+--------------+------------+----------+
-|      |RTL Partition |Replication |Instances |
-+------+--------------+------------+----------+
-|1     |DMEM__GB0     |           1|     33305|
-|2     |DMEM__GB1     |           1|      9430|
-|3     |DMEM__GB2     |           1|     12769|
-|4     |DMEM__GB3     |           1|     20774|
-|5     |DMEM__GB4     |           1|     15795|
-|6     |DMEM__GB5     |           1|      9399|
-|7     |DMEM__GB6     |           1|     10881|
-|8     |DMEM__GB7     |           1|      5854|
-|9     |DMEM__GB8     |           1|     10271|
-|10    |DMEM__GB9     |           1|      9275|
-|11    |system__GC0   |           1|     11202|
-+------+--------------+------------+----------+
-No constraint files found.
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:51 ; elapsed = 00:02:02 . Memory (MB): peak = 867.000 ; gain = 584.602
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:44 ; elapsed = 00:07:36 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished Timing Optimization : Time (s): cpu = 00:01:52 ; elapsed = 00:02:03 . Memory (MB): peak = 874.195 ; gain = 591.797
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+--------------+------------+----------+
-|      |RTL Partition |Replication |Instances |
-+------+--------------+------------+----------+
-|1     |DMEM__GB0     |           1|     33305|
-|2     |DMEM__GB1     |           1|      9424|
-|3     |DMEM__GB2     |           1|     12753|
-|4     |DMEM__GB3     |           1|     20774|
-|5     |DMEM__GB4     |           1|     15795|
-|6     |DMEM__GB5     |           1|      9391|
-|7     |DMEM__GB6     |           1|     10880|
-|8     |DMEM__GB7     |           1|      5854|
-|9     |DMEM__GB8     |           1|     10271|
-|10    |DMEM__GB9     |           1|      9275|
-|11    |system__GC0   |           1|     11202|
-+------+--------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'i_0/reg_ID_EXE/wb_control_out_reg[0]' (FDC) to 'i_0/reg_ID_EXE/wb_control_out_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/reg_ID_EXE/wb_control_out_reg[1]' (FDC) to 'i_0/reg_ID_EXE/alu_op_control_out_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/IF_stage/pc_reg/data_out_reg[2]' (FDC_1) to 'i_0/IF_stage/imem/instruction_out_reg[24]'
-INFO: [Synth 8-3886] merging instance 'i_0/IF_stage/imem/instruction_out_reg[22]' (FDC_1) to 'i_0/IF_stage/imem/instruction_out_reg[18]'
-INFO: [Synth 8-3886] merging instance 'i_0/IF_stage/imem/instruction_out_reg[21]' (FDC_1) to 'i_0/IF_stage/imem/instruction_out_reg[19]'
-INFO: [Synth 8-3886] merging instance 'i_0/reg_IF_ID/pc_out_reg[2]' (FDC) to 'i_0/reg_IF_ID/rs_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/reg_IF_ID/rs_reg[1]' (FDC) to 'i_0/reg_IF_ID/rt_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/reg_IF_ID/rs_reg[0]' (FDC) to 'i_0/reg_IF_ID/rt_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/IF_stage/imem/instruction_out_reg[19]' (FDC_1) to 'i_0/IF_stage/imem/instruction_out_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\IF_stage/imem/instruction_out_reg[9] )
-INFO: [Synth 8-3886] merging instance 'i_0/reg_IF_ID/rt_reg[3]' (FDC) to 'i_0/reg_IF_ID/immediate_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/reg_ID_EXE/alu_op_control_out_reg[0]' (FDC) to 'i_0/reg_ID_EXE/alu_op_control_out_reg[1]'
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[14]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[15]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[11]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[12]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rd_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[13]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[5]' (FDC) to 'reg_IF_ID/immediate_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[9]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[10]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[6]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[7]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/shamt_reg[2]' (FDC) to 'reg_IF_ID/immediate_reg[8]'
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/funct_reg[4]' (FDC) to 'reg_IF_ID/immediate_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[10]' (FDC) to 'reg_ID_EXE/shamt_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[14]' (FDC) to 'reg_ID_EXE/rd_address_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[6]' (FDC) to 'reg_ID_EXE/shamt_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[8]' (FDC) to 'reg_ID_EXE/shamt_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[12]' (FDC) to 'reg_ID_EXE/rd_address_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[4]' (FDC) to 'reg_ID_EXE/funct_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[9]' (FDC) to 'reg_ID_EXE/shamt_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[13]' (FDC) to 'reg_ID_EXE/rd_address_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[5]' (FDC) to 'reg_ID_EXE/funct_out_reg[5]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[7]' (FDC) to 'reg_ID_EXE/shamt_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[11]' (FDC) to 'reg_ID_EXE/rd_address_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[31]' (FDC) to 'reg_ID_EXE/rd_address_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[0]' (FDC) to 'reg_ID_EXE/funct_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[2]' (FDC) to 'reg_ID_EXE/funct_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[1]' (FDC) to 'reg_ID_EXE/funct_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/funct_out_reg[3]' (FDC) to 'reg_ID_EXE/immediate_out_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:54 ; elapsed = 00:07:47 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished Technology Mapping : Time (s): cpu = 00:01:55 ; elapsed = 00:02:06 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+--------------+------------+----------+
-|      |RTL Partition |Replication |Instances |
-+------+--------------+------------+----------+
-|1     |DMEM__GB0     |           1|     26004|
-|2     |DMEM__GB1     |           1|      8694|
-|3     |DMEM__GB2     |           1|      8328|
-|4     |DMEM__GB3     |           1|     11566|
-|5     |DMEM__GB4     |           1|     12024|
-|6     |DMEM__GB5     |           1|      9035|
-|7     |DMEM__GB6     |           1|      9278|
-|8     |DMEM__GB7     |           1|      4939|
-|9     |DMEM__GB8     |           1|      8382|
-|10    |DMEM__GB9     |           1|      7254|
-|11    |system__GC0   |           1|      4611|
-+------+--------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -681,222 +986,11 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[205][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[206][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[207][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[208][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[201][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[202][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[203][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[204][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[197][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[198][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[199][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[200][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[193][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[194][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[195][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[196][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[221][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[222][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[223][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[224][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[217][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[218][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[219][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[220][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[213][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[214][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[215][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[216][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[209][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[210][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[211][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[212][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[237][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[238][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[239][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[240][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[233][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[234][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[235][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[236][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[229][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[230][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[231][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[232][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[225][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[226][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[227][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[228][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[253][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[254][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[255][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[256][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[249][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[250][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[251][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[252][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[245][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[246][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[247][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[248][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[241][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[242][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[243][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[244][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[141][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[142][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[143][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[144][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[137][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[138][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[139][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[140][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[133][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[134][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[135][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[136][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[129][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[130][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[131][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[132][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[157][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[158][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[159][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[160][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[153][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[154][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[155][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[156][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[149][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[150][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[151][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[152][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[145][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[146][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[147][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[148][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[173][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[174][3]_P )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MEM_stage/data_mem/memory_reg[175][3]_P )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'IF_stage/imem/instruction_out_reg[24]' (FDC_1) to 'IF_stage/imem/instruction_out_reg[3]'
-INFO: [Synth 8-3886] merging instance 'reg_IF_ID/rs_reg[3]' (FDC) to 'reg_IF_ID/immediate_reg[3]'
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][7]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][7]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][6]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][6]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][5]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][5]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][4]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][4]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][3]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][3]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][2]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][2]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][1]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][1]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][0]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[1017][0]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][7]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][7]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][6]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][6]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][5]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][5]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][4]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][4]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][3]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][3]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][2]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][2]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][1]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][1]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][0]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[976][0]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][7]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][7]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][6]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][6]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][5]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][5]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][4]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][4]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][3]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][3]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][2]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][2]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][1]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][1]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][0]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[965][0]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][7]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][7]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][6]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][6]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][5]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][5]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][4]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][4]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][3]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][3]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][2]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][2]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][1]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][1]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][0]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[854][0]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][7]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][7]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][6]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][6]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][5]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][5]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][4]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][4]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][3]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][3]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][2]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][2]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][1]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][1]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][0]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[778][0]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][7]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][7]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][6]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][6]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][5]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][5]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][4]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][4]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][3]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][3]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][2]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][2]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][1]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][1]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][0]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[691][0]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[684][7]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[684][7]_P) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[684][6]_LDC) is unused and will be removed from module system.
-WARNING: [Synth 8-3332] Sequential element (MEM_stage/data_mem/memory_reg[684][6]_P) is unused and will be removed from module system.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:38]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.srcs/sources_1/new/reg_ID_EXE.v:39]
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:07:00 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished IO Insertion : Time (s): cpu = 00:01:56 ; elapsed = 00:02:07 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -909,7 +1003,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:07:00 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:02:07 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -921,25 +1015,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:56 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -952,69 +1046,89 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |BUFG    |     1|
-|2     |CARRY4  |   592|
-|3     |DSP48E1 |     4|
-|4     |LUT1    |   127|
-|5     |LUT2    |   156|
-|6     |LUT3    |  2060|
-|7     |LUT4    |    54|
-|8     |LUT5    |    79|
-|9     |LUT6    |   402|
-|10    |MUXF7   |    78|
-|11    |MUXF8   |    23|
-|12    |FDCE    |   331|
-|13    |FDPE    |    64|
-|14    |FDRE    |   512|
-|15    |LDC     |    64|
-|16    |IBUF    |     2|
-|17    |OBUF    |    27|
-+------+--------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |    12|
+|2     |CARRY4   |   617|
+|3     |DSP48E1  |     4|
+|4     |LUT1     |    70|
+|5     |LUT2     |   762|
+|6     |LUT3     |  2220|
+|7     |LUT4     |   236|
+|8     |LUT5     |   276|
+|9     |LUT6     |  1757|
+|10    |MUXF7    |   549|
+|11    |MUXF8    |   259|
+|12    |RAMB18E1 |     1|
+|13    |RAMB36E1 |     1|
+|14    |FDCE     |  1549|
+|15    |FDPE     |  1088|
+|16    |LDC      |    96|
+|17    |IBUF     |    16|
+|18    |OBUF     |    14|
++------+---------+------+
 
 Report Instance Areas: 
-+------+-----------------+---------------------------+------+
-|      |Instance         |Module                     |Cells |
-+------+-----------------+---------------------------+------+
-|1     |top              |                           |  4576|
-|2     |  EXE_stage      |EXE_stage                  |  3060|
-|3     |    ALU          |ALU                        |  2740|
-|4     |    reg_HI_LO    |reg_HI_LO                  |   320|
-|5     |  ID_stage       |ID_stage                   |   879|
-|6     |    regFile      |REG                        |   879|
-|7     |  IF_stage       |IF_stage                   |    10|
-|8     |    imem         |IMEM                       |     9|
-|9     |    pc_reg       |pc_register                |     1|
-|10    |  WB_stage       |WB_stage                   |    32|
-|11    |    data_reg_sel |mux_2_to_1__parameterized2 |    32|
-|12    |  reg_EXE_MEM    |reg_EXE_MEM                |    38|
-|13    |  reg_ID_EXE     |reg_ID_EXE                 |   443|
-|14    |  reg_IF_ID      |reg_IF_ID                  |    29|
-|15    |  reg_MEM_WB     |reg_MEM_WB                 |    55|
-+------+-----------------+---------------------------+------+
++------+---------------------------------------------------+----------------------------------------------+------+
+|      |Instance                                           |Module                                        |Cells |
++------+---------------------------------------------------+----------------------------------------------+------+
+|1     |top                                                |                                              |  9527|
+|2     |  MEM_stage                                        |MEM_stage                                     |     9|
+|3     |    data_mem                                       |DMEM                                          |     9|
+|4     |      dmem                                         |dmem_lib                                      |     1|
+|5     |        U0                                         |blk_mem_gen_v8_4_1__parameterized1            |     1|
+|6     |          inst_blk_mem_gen                         |blk_mem_gen_v8_4_1_synth__parameterized0      |     1|
+|7     |            \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top__parameterized0               |     1|
+|8     |              \valid.cstr                          |blk_mem_gen_generic_cstr__parameterized0      |     1|
+|9     |                \ramloop[0].ram.r                  |blk_mem_gen_prim_width__parameterized0        |     1|
+|10    |                  \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized0 |     1|
+|11    |  EXE_stage                                        |EXE_stage                                     |  3068|
+|12    |    ALU                                            |ALU                                           |  2748|
+|13    |    reg_HI_LO                                      |reg_HI_LO                                     |   320|
+|14    |  ID_stage                                         |ID_stage                                      |  4128|
+|15    |    pc_update                                      |pc_update                                     |    25|
+|16    |    regFile                                        |REG                                           |  4103|
+|17    |  IF_stage                                         |IF_stage                                      |    57|
+|18    |    imem                                           |IMEM                                          |    41|
+|19    |      imem                                         |imem_lib                                      |     1|
+|20    |        U0                                         |blk_mem_gen_v8_4_1                            |     1|
+|21    |          inst_blk_mem_gen                         |blk_mem_gen_v8_4_1_synth                      |     1|
+|22    |            \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top                               |     1|
+|23    |              \valid.cstr                          |blk_mem_gen_generic_cstr                      |     1|
+|24    |                \ramloop[0].ram.r                  |blk_mem_gen_prim_width                        |     1|
+|25    |                  \prim_init.ram                   |blk_mem_gen_prim_wrapper_init                 |     1|
+|26    |    pc_reg                                         |pc_register                                   |    16|
+|27    |  debouncer_clk                                    |debouncer                                     |    67|
+|28    |  exception_handler                                |exception_handler                             |    17|
+|29    |  lcd_control                                      |lcd_control                                   |   117|
+|30    |  reg_EXE_MEM                                      |reg_EXE_MEM                                   |   475|
+|31    |  reg_ID_EXE                                       |reg_ID_EXE                                    |  1202|
+|32    |  reg_IF_ID                                        |reg_IF_ID                                     |   141|
+|33    |  reg_MEM_WB                                       |reg_MEM_WB                                    |    42|
+|34    |  system_control                                   |system_control                                |   161|
++------+---------------------------------------------------+----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:07:01 ; elapsed = 00:07:54 . Memory (MB): peak = 982.152 ; gain = 744.043
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 24780 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:07:01 ; elapsed = 00:07:55 . Memory (MB): peak = 982.152 ; gain = 744.043
-Synthesis Optimization Complete : Time (s): cpu = 00:07:01 ; elapsed = 00:07:55 . Memory (MB): peak = 982.152 ; gain = 744.043
+Synthesis finished with 0 errors, 0 critical warnings and 423 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:58 . Memory (MB): peak = 995.094 ; gain = 603.812
+Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 763 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 1543 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 64 instances were transformed.
-  LDC => LDCE: 64 instances
+  A total of 96 instances were transformed.
+  LDC => LDCE: 96 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-298 Infos, 208 Warnings, 0 Critical Warnings and 0 Errors encountered.
+172 Infos, 220 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:07:04 ; elapsed = 00:08:01 . Memory (MB): peak = 982.152 ; gain = 757.367
+synth_design: Time (s): cpu = 00:02:00 ; elapsed = 00:02:12 . Memory (MB): peak = 995.094 ; gain = 718.684
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1/system.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1/system.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_utilization_synth.rpt -pb system_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 982.152 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 25 15:26:41 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 995.094 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 18 15:07:46 2023...

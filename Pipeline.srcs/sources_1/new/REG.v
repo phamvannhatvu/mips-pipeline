@@ -12,22 +12,42 @@ module REG (
 );
 
 	reg	[31:0]	reg_file [0:31];
-	
 	always @(posedge clk or negedge clk or posedge reset) begin
 		if (reset) begin
-			value_rs		<= 0;
-			value_rt		<= 0;
-			reg_file[0]		<= 0;				// zero
-			reg_file[8]		<= 10;				// t0
-			reg_file[9]		<= 11;				// t1
-			reg_file[10]	<= 12;				// t2
-			reg_file[11]	<= 13;				// t3
-			reg_file[12]	<= 14;				// t4
-			reg_file[13]	<= 15;				// t5
-			reg_file[14]	<= 16;				// t6
-			reg_file[15]	<= 17;				// t7
-			reg_file[16]	<= 32'h94000000;	// s0
-			reg_file[17]	<= 32'h73000000;	// s1
+			value_rs			<= 0;
+			value_rt			<= 0;
+			reg_file[0]			<= 0;
+			reg_file[1]			<= 0;
+			reg_file[2]			<= 0;
+			reg_file[3]			<= 0;
+			reg_file[4]			<= 0;
+			reg_file[5]			<= 0;
+			reg_file[6]			<= 0;
+			reg_file[7]			<= 0;
+			reg_file[8]			<= 0;
+			reg_file[9]			<= 0;
+			reg_file[10]		<= 0;
+			reg_file[11]		<= 0;
+			reg_file[12]		<= 0;
+			reg_file[13]		<= 0;
+			reg_file[14]		<= 0;
+			reg_file[15]		<= 0;
+			reg_file[16]		<= 0;
+			reg_file[17]		<= 0;
+			reg_file[18]		<= 0;
+			reg_file[19]		<= 0;
+			reg_file[20]		<= 0;
+			reg_file[21]		<= 0;
+			reg_file[22]		<= 0;
+			reg_file[23]		<= 0;
+			reg_file[24]		<= 0;
+			reg_file[25]		<= 0;
+			reg_file[26]		<= 0;
+			reg_file[27]		<= 0;
+			reg_file[28]		<= 0;
+			reg_file[29]		<= 0;
+			reg_file[30]		<= 0;
+			reg_file[31]		<= 0;
 		end else if (clk) begin
 			if (reg_write) begin
 				reg_file[address_write]	<= data_write;

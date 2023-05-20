@@ -5,7 +5,6 @@ module reg_HI_LO (
     input       [1:0]   read_control,
     input               clk,
     input               reset,
-    input               excep_enable,
 
     output  reg [31:0]  data_out
 );
@@ -17,7 +16,7 @@ module reg_HI_LO (
             data_out        <= 0;
             reg_hilo[0]     <= 0;
             reg_hilo[1]     <= 0;
-        end else if (excep_enable == 1'b0) begin
+        end else begin
             if (clk) begin
                 if (write_control == 1'b1) begin
                     reg_hilo[0] <= low_register_in;

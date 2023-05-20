@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/SoftWare/VIVADO/SDK/2018.2/bin;C:/SoftWare/VIVADO/Vivado/2018.2/ids_lite/ISE/bin/nt64;C:/SoftWare/VIVADO/Vivado/2018.2/ids_lite/ISE/lib/nt64:C:/SoftWare/VIVADO/Vivado/2018.2/bin
+  PATH=D:/Programs/Xilinx/SDK/2018.2/bin;D:/Programs/Xilinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;D:/Programs/Xilinx/Vivado/2018.2/ids_lite/ISE/lib/nt64:D:/Programs/Xilinx/Vivado/2018.2/bin
 else
-  PATH=C:/SoftWare/VIVADO/SDK/2018.2/bin;C:/SoftWare/VIVADO/Vivado/2018.2/ids_lite/ISE/bin/nt64;C:/SoftWare/VIVADO/Vivado/2018.2/ids_lite/ISE/lib/nt64:C:/SoftWare/VIVADO/Vivado/2018.2/bin:$PATH
+  PATH=D:/Programs/Xilinx/SDK/2018.2/bin;D:/Programs/Xilinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;D:/Programs/Xilinx/Vivado/2018.2/ids_lite/ISE/lib/nt64:D:/Programs/Xilinx/Vivado/2018.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/impl_1'
+HD_PWD='D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

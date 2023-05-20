@@ -60,23 +60,25 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache {C:/Users/Nhat Khai/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-10224-LAPTOP-TQL8U39E/incrSyn}
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.cache/wt [current_project]
-  set_property parent.project_path C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.xpr [current_project]
-  set_property ip_output_repo C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.cache/wt [current_project]
+  set_property parent.project_path D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.xpr [current_project]
+  set_property ip_output_repo D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/HCMUT/HK222/CO2007/Assignment/Pipeline/Pipeline.runs/synth_1/system.dcp
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+  add_files -quiet D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1/system.dcp
+  read_ip -quiet D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/dmem_lib.xci
+  read_ip -quiet D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/imem_lib/imem_lib.xci
+  read_xdc D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/constrs_1/imports/digilent-xdc-master/Arty-Z7-20-Master.xdc
   link_design -top system -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -149,6 +151,25 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+  catch { write_mem_info -force system.mmi }
+  write_bitstream -force system.bit 
+  catch {write_debug_probes -quiet -force system}
+  catch {file copy -force system.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
