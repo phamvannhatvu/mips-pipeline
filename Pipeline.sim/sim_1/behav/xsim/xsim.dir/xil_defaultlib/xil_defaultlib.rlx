@@ -2,10 +2,10 @@
 2018.2
 Jun 14 2018
 20:41:02
-D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.ip_user_files/ip/imem_lib/sim/imem_lib.v,1684557908,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ALU.v,,imem_lib,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.ip_user_files/ip/imem_lib/sim/imem_lib.v,1684599292,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ALU.v,,imem_lib,,,,,,,,
 D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.sim/sim_1/behav/xsim/glbl.v,1683022163,verilog,,,,glbl,,,,,,,,
 D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sim_1/new/instruction_tb0.v,1683022164,verilog,,,,instruction_tb0,,,,,,,,
-D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/sim/dmem_lib.v,1683090015,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.ip_user_files/ip/imem_lib/sim/imem_lib.v,,dmem_lib,,,,,,,,
+D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/ip/dmem_lib/sim/dmem_lib.v,1684599135,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.ip_user_files/ip/imem_lib/sim/imem_lib.v,,dmem_lib,,,,,,,,
 D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ALU.v,1683022164,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/DMEM.v,,ALU,,,,,,,,
 D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/DMEM.v,1683027198,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v,,DMEM,,,,,,,,
 D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/EXE_stage.v,1683027198,verilog,,D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/ID_stage.v,,EXE_stage,,,,,,,,

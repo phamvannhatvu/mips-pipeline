@@ -1,5 +1,2 @@
 memory_initialization_radix=16;
-memory_initialization_vector=
-
-AB12CD64,
-74EF5465,
+memory_initialization_vector=AB12CD64 74EF5465;

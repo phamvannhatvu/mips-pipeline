@@ -163,7 +163,7 @@ output wire [31 : 0] doutb;
     .C_HAS_INJECTERR(0),
     .C_SIM_COLLISION_CHECK("ALL"),
     .C_COMMON_CLK(0),
-    .C_DISABLE_WARN_BHV_COLL(0),
+    .C_DISABLE_WARN_BHV_COLL(1),
     .C_EN_SLEEP_PIN(0),
     .C_USE_URAM(0),
     .C_EN_RDADDRA_CHG(0),
@@ -171,7 +171,7 @@ output wire [31 : 0] doutb;
     .C_EN_DEEPSLEEP_PIN(0),
     .C_EN_SHUTDOWN_PIN(0),
     .C_EN_SAFETY_CKT(0),
-    .C_DISABLE_WARN_BHV_RANGE(0),
+    .C_DISABLE_WARN_BHV_RANGE(1),
     .C_COUNT_36K_BRAM("1"),
     .C_COUNT_18K_BRAM("0"),
     .C_EST_POWER_SUMMARY("Estimated Power for IP     :     5.9299 mW")
