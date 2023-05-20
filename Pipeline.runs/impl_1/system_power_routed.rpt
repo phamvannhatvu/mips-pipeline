@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed May 10 12:20:56 2023
+| Date             : Thu May 18 15:09:29 2023
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file system_power_routed.rpt -pb system_power_summary_routed.pb -rpx system_power_routed.rpx
 | Design           : system
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+-----------------------------------+
-| Total On-Chip Power (W)  | 173.810 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 170.488 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                      |
 | Power Budget Margin (W)  | NA                                |
-| Dynamic (W)              | 172.766                           |
+| Dynamic (W)              | 169.444                           |
 | Device Static (W)        | 1.044                             |
 | Effective TJA (C/W)      | 11.5                              |
 | Max Ambient (C)          | 0.0                               |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    75.855 |     9482 |       --- |             --- |
-|   LUT as Logic |    64.416 |     4761 |     53200 |            8.95 |
-|   Register     |     4.890 |     2733 |    106400 |            2.57 |
-|   CARRY4       |     4.685 |      617 |     13300 |            4.64 |
-|   F7/F8 Muxes  |     1.859 |      809 |     53200 |            1.52 |
+| Slice Logic    |    73.422 |     9482 |       --- |             --- |
+|   LUT as Logic |    62.116 |     4758 |     53200 |            8.94 |
+|   Register     |     4.865 |     2733 |    106400 |            2.57 |
+|   CARRY4       |     4.676 |      617 |     13300 |            4.64 |
+|   F7/F8 Muxes  |     1.759 |      808 |     53200 |            1.52 |
 |   BUFG         |     0.006 |       12 |        32 |           37.50 |
 |   Others       |     0.000 |       25 |       --- |             --- |
-| Signals        |    87.046 |     7443 |       --- |             --- |
+| Signals        |    86.158 |     7444 |       --- |             --- |
 | Block RAM      |    <0.001 |      1.5 |       140 |            1.07 |
-| DSPs           |     3.189 |        4 |       220 |            1.82 |
-| I/O            |     6.676 |       30 |       125 |           24.00 |
+| DSPs           |     3.394 |        4 |       220 |            1.82 |
+| I/O            |     6.471 |       30 |       125 |           24.00 |
 | Static Power   |     1.044 |          |           |                 |
-| Total          |   173.810 |          |           |                 |
+| Total          |   170.488 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |   166.446 |     166.146 |      0.300 |
-| Vccaux    |       1.800 |     0.342 |       0.243 |      0.100 |
-| Vcco33    |       3.300 |     1.875 |       1.874 |      0.001 |
+| Vccint    |       1.000 |   163.329 |     163.029 |      0.300 |
+| Vccaux    |       1.800 |     0.335 |       0.235 |      0.100 |
+| Vcco33    |       3.300 |     1.817 |       1.816 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -148,15 +148,15 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| system                                           |   172.766 |
-|   EXE_stage                                      |    61.018 |
-|     ALU                                          |    60.518 |
-|     reg_HI_LO                                    |     0.501 |
-|   ID_stage                                       |    78.095 |
-|     pc_update                                    |     0.473 |
-|     regFile                                      |    77.622 |
-|   IF_stage                                       |     0.103 |
-|     imem                                         |     0.037 |
+| system                                           |   169.444 |
+|   EXE_stage                                      |    61.995 |
+|     ALU                                          |    61.506 |
+|     reg_HI_LO                                    |     0.489 |
+|   ID_stage                                       |    76.630 |
+|     pc_update                                    |     0.348 |
+|     regFile                                      |    76.282 |
+|   IF_stage                                       |     0.030 |
+|     imem                                         |    <0.001 |
 |       imem                                       |    <0.001 |
 |         U0                                       |    <0.001 |
 |           inst_blk_mem_gen                       |    <0.001 |
@@ -164,9 +164,9 @@ Table of Contents
 |               valid.cstr                         |    <0.001 |
 |                 ramloop[0].ram.r                 |    <0.001 |
 |                   prim_init.ram                  |    <0.001 |
-|     pc_reg                                       |     0.067 |
-|   MEM_stage                                      |     0.003 |
-|     data_mem                                     |     0.003 |
+|     pc_reg                                       |     0.030 |
+|   MEM_stage                                      |    <0.001 |
+|     data_mem                                     |    <0.001 |
 |       dmem                                       |    <0.001 |
 |         U0                                       |    <0.001 |
 |           inst_blk_mem_gen                       |    <0.001 |
@@ -174,14 +174,14 @@ Table of Contents
 |               valid.cstr                         |    <0.001 |
 |                 ramloop[0].ram.r                 |    <0.001 |
 |                   prim_init.ram                  |    <0.001 |
-|   debouncer_clk                                  |     0.232 |
-|   exception_handler                              |     0.146 |
-|   lcd_control                                    |     1.218 |
-|   reg_EXE_MEM                                    |     4.381 |
-|   reg_ID_EXE                                     |    18.106 |
-|   reg_IF_ID                                      |     0.930 |
-|   reg_MEM_WB                                     |     0.030 |
-|   system_control                                 |     1.504 |
+|   debouncer_clk                                  |     0.224 |
+|   exception_handler                              |     0.052 |
+|   lcd_control                                    |     1.179 |
+|   reg_EXE_MEM                                    |     4.536 |
+|   reg_ID_EXE                                     |    16.372 |
+|   reg_IF_ID                                      |     0.065 |
+|   reg_MEM_WB                                     |     0.001 |
+|   system_control                                 |     1.485 |
 +--------------------------------------------------+-----------+
 
 

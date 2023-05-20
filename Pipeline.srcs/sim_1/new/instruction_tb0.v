@@ -34,7 +34,7 @@ initial begin
     out_sel = 4'b1100;
     #33 reset = 0;
     #80 out_sel = 4'b1100;
-    #153 $finish;
+    #300 $finish;
 end
 
 endmodule 

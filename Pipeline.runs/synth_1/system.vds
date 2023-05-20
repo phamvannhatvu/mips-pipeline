@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed May 10 12:16:58 2023
-# Process ID: 19228
+# Start of session at: Thu May 18 15:05:28 2023
+# Process ID: 4564
 # Current directory: D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1
 # Command line: vivado.exe -log system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system.tcl
 # Log file: D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1/system.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5728 
+INFO: Helper process launched with PID 9884 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 382.301 ; gain = 99.348
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 382.883 ; gain = 100.484
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/system.v:1]
 INFO: [Synth 8-6157] synthesizing module 'debouncer' [D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.srcs/sources_1/new/debouncer.v:3]
@@ -352,7 +352,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unco
 WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth__parameterized0 has unconnected port S_AXI_WDATA[7]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 721.500 ; gain = 438.547
+Finished RTL Elaboration : Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 723.570 ; gain = 441.172
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -461,10 +461,10 @@ WARNING: [Synth 8-3295] tying undriven pin rt_value_mux:in3[0] to constant 0 [D:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 721.500 ; gain = 438.547
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 723.570 ; gain = 441.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 721.500 ; gain = 438.547
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 723.570 ; gain = 441.172
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -484,16 +484,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 833.766 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 832.453 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:26 ; elapsed = 00:01:31 . Memory (MB): peak = 833.766 ; gain = 550.812
+Finished Constraint Validation : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 832.453 ; gain = 550.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:26 ; elapsed = 00:01:31 . Memory (MB): peak = 833.766 ; gain = 550.812
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 832.453 ; gain = 550.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -501,7 +501,7 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for MEM_stage/data_mem/dmem. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for IF_stage/imem/imem. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:31 . Memory (MB): peak = 833.766 ; gain = 550.812
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 832.453 ; gain = 550.055
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "button_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "control_signal" won't be mapped to RAM because it is too sparse
@@ -535,7 +535,7 @@ INFO: [Synth 8-5546] ROM "idx" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'lcd_control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:27 ; elapsed = 00:01:33 . Memory (MB): peak = 833.766 ; gain = 550.812
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:01:32 . Memory (MB): peak = 832.453 ; gain = 550.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -841,22 +841,22 @@ DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
 DSP Report: operator high_register_out0 is absorbed into DSP high_register_out0.
 INFO: [Synth 8-5546] ROM "enable" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "debouncer_clk/button_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[18]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[26]' (FDC) to 'reg_ID_EXE/immediate_out_reg[30]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[30]' (FDC) to 'reg_ID_EXE/immediate_out_reg[22]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[22]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[16]' (FDC) to 'reg_ID_EXE/immediate_out_reg[24]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[24]' (FDC) to 'reg_ID_EXE/immediate_out_reg[28]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[28]' (FDC) to 'reg_ID_EXE/immediate_out_reg[20]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[20]' (FDC) to 'reg_ID_EXE/immediate_out_reg[17]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[17]' (FDC) to 'reg_ID_EXE/immediate_out_reg[25]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[25]' (FDC) to 'reg_ID_EXE/immediate_out_reg[29]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[29]' (FDC) to 'reg_ID_EXE/immediate_out_reg[21]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[21]' (FDC) to 'reg_ID_EXE/immediate_out_reg[31]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[31]' (FDC) to 'reg_ID_EXE/immediate_out_reg[15]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[15]' (FDC) to 'reg_ID_EXE/immediate_out_reg[23]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[23]' (FDC) to 'reg_ID_EXE/immediate_out_reg[27]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[27]' (FDC) to 'reg_ID_EXE/immediate_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[15]' (FDC) to 'reg_ID_EXE/immediate_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[16]' (FDC) to 'reg_ID_EXE/immediate_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[17]' (FDC) to 'reg_ID_EXE/immediate_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[18]' (FDC) to 'reg_ID_EXE/immediate_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[19]' (FDC) to 'reg_ID_EXE/immediate_out_reg[20]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[20]' (FDC) to 'reg_ID_EXE/immediate_out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[21]' (FDC) to 'reg_ID_EXE/immediate_out_reg[22]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[22]' (FDC) to 'reg_ID_EXE/immediate_out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[23]' (FDC) to 'reg_ID_EXE/immediate_out_reg[24]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[24]' (FDC) to 'reg_ID_EXE/immediate_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[25]' (FDC) to 'reg_ID_EXE/immediate_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[26]' (FDC) to 'reg_ID_EXE/immediate_out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[27]' (FDC) to 'reg_ID_EXE/immediate_out_reg[28]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[28]' (FDC) to 'reg_ID_EXE/immediate_out_reg[29]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[29]' (FDC) to 'reg_ID_EXE/immediate_out_reg[30]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[30]' (FDC) to 'reg_ID_EXE/immediate_out_reg[31]'
 WARNING: [Synth 8-3332] Sequential element (jump_address_reg[25]) is unused and will be removed from module reg_IF_ID.
 WARNING: [Synth 8-3332] Sequential element (jump_address_reg[24]) is unused and will be removed from module reg_IF_ID.
 WARNING: [Synth 8-3332] Sequential element (jump_address_reg[23]) is unused and will be removed from module reg_IF_ID.
@@ -886,7 +886,7 @@ INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/alu_op_control_out_reg[2]' (FD
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[0]' (FDC) to 'reg_IF_ID/immediate_reg[0]'
 INFO: [Synth 8-3886] merging instance 'reg_IF_ID/jump_address_reg[1]' (FDC) to 'reg_IF_ID/immediate_reg[1]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:41 ; elapsed = 00:01:48 . Memory (MB): peak = 833.766 ; gain = 550.812
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 832.453 ; gain = 550.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -916,13 +916,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:53 ; elapsed = 00:02:00 . Memory (MB): peak = 867.340 ; gain = 584.387
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:51 ; elapsed = 00:02:02 . Memory (MB): peak = 867.000 ; gain = 584.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:02:01 . Memory (MB): peak = 874.535 ; gain = 591.582
+Finished Timing Optimization : Time (s): cpu = 00:01:52 ; elapsed = 00:02:03 . Memory (MB): peak = 874.195 ; gain = 591.797
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -960,13 +960,13 @@ INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[13]' (FDC) t
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[5]' (FDC) to 'reg_ID_EXE/funct_out_reg[5]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[7]' (FDC) to 'reg_ID_EXE/shamt_out_reg[1]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[11]' (FDC) to 'reg_ID_EXE/rd_address_out_reg[0]'
-INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[19]' (FDC) to 'reg_ID_EXE/rd_address_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[31]' (FDC) to 'reg_ID_EXE/rd_address_out_reg[4]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[0]' (FDC) to 'reg_ID_EXE/funct_out_reg[0]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[2]' (FDC) to 'reg_ID_EXE/funct_out_reg[2]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/immediate_out_reg[1]' (FDC) to 'reg_ID_EXE/funct_out_reg[1]'
 INFO: [Synth 8-3886] merging instance 'reg_ID_EXE/funct_out_reg[3]' (FDC) to 'reg_ID_EXE/immediate_out_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:57 ; elapsed = 00:02:04 . Memory (MB): peak = 994.477 ; gain = 711.523
+Finished Technology Mapping : Time (s): cpu = 00:01:55 ; elapsed = 00:02:06 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -990,7 +990,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:58 ; elapsed = 00:02:05 . Memory (MB): peak = 994.477 ; gain = 711.523
+Finished IO Insertion : Time (s): cpu = 00:01:56 ; elapsed = 00:02:07 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1003,7 +1003,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:58 ; elapsed = 00:02:05 . Memory (MB): peak = 994.477 ; gain = 711.523
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:02:07 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1015,25 +1015,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:58 ; elapsed = 00:02:06 . Memory (MB): peak = 994.477 ; gain = 711.523
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:56 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:58 ; elapsed = 00:02:06 . Memory (MB): peak = 994.477 ; gain = 711.523
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:58 ; elapsed = 00:02:06 . Memory (MB): peak = 994.477 ; gain = 711.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:58 ; elapsed = 00:02:06 . Memory (MB): peak = 994.477 ; gain = 711.523
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1053,12 +1053,12 @@ Report Cell Usage:
 |2     |CARRY4   |   617|
 |3     |DSP48E1  |     4|
 |4     |LUT1     |    70|
-|5     |LUT2     |   761|
-|6     |LUT3     |  2213|
+|5     |LUT2     |   762|
+|6     |LUT3     |  2220|
 |7     |LUT4     |   236|
-|8     |LUT5     |   275|
-|9     |LUT6     |  1765|
-|10    |MUXF7    |   550|
+|8     |LUT5     |   276|
+|9     |LUT6     |  1757|
+|10    |MUXF7    |   549|
 |11    |MUXF8    |   259|
 |12    |RAMB18E1 |     1|
 |13    |RAMB36E1 |     1|
@@ -1102,21 +1102,21 @@ Report Instance Areas:
 |27    |  debouncer_clk                                    |debouncer                                     |    67|
 |28    |  exception_handler                                |exception_handler                             |    17|
 |29    |  lcd_control                                      |lcd_control                                   |   117|
-|30    |  reg_EXE_MEM                                      |reg_EXE_MEM                                   |   461|
-|31    |  reg_ID_EXE                                       |reg_ID_EXE                                    |  1216|
+|30    |  reg_EXE_MEM                                      |reg_EXE_MEM                                   |   475|
+|31    |  reg_ID_EXE                                       |reg_ID_EXE                                    |  1202|
 |32    |  reg_IF_ID                                        |reg_IF_ID                                     |   141|
 |33    |  reg_MEM_WB                                       |reg_MEM_WB                                    |    42|
 |34    |  system_control                                   |system_control                                |   161|
 +------+---------------------------------------------------+----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:58 ; elapsed = 00:02:06 . Memory (MB): peak = 994.477 ; gain = 711.523
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 423 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:56 . Memory (MB): peak = 994.477 ; gain = 599.258
-Synthesis Optimization Complete : Time (s): cpu = 00:01:59 ; elapsed = 00:02:06 . Memory (MB): peak = 994.477 ; gain = 711.523
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:58 . Memory (MB): peak = 995.094 ; gain = 603.812
+Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 995.094 ; gain = 712.695
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1544 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 1543 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -1126,9 +1126,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 172 Infos, 220 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:02 ; elapsed = 00:02:10 . Memory (MB): peak = 994.477 ; gain = 718.094
+synth_design: Time (s): cpu = 00:02:00 ; elapsed = 00:02:12 . Memory (MB): peak = 995.094 ; gain = 718.684
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'D:/Studying/Academic/HCMUT/222/ComputerArchitecture/Assignments/ThayBinh/Mips_Pipeline/Pipeline.runs/synth_1/system.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_utilization_synth.rpt -pb system_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 994.477 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed May 10 12:19:17 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 995.094 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 18 15:07:46 2023...
