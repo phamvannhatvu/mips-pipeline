@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="332600001fs"></ZoomEndTime>
-      <Cursor1Time time="98800000fs"></Cursor1Time>
+      <ZoomStartTime time="18112860fs"></ZoomStartTime>
+      <ZoomEndTime time="101412861fs"></ZoomEndTime>
+      <Cursor1Time time="423000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="155"></NameColumnWidth>
+      <NameColumnWidth column_width="152"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="25" />
+   <WVObjectSize size="37" />
    <wvobject fp_name="/instruction_tb0/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -31,102 +31,242 @@
    <wvobject fp_name="/instruction_tb0/pc" type="array">
       <obj_property name="ElementShortName">pc[7:0]</obj_property>
       <obj_property name="ObjectShortName">pc[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/IF_stage/pc_in" type="array">
-      <obj_property name="ElementShortName">pc_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_in[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/reg_IF_ID/instruction" type="array">
-      <obj_property name="ElementShortName">instruction[31:0]</obj_property>
-      <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
-      <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/exception_handler/exe_excep_in" type="logic">
-      <obj_property name="ElementShortName">exe_excep_in</obj_property>
-      <obj_property name="ObjectShortName">exe_excep_in</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/exception_handler/alu_excep_in" type="logic">
-      <obj_property name="ElementShortName">alu_excep_in</obj_property>
-      <obj_property name="ObjectShortName">alu_excep_in</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/exception_handler/alu_control_excep_in" type="logic">
-      <obj_property name="ElementShortName">alu_control_excep_in</obj_property>
-      <obj_property name="ObjectShortName">alu_control_excep_in</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/exception_handler/pc_out" type="array">
-      <obj_property name="ElementShortName">pc_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/exception_handler/exception" type="logic">
-      <obj_property name="ElementShortName">exception</obj_property>
-      <obj_property name="ObjectShortName">exception</obj_property>
    </wvobject>
    <wvobject fp_name="/instruction_tb0/load" type="logic">
       <obj_property name="ElementShortName">load</obj_property>
       <obj_property name="ObjectShortName">load</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/out_sel" type="array">
-      <obj_property name="ElementShortName">out_sel[3:0]</obj_property>
-      <obj_property name="ObjectShortName">out_sel[3:0]</obj_property>
+   <wvobject fp_name="/instruction_tb0/uut/IF_stage/imem/pc" type="array">
+      <obj_property name="ElementShortName">pc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/id_calculated_pc" type="array">
-      <obj_property name="ElementShortName">id_calculated_pc[7:0]</obj_property>
-      <obj_property name="ObjectShortName">id_calculated_pc[7:0]</obj_property>
+   <wvobject fp_name="/instruction_tb0/uut/IF_stage/imem/instruction_out" type="array">
+      <obj_property name="ElementShortName">instruction_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction_out[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/hazard_detection/control_signal" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">control_signal</obj_property>
+      <obj_property name="ObjectShortName">control_signal</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="label">hazard_control</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/id_control" type="array">
+      <obj_property name="ElementShortName">id_control[13:0]</obj_property>
+      <obj_property name="ObjectShortName">id_control[13:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/address_rs" type="array">
+      <obj_property name="ElementShortName">address_rs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">address_rs[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/address_rt" type="array">
+      <obj_property name="ElementShortName">address_rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">address_rt[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/address_rd" type="array">
+      <obj_property name="ElementShortName">address_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">address_rd[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/immediate" type="array">
+      <obj_property name="ElementShortName">immediate[15:0]</obj_property>
+      <obj_property name="ObjectShortName">immediate[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/out" type="array">
-      <obj_property name="ElementShortName">out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/value_rs" type="array">
+      <obj_property name="ElementShortName">value_rs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">value_rs[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/comparator_out" type="logic">
-      <obj_property name="ElementShortName">comparator_out</obj_property>
-      <obj_property name="ObjectShortName">comparator_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/hazard_detection/pc_control_out" type="logic">
-      <obj_property name="ElementShortName">pc_control_out</obj_property>
-      <obj_property name="ObjectShortName">pc_control_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/forward_unit/operand_0_control" type="array">
-      <obj_property name="ElementShortName">operand_0_control[1:0]</obj_property>
-      <obj_property name="ObjectShortName">operand_0_control[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/forward_unit/operand_1_control" type="array">
-      <obj_property name="ElementShortName">operand_1_control[1:0]</obj_property>
-      <obj_property name="ObjectShortName">operand_1_control[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/opreand_0_mux/out" type="array">
-      <obj_property name="ElementShortName">out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/value_rt" type="array">
+      <obj_property name="ElementShortName">value_rt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">value_rt[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/opreand_1_mux/out" type="array">
-      <obj_property name="ElementShortName">out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out[31:0]</obj_property>
+   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/operand_0" type="array">
+      <obj_property name="ElementShortName">operand_0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">operand_0[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file" type="array">
-      <obj_property name="ElementShortName">reg_file[0:31][31:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_file[0:31][31:0]</obj_property>
+   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/operand_1" type="array">
+      <obj_property name="ElementShortName">operand_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">operand_1[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/alu_control/control_out" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">control_out[4:0]</obj_property>
+      <obj_property name="ObjectShortName">control_out[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="label">ALU_control</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/alu_result" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">alu_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">EXE_result</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/alu_out" type="array">
+      <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/instruction_tb0/uut/EXE_stage/reg_HI_LO/reg_hilo" type="array">
       <obj_property name="ElementShortName">reg_hilo[0:1][31:0]</obj_property>
       <obj_property name="ObjectShortName">reg_hilo[0:1][31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/exception_handler/pc_out" type="array">
-      <obj_property name="ElementShortName">pc_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_out[7:0]</obj_property>
+   <wvobject fp_name="/instruction_tb0/uut/exception_handler/exception" type="logic">
+      <obj_property name="ElementShortName">exception</obj_property>
+      <obj_property name="ObjectShortName">exception</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/instruction_tb0/uut/exception_pc" type="array">
       <obj_property name="ElementShortName">exception_pc[7:0]</obj_property>
       <obj_property name="ObjectShortName">exception_pc[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/system_control/epc" type="array">
-      <obj_property name="ElementShortName">epc[7:0]</obj_property>
-      <obj_property name="ObjectShortName">epc[7:0]</obj_property>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_write" type="logic">
+      <obj_property name="ElementShortName">reg_write</obj_property>
+      <obj_property name="ObjectShortName">reg_write</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/address_write" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">address_write[4:0]</obj_property>
+      <obj_property name="ObjectShortName">address_write[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="label">Reg_addr_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/data_write" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_write[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_write[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="label">Reg_data_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[8]" type="array">
+      <obj_property name="ElementShortName">[8][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[8][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[9]" type="array">
+      <obj_property name="ElementShortName">[9][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[9][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[11]" type="array">
+      <obj_property name="ElementShortName">[11][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[11][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[12]" type="array">
+      <obj_property name="ElementShortName">[12][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[12][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[16]" type="array">
+      <obj_property name="ElementShortName">[16][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[16][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[17]" type="array">
+      <obj_property name="ElementShortName">[17][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[17][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[18]" type="array">
+      <obj_property name="ElementShortName">[18][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[18][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[19]" type="array">
+      <obj_property name="ElementShortName">[19][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[19][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[20]" type="array">
+      <obj_property name="ElementShortName">[20][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[20][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[22]" type="array">
+      <obj_property name="ElementShortName">[22][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[22][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[24]" type="array">
+      <obj_property name="ElementShortName">[24][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[24][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/uut/ID_stage/regFile/reg_file[25]" type="array">
+      <obj_property name="ElementShortName">[25][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[25][31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
