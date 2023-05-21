@@ -11,9 +11,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="343583333fs"></ZoomStartTime>
-      <ZoomEndTime time="426883334fs"></ZoomEndTime>
-      <Cursor1Time time="413000000fs"></Cursor1Time>
+      <ZoomStartTime time="18112860fs"></ZoomStartTime>
+      <ZoomEndTime time="101412861fs"></ZoomEndTime>
+      <Cursor1Time time="423000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="152"></NameColumnWidth>
@@ -27,6 +27,18 @@
    <wvobject fp_name="/instruction_tb0/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/pc" type="array">
+      <obj_property name="ElementShortName">pc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instruction_tb0/load" type="logic">
+      <obj_property name="ElementShortName">load</obj_property>
+      <obj_property name="ObjectShortName">load</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/instruction_tb0/uut/IF_stage/imem/pc" type="array">
       <obj_property name="ElementShortName">pc[7:0]</obj_property>
@@ -134,27 +146,12 @@
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/alu_status" type="array">
-      <obj_property name="ElementShortName">alu_status[7:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_status[7:0]</obj_property>
-      <obj_property name="CustomSignalColor">#800000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/instruction_tb0/uut/EXE_stage/reg_HI_LO/reg_hilo" type="array">
       <obj_property name="ElementShortName">reg_hilo[0:1][31:0]</obj_property>
       <obj_property name="ObjectShortName">reg_hilo[0:1][31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="CustomSignalColor">#800000</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/instruction_tb0/uut/EXE_stage/reg_HI_LO/data_out" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
-      <obj_property name="CustomSignalColor">#800000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="label">hilo_out</obj_property>
    </wvobject>
    <wvobject fp_name="/instruction_tb0/uut/exception_handler/exception" type="logic">
       <obj_property name="ElementShortName">exception</obj_property>

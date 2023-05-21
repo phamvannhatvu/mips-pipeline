@@ -29,10 +29,11 @@ initial begin
     clk = 0;
     BOARD_clk = 0;
     reset = 1;
-    load = 0;
-    pc = 8;
+    load = 1;
+    pc = 4;
     out_sel = 4'b1100;
     #33 reset = 0;
+    #44 load = 0;
     #80 out_sel = 4'b1100;
     #300 $finish;
 end
